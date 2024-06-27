@@ -1,0 +1,35 @@
+{
+    "name": "gjo-se/gjo-site-package",
+    "type": "typo3-cms-extension",
+    "description": "Gjo-Site-Package",
+    "authors": [
+        {
+            "name": "Gregory Jo Erdmann",
+            "email": "gregory.jo@gjo-se.com",
+            "homepage": "https://www.gjo-se.com",
+            "role": "maintainer"
+        }
+    ],
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "php": "~8.3.0",
+        "typo3/cms-core": "^12.4"
+    },
+    "require-dev": {
+    },
+    "conflict": {
+    },
+    "autoload": {
+        "psr-4": {
+            "GjoSe\\GjoSitePackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "gjo-site-package"
+        }
+    },
+    "replace": {
+        "gjo-se/gjo-site-package": "self.version"
+    }
+}
