@@ -26,10 +26,7 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "gjo-site-package"
+            "extension-key": "gjo_site_package"
         }
-    },
-    "replace": {
-        "gjo-se/gjo-site-package": "self.version"
     }
 }

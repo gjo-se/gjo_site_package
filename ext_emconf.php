@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'gjo-site-package',
+    'title' => 'Gjo Site Package',
     'description' => 'Gjo Site Package',
     'version' => '12.0.0',
     'category' => 'plugin',
