@@ -1,4 +1,7 @@
-Sitepackage for the project "mySitepacke"
+DOCU TYPO3 CONCEPTS
 ==============================================================
 
-Add some explanation here.
+# BackendLayout:
+
+- Rootpage / Module Page / Resources / Include Page TSconfig
+- Rootpage / Module Page / Appearance/ Backend Layout (this & sub)
