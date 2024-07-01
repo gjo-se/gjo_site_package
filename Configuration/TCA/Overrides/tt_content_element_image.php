@@ -36,7 +36,7 @@ call_user_func(function () {
         ]
     );
 
-    $defaultCropSettings = \GjoSe\GjoIntroduction\Utility\CroppingUtility::getDefaultCropSettings();
+    $defaultCropSettings = \GjoSe\GjoSitePackage\Utility\CroppingUtility::getDefaultCropSettings();
 
     $mobileCropSettings           = $defaultCropSettings;
     $mobileCropSettings['title']  = $lll . 'cropVariant.mobile';

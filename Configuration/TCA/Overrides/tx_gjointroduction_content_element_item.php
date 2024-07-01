@@ -7,7 +7,7 @@ call_user_func(function () {
     $ext   = 'gjo_introduction';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
-    $defaultCropSettings = \GjoSe\GjoIntroduction\Utility\CroppingUtility::getDefaultCropSettings();
+    $defaultCropSettings = \GjoSe\GjoSitePackage\Utility\CroppingUtility::getDefaultCropSettings();
 
     $mobileCropSettings           = $defaultCropSettings;
     $mobileCropSettings['title']  = $lll . 'cropVariant.mobile';
