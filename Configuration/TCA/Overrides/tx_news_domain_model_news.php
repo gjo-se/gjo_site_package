@@ -1,11 +1,16 @@
 <?php
 
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 $ll = 'LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:';
 
 // Extension manager configuration
-$configuration = \GeorgRinger\News\Utility\EmConfiguration::getSettings();
+$extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+$configuration = $extensionConfiguration->get('news');
 
 $teaserRteConfiguration = $configuration->getRteForTeaser() ? 'richtext:rte_transform[mode=ts_css]' : '';
+
 
 $tx_news_domain_model_news = [
     'ctrl'      => [
