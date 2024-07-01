@@ -17,16 +17,16 @@ TYPO3:
                 templateRootPaths:
                   100: 'EXT:gjo_site_package/Resources/Private/Templates/Form'
                 partialRootPaths:
-                  100: 'EXT:gjo_introduction/Resources/Private/Partials'
+                  100: 'EXT:gjo_site_package/Resources/Private/Partials'
                 layoutRootPaths:
-                  100: 'EXT:gjo_introduction/Resources/Private/Layouts'
+                  100: 'EXT:gjo_site_package/Resources/Private/Layouts'
                 honeypot:
                       enable: true
                       formElementToUse: Honeypot
       mixins:
         finishersEmailMixin:
           options:
-            templatePathAndFilename: 'EXT:gjo_introduction/Resources/Private/Templates/Email/{@format}.html'
+            templatePathAndFilename: 'EXT:gjo_site_package/Resources/Private/Templates/Email/{@format}.html'
             #partialRootPaths: []
             #layoutRootPaths: []
             #variables: {}

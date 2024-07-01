@@ -1,19 +1,19 @@
-plugin.tx_gjointroduction {
+plugin.tx_gjositepackage {
     view {
         templateRootPaths {
             0 = EXT:gjo_boilerplate/Resources/Private/Templates/
-            10 = {$plugin.tx_gjointroduction.view.templateRootPath}
+            10 = {$plugin.tx_gjositepackage.view.templateRootPath}
 
         }
 
         partialRootPaths {
             0 = EXT:gjo_boilerplate/Resources/Private/Partials/
-            10 = {$plugin.tx_gjointroduction.view.partialRootPath}
+            10 = {$plugin.tx_gjositepackage.view.partialRootPath}
         }
 
         layoutRootPaths {
             0 = EXT:gjo_boilerplate/Resources/Private/Layouts/
-            10 = {$plugin.tx_gjointroduction.view.layoutRootPath}
+            10 = {$plugin.tx_gjositepackage.view.layoutRootPath}
         }
     }
 
@@ -48,11 +48,11 @@ plugin.tx_gjointroduction {
 
         site {
             pid {
-                userLogin = {$plugin.tx_gjointroduction.settings.site.pid.userLogin}
-                userLogout = {$plugin.tx_gjointroduction.settings.site.pid.userLogout}
-                userRegister = {$plugin.tx_gjointroduction.settings.site.pid.userRegister}
-                userData = {$plugin.tx_gjointroduction.settings.site.pid.userData}
-                myTiger = {$plugin.tx_gjointroduction.settings.site.pid.myTiger}
+                userLogin = {$plugin.tx_gjositepackage.settings.site.pid.userLogin}
+                userLogout = {$plugin.tx_gjositepackage.settings.site.pid.userLogout}
+                userRegister = {$plugin.tx_gjositepackage.settings.site.pid.userRegister}
+                userData = {$plugin.tx_gjositepackage.settings.site.pid.userData}
+                myTiger = {$plugin.tx_gjositepackage.settings.site.pid.myTiger}
             }
         }
     }

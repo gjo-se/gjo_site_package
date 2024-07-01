@@ -4,17 +4,17 @@ plugin.tx_news {
         templateRootPaths >
         templateRootPaths {
             0 = EXT:news/Resources/Private/Templates/
-            1 = {$plugin.tx_gjointroduction.view.templateRootPath}
+            1 = {$plugin.tx_gjositepackage.view.templateRootPath}
         }
         layoutRootPaths >
         layoutRootPaths {
             0 = EXT:news/Resources/Private/Layouts/
-            1 = {$plugin.tx_gjointroduction.view.layoutRootPath}
+            1 = {$plugin.tx_gjositepackage.view.layoutRootPath}
         }
         partialRootPaths >
         partialRootPaths {
             0 = EXT:news/Resources/Private/Templates/
-            1 = {$plugin.tx_gjointroduction.view.partialRootPath}
+            1 = {$plugin.tx_gjositepackage.view.partialRootPath}
         }
     }
 
@@ -37,11 +37,11 @@ plugin.tx_news {
 #
 #            GeorgRinger\News\Domain\Model\News {
 #                subclasses {
-#                    0 = GjoSe\GjoIntroduction\Domain\Model\NewsExtended
+#                    0 = GjoSe\GjoSitePackage\Domain\Model\NewsExtended
 #                }
 #            }
 #
-#            GjoSe\GjoIntroduction\Domain\Model\NewsExtended {
+#            GjoSe\GjoSitePackage\Domain\Model\NewsExtended {
 #                mapping {
 #                    recordType = 0
 #                    tableName = tx_news_domain_model_news
@@ -57,7 +57,7 @@ plugin.tx_news {
 
 #config.tx_extbase {
 #    objects {
-#        GeorgRinger\News\Controller\NewsController.className = GjoSe\GjoIntroduction\Controller\NewsExtendedController
-#        GeorgRinger\News\Domain\Repository\NewsRepository.className = GjoSe\GjoIntroduction\Domain\Repository\NewsExtendedRepository
+#        GeorgRinger\News\Controller\NewsController.className = GjoSe\GjoSitePackage\Controller\NewsExtendedController
+#        GeorgRinger\News\Domain\Repository\NewsRepository.className = GjoSe\GjoSitePackage\Domain\Repository\NewsExtendedRepository
 #    }
 #}

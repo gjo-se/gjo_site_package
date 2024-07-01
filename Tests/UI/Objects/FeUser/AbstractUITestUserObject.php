@@ -25,7 +25,7 @@ use GjoSe\GjoSitePackage\Tests\UI\Objects\AbstractObject;
 
 /**
  * Class AbstractUITestUserObject
- * @package GjoSe\GjoIntroduction\Tests\UI\Objects
+ * @package GjoSe\GjoSitePackage\Tests\UI\Objects
  */
 abstract class AbstractUITestUserObject extends AbstractObject
 {

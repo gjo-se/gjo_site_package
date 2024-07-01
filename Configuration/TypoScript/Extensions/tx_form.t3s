@@ -1,7 +1,7 @@
 plugin.tx_form.settings.yamlConfigurations {
-    100 = EXT:gjo_introduction/Configuration/Form/Definition/GjoSeFormDefinition.yaml
+    100 = EXT:gjo_site_package/Configuration/Form/Definition/GjoSeFormDefinition.yaml
 }
 
 module.tx_form.settings.yamlConfigurations {
-    100 = EXT:gjo_introduction/Configuration/Form/Definition/GjoSeFormDefinition.yaml
+    100 = EXT:gjo_site_package/Configuration/Form/Definition/GjoSeFormDefinition.yaml
 }

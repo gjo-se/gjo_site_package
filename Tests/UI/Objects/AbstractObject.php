@@ -27,7 +27,7 @@ use Facebook\WebDriver\WebDriverExpectedCondition;
 
 /**
  * Class AbstractObject
- * @package GjoSe\GjoIntroduction\Tests\UI\Objects
+ * @package GjoSe\GjoSitePackage\Tests\UI\Objects
  */
 abstract class AbstractObject
 {

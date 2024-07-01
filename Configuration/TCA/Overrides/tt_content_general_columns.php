@@ -3,7 +3,7 @@
 call_user_func(function () {
 
     $table  = 'tt_content';
-    $column = 'tx_gjointroduction_carousel_item';
+    $column = 'tx_gjositepackage_carousel_item';
 
     $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';

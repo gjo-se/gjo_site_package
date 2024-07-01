@@ -13,18 +13,18 @@ call_user_func(function () {
 
     $additionalColumns = [
 
-        'tx_gjointroduction_additional_css' => [
-            'label'  => $lll . 'ContentElements.xlf:tx_gjointroduction_additional_css',
+        'tx_gjositepackage_additional_css' => [
+            'label'  => $lll . 'ContentElements.xlf:tx_gjositepackage_additional_css',
             'config' => [
                 'type' => 'input'
             ]
         ],
 
-        'tx_gjointroduction_content_element_item' => [
+        'tx_gjositepackage_content_element_item' => [
             'label' => 'Content Elemente',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_gjointroduction_content_element_item',
+                'foreign_table' => 'tx_gjositepackage_content_element_item',
                 'foreign_field' => 'tt_content',
                 'maxitems' => 1,
                 'appearance' => [
@@ -48,7 +48,7 @@ call_user_func(function () {
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, 'tx_gjointroduction_additional_css', '', 'after:layout');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, 'tx_gjositepackage_additional_css', '', 'after:layout');
 
     // TODO: überprüfen: wird mE nicht mehr benutzt
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(

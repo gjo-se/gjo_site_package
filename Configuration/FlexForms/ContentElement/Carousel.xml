@@ -14,44 +14,44 @@
                 <el>
                     <settings.carousel.options>
                         <TCEforms>
-                            <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options</label>
+                            <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options</label>
                             <config>
                                 <type>select</type>
                                 <renderType>selectMultipleSideBySide</renderType>
                                 <items type="array">
 <!--                                    <numIndex index="0" type="array">-->
 <!--                                        <numIndex index="0">-->
-<!--                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.0-->
+<!--                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.0-->
 <!--                                        </numIndex>-->
 <!--                                        <numIndex index="1">intervall-0</numIndex>-->
 <!--                                    </numIndex>-->
                                     <numIndex index="1" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500
                                         </numIndex>
                                         <numIndex index="1">intervall-2500</numIndex>
                                     </numIndex>
                                     <numIndex index="2" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride
                                         </numIndex>
                                         <numIndex index="1">ride</numIndex>
                                     </numIndex>
                                     <numIndex index="3" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause
                                         </numIndex>
                                         <numIndex index="1">pause</numIndex>
                                     </numIndex>
                                     <numIndex index="4" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade
                                         </numIndex>
                                         <numIndex index="1">fade</numIndex>
                                     </numIndex>
                                     <numIndex index="5" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop
                                         </numIndex>
                                         <numIndex index="1">loop</numIndex>
                                     </numIndex>
@@ -75,69 +75,69 @@
                 <el>
                     <!--<settings.carousel.ratio>-->
                     <!--<TCEforms>-->
-                    <!--<label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio</label>-->
+                    <!--<label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio</label>-->
                     <!--<config>-->
                     <!--<type>select</type>-->
                     <!--<renderType>selectMultipleSideBySide</renderType>-->
                     <!--<items type="array">-->
                     <!--<numIndex index="0" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_16_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_16_9</numIndex>-->
                     <!--<numIndex index="1">sx-16</numIndex>-->
                     <!--</numIndex>-->
                     <!--<numIndex index="1" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_21_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_21_9</numIndex>-->
                     <!--<numIndex index="1">sx-21</numIndex>-->
                     <!--</numIndex>-->
                     <!--&lt;!&ndash;<numIndex index="2" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_full</numIndex>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;<numIndex index="1">sx-full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
                     <!--<numIndex index="3" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_16_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_16_9</numIndex>-->
                     <!--<numIndex index="1">sm-16</numIndex>-->
                     <!--</numIndex>-->
                     <!--<numIndex index="4" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_21_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_21_9</numIndex>-->
                     <!--<numIndex index="1">sm-21</numIndex>-->
                     <!--</numIndex>-->
                     <!--&lt;!&ndash;<numIndex index="5" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_full</numIndex>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;<numIndex index="1">sm-full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
                     <!--<numIndex index="6" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_16_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_16_9</numIndex>-->
                     <!--<numIndex index="1">md-16</numIndex>-->
                     <!--</numIndex>-->
                     <!--<numIndex index="7" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_21_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_21_9</numIndex>-->
                     <!--<numIndex index="1">md-21</numIndex>-->
                     <!--</numIndex>-->
                     <!--&lt;!&ndash;<numIndex index="8" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_full</numIndex>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;<numIndex index="1">md-full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
                     <!--<numIndex index="9" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_16_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_16_9</numIndex>-->
                     <!--<numIndex index="1">lg-16</numIndex>-->
                     <!--</numIndex>-->
                     <!--<numIndex index="10" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_21_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_21_9</numIndex>-->
                     <!--<numIndex index="1">lg-21</numIndex>-->
                     <!--</numIndex>-->
                     <!--&lt;!&ndash;<numIndex index="11" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_full</numIndex>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;<numIndex index="1">lg-full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
                     <!--<numIndex index="12" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_16_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_16_9</numIndex>-->
                     <!--<numIndex index="1">xl-16</numIndex>-->
                     <!--</numIndex>-->
                     <!--<numIndex index="13" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_21_9</numIndex>-->
+                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_21_9</numIndex>-->
                     <!--<numIndex index="1">xl-21</numIndex>-->
                     <!--</numIndex>-->
                     <!--&lt;!&ndash;<numIndex index="14" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_full</numIndex>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;<numIndex index="1">xl-full</numIndex>&ndash;&gt;-->
                     <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
                     <!--</items>-->
@@ -149,7 +149,7 @@
                     <!--</settings.carousel.ratio>-->
                     <settings.carousel.count_items>
                         <TCEforms>
-                            <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items
+                            <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items
                             </label>
                             <config>
                                 <type>select</type>
@@ -157,49 +157,49 @@
                                 <items type="array">
                                     <numIndex index="0" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xs_1
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xs_1
                                         </numIndex>
                                         <numIndex index="1">xs-1</numIndex>
                                     </numIndex>
                                     <numIndex index="2" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.sm_1
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.sm_1
                                         </numIndex>
                                         <numIndex index="1">sm-1</numIndex>
                                     </numIndex>
                                     <numIndex index="4" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_1
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_1
                                         </numIndex>
                                         <numIndex index="1">md-1</numIndex>
                                     </numIndex>
                                     <numIndex index="5" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_3
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_3
                                         </numIndex>
                                         <numIndex index="1">md-3</numIndex>
                                     </numIndex>
                                     <numIndex index="6" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_1
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_1
                                         </numIndex>
                                         <numIndex index="1">lg-1</numIndex>
                                     </numIndex>
                                     <numIndex index="7" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_3
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_3
                                         </numIndex>
                                         <numIndex index="1">lg-3</numIndex>
                                     </numIndex>
                                     <numIndex index="8" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_1
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_1
                                         </numIndex>
                                         <numIndex index="1">xl-1</numIndex>
                                     </numIndex>
                                     <numIndex index="9" type="array">
                                         <numIndex index="0">
-                                            LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_3
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_3
                                         </numIndex>
                                         <numIndex index="1">xl-3</numIndex>
                                     </numIndex>
@@ -231,7 +231,7 @@
                     <settings.carousel.caption_css_class>
                         <TCEforms>
                             <label>
-                                LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexform.carousel.caption_css_class
+                                LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.caption_css_class
                             </label>
                             <config>
                                 <type>input</type>

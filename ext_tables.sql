@@ -1,11 +1,11 @@
 CREATE TABLE tt_content (
-    tx_gjointroduction_additional_css VARCHAR(150) NOT NULL DEFAULT '',
-    tx_gjointroduction_carousel_item int(11) unsigned DEFAULT '0',
-    tx_gjointroduction_content_element_item int(11) unsigned DEFAULT '0',
+    tx_gjositepackage_additional_css VARCHAR(150) NOT NULL DEFAULT '',
+    tx_gjositepackage_carousel_item int(11) unsigned DEFAULT '0',
+    tx_gjositepackage_content_element_item int(11) unsigned DEFAULT '0',
 
 );
 
-CREATE TABLE tx_gjointroduction_carousel_item (
+CREATE TABLE tx_gjositepackage_carousel_item (
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 
@@ -46,7 +46,7 @@ CREATE TABLE tx_gjointroduction_carousel_item (
     KEY language (l10n_parent,sys_language_uid)
 );
 
-CREATE TABLE tx_gjointroduction_content_element_item (
+CREATE TABLE tx_gjositepackage_content_element_item (
     uid int(11) NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 

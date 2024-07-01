@@ -8,7 +8,7 @@
         <el type="array">
             <row_css>
                 <TCEforms>
-                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.row_css</label>
+                    <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexforms.template.row_css</label>
                     <config>
                         <type>input</type>
                     </config>
@@ -16,7 +16,7 @@
             </row_css>
             <col1_css>
                 <TCEforms>
-                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col1_css</label>
+                    <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexforms.template.col1_css</label>
                     <config>
                         <type>input</type>
                     </config>
@@ -24,7 +24,7 @@
             </col1_css>
             <col2_css>
                 <TCEforms>
-                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col2_css</label>
+                    <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexforms.template.col2_css</label>
                     <config>
                         <type>input</type>
                     </config>

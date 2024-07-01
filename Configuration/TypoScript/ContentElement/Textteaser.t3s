@@ -2,9 +2,9 @@
 #### CTYPE: TEXTTEASER ####
 ###########################
 
-tt_content.gjointroduction_textteaser >
-tt_content.gjointroduction_textteaser =< lib.contentElement
-tt_content.gjointroduction_textteaser {
+tt_content.gjositepackage_textteaser >
+tt_content.gjositepackage_textteaser =< lib.contentElement
+tt_content.gjositepackage_textteaser {
 
     ################
     ### TEMPLATE ###

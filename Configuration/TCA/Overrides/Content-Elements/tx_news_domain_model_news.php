@@ -761,7 +761,7 @@ $column = 'fal_media';
 $ext    = 'gjo_site_package';
 $lll    = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
-$defaultCropSettings = \GjoSe\GjoIntroduction\Utility\CroppingUtility::getDefaultCropSettings();
+$defaultCropSettings = \GjoSe\GjoSitePackage\Utility\CroppingUtility::getDefaultCropSettings();
 
 $mobileCropSettings              = $defaultCropSettings;
 $mobileCropSettings['title']     = $lll . 'cropVariant.mobile';

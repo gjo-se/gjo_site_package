@@ -7,7 +7,7 @@ return call_user_func(function () {
     $cePreKey = 'content_element_item';
     $lllLang  = 'LLL:EXT:' . 'lang/Resources/Private/Language/locallang_general.xlf:';
 
-    $table = 'tx_gjointroduction_content_element_item';
+    $table = 'tx_gjositepackage_content_element_item';
 
     return [
 

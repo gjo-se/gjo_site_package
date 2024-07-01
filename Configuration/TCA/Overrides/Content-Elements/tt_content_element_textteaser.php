@@ -3,24 +3,24 @@
 /***************
  * Add Content Element
  */
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['gjointroduction_textteaser'] = 'content-bootstrappackage-accordion';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['gjositepackage_textteaser'] = 'content-bootstrappackage-accordion';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
         'gjoSE-textteaser',
-        'gjointroduction_textteaser',
+        'gjositepackage_textteaser',
         'content-bootstrappackage-accordion'
     ],
     'carousel',
     'after'
 );
 
-if (!is_array($GLOBALS['TCA']['tt_content']['types']['gjointroduction_textteaser'])) {
-    $GLOBALS['TCA']['tt_content']['types']['gjointroduction_textteaser'] = [];
+if (!is_array($GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'])) {
+    $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'] = [];
 }
-$GLOBALS['TCA']['tt_content']['types']['gjointroduction_textteaser'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['types']['gjointroduction_textteaser'],
+$GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'],
     [
         'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,

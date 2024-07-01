@@ -184,7 +184,7 @@
             <trans-unit id="flexforms.template.col5_css">
                 <source>zusätzliches CSS Spalte 5 (col5)</source>
             </trans-unit>
-            <trans-unit id="tx_gjointroduction_additional_css">
+            <trans-unit id="tx_gjositepackage_additional_css">
                 <source>zusätzliches CSS (Container)</source>
             </trans-unit>
 

@@ -2,7 +2,7 @@
 
 call_user_func(function () {
 
-    $table = 'tx_gjointroduction_content_element_item';
+    $table = 'tx_gjositepackage_content_element_item';
 
     $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';

@@ -21,7 +21,7 @@ namespace GjoSe\GjoSitePackage\Task;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use GjoSe\GjoSitePackage\Task\AbstractTask as GjoIntroductionAbstracttask;
+use GjoSe\GjoSitePackage\Task\AbstractTask as GjoSitePackageAbstracttask;
 use TYPO3\CMS\Scheduler\AdditionalFieldProviderInterface;
 use TYPO3\CMS\Scheduler\Controller\SchedulerModuleController;
 use TYPO3\CMS\Scheduler\Task\AbstractTask;
@@ -49,11 +49,11 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
         }
 
         $fileArrHelper = array();
-        $fileArr = GeneralUtility::getAllFilesAndFoldersInPath($fileArrHelper, GjoIntroductionAbstracttask::BACKUP_DIR);
+        $fileArr = GeneralUtility::getAllFilesAndFoldersInPath($fileArrHelper, GjoSitePackageAbstracttask::BACKUP_DIR);
 
         $options = '';
         foreach ($fileArr as $file) {
-            $value = substr($file, strlen(GjoIntroductionAbstracttask::BACKUP_DIR));
+            $value = substr($file, strlen(GjoSitePackageAbstracttask::BACKUP_DIR));
             $options .= '<option value="' . $value . '" ' . ($value ==  $dump ? 'selected' : '') . ' >' . $value . '</option>';
 
         }

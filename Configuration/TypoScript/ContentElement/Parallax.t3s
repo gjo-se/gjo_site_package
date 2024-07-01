@@ -16,10 +16,10 @@ tt_content.parallax {
     ##########################
 
     dataProcessing {
-        10 = GjoSe\GjoIntroduction\DataProcessing\FlexFormProcessor
+        10 = GjoSe\GjoSitePackage\DataProcessing\FlexFormProcessor
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         20 {
-            table = tx_gjointroduction_content_element_item
+            table = tx_gjositepackage_content_element_item
             pidInList.field = pid
             where {
                 data = field:uid

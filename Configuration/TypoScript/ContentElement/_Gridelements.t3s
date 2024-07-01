@@ -13,13 +13,13 @@ tt_content.gridelements_pi1.20.10.setup {
 
             templateName = GridElements
             templateRootPaths {
-                20 = EXT:gjo_introduction/Resources/Private/Templates/
+                20 = EXT:gjo_site_package/Resources/Private/Templates/
             }
             partialRootPaths {
-                20 = EXT:gjo_introduction/Resources/Private/Partials/
+                20 = EXT:gjo_site_package/Resources/Private/Partials/
             }
             layoutRootPaths {
-                20 = EXT:gjo_introduction/Resources/Private/Layouts/
+                20 = EXT:gjo_site_package/Resources/Private/Layouts/
             }
         }
     }

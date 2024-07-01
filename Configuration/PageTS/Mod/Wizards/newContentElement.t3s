@@ -15,7 +15,7 @@ mod.wizards.newContentElement.wizardItems.common {
     elements {
         image {
             title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.image
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.image.description
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.image.description
         }
     }
     show = *
@@ -26,14 +26,14 @@ mod.wizards.newContentElement.wizardItems.common {
 #### GjoSe       ####
 #####################
 mod.wizards.newContentElement.wizardItems.gjose {
-    header = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_group.gjose
+    header = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_group.gjose
     elements {
-        gjointroduction_textteaser {
+        gjositepackage_textteaser {
             iconIdentifier = content-text-teaser
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.textteaser
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.textteaser.description
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.textteaser
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.textteaser.description
             tt_content_defValues {
-                CType = gjointroduction_textteaser
+                CType = gjositepackage_textteaser
             }
         }
     }
@@ -44,12 +44,12 @@ mod.wizards.newContentElement.wizardItems.gjose {
 #### COMPLEXE ####
 #####################
 mod.wizards.newContentElement.wizardItems.complexe {
-    header = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_group.complexe
+    header = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_group.complexe
     elements {
         carousel {
             iconIdentifier = content-bootstrappackage-carousel
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:carousel
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:carousel.description
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel.description
             tt_content_defValues {
                 CType = carousel
             }
@@ -62,20 +62,20 @@ mod.wizards.newContentElement.wizardItems.complexe {
 #### Composed    ####
 #####################
 mod.wizards.newContentElement.wizardItems.composed {
-    header = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_group.composed
+    header = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_group.composed
     elements {
         parallax {
             iconIdentifier = content-bootstrappackage-carousel
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:parallax
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:parallax.description
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:parallax
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:parallax.description
             tt_content_defValues {
                 CType = parallax
             }
         }
         card {
             iconIdentifier = content-bootstrappackage-carousel
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:card
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:card.description
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:card
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:card.description
             tt_content_defValues {
                 CType = card
             }

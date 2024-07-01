@@ -18,10 +18,10 @@ tt_content.carousel {
     #    TODO: schauen, ob der benötigt wird!!
 
     dataProcessing {
-        10 = GjoSe\GjoIntroduction\DataProcessing\FlexFormProcessor
+        10 = GjoSe\GjoSitePackage\DataProcessing\FlexFormProcessor
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         20 {
-            table = tx_gjointroduction_carousel_item
+            table = tx_gjositepackage_carousel_item
             pidInList.field = pid
             where {
                 data = field:uid

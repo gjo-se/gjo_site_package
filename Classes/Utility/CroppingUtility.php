@@ -25,7 +25,7 @@ use GjoSe\GjoBoilerplate\Utility\AbstractUtility;
 
 /**
  * Class CroppingUtility
- * @package GjoSe\GjoIntroduction\Controller
+ * @package GjoSe\GjoSitePackage\Controller
  */
 class CroppingUtility extends AbstractUtility
 {

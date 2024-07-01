@@ -2,7 +2,7 @@
 
 call_user_func(function () {
 
-    $table = 'tx_gjointroduction_carousel_item';
+    $table = 'tx_gjositepackage_carousel_item';
     $image = 'image';
 
     $ext   = 'gjo_site_package';
