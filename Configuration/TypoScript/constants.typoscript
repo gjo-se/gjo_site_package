@@ -7,9 +7,9 @@
 ##############################
 styles {
     templates {
-        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/ContentElements/
+        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/
+        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/
+        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/
     }
 }
 

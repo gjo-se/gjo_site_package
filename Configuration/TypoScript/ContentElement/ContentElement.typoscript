@@ -11,15 +11,15 @@ lib.contentElement {
     templateName = Default
     templateRootPaths {
         10 = EXT:gjo_introduction/Resources/Private/Templates/
-        20 = EXT:gjo_introduction/Resources/Private/Templates/ContentElements/
+#        20 = EXT:gjo_introduction/Resources/Private/Templates/
     }
     partialRootPaths {
         10 = EXT:gjo_introduction/Resources/Private/Partials/
-        20 = EXT:gjo_introduction/Resources/Private/Partials/ContentElements/
+#        20 = EXT:gjo_introduction/Resources/Private/Partials/
     }
     layoutRootPaths {
         10 = EXT:gjo_introduction/Resources/Private/Layouts/
-        20 = EXT:gjo_introduction/Resources/Private/Layouts/ContentElements/
+#        20 = EXT:gjo_introduction/Resources/Private/Layouts/
     }
 
     ################

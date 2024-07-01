@@ -5,7 +5,8 @@
 @import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/configSetup.typoscript'
 @import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/dynamicContentSetup.typoscript'
 
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/_ContentElement.t3s">
+@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/ContentElement.typoscript'
+
 #
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_form.t3s">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_news.t3s">
