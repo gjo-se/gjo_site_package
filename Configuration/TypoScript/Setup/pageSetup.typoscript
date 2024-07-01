@@ -35,16 +35,19 @@ page {
             ifEmpty = Default
         }
         templateRootPaths {
-            0 = EXT:gjo_site_package/Resources/Private/Templates/
-            1 = {$page.fluidtemplate.templateRootPath}
+            10 = EXT:gjo_site_package/Resources/Private/Templates/Page/
+            20 = EXT:gjo_boilerplate/Resources/Private/Templates/
+            30 = {$page.fluidtemplate.templateRootPath}
         }
         partialRootPaths {
-            0 = EXT:gjo_site_package/Resources/Private/Partials/
-            1 = {$page.fluidtemplate.partialRootPath}
+            10 = EXT:gjo_site_package/Resources/Private/Partials/Page/
+            20 = EXT:gjo_boilerplate/Resources/Private/Partials/
+            30 = {$page.fluidtemplate.partialRootPath}
         }
         layoutRootPaths {
-            0 = EXT:gjo_site_package/Resources/Private/Layouts/
-            1 = {$page.fluidtemplate.layoutRootPath}
+            10 = EXT:gjo_site_package/Resources/Private/Layouts/Page/
+            20 = EXT:gjo_boilerplate/Resources/Private/Layouts/
+            30 = {$page.fluidtemplate.layoutRootPath}
         }
 
 #        Verwendung pürfen

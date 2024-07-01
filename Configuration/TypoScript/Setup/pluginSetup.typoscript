@@ -1,21 +1,4 @@
 plugin.tx_gjositepackage {
-    view {
-        templateRootPaths {
-            0 = EXT:gjo_boilerplate/Resources/Private/Templates/
-            10 = {$plugin.tx_gjositepackage.view.templateRootPath}
-
-        }
-
-        partialRootPaths {
-            0 = EXT:gjo_boilerplate/Resources/Private/Partials/
-            10 = {$plugin.tx_gjositepackage.view.partialRootPath}
-        }
-
-        layoutRootPaths {
-            0 = EXT:gjo_boilerplate/Resources/Private/Layouts/
-            10 = {$plugin.tx_gjositepackage.view.layoutRootPath}
-        }
-    }
 
     settings {
         gridSystem = 12
