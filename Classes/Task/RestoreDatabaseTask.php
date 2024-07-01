@@ -59,7 +59,7 @@ class RestoreDatabaseTask extends AbstractTask
         // TODO: Filename stimmt nicht
         if (!is_file($backupFile)) {
             $this->sendMail($this->getEmailTemplate(), self::EMAIL_SUBJECT_RESTORE_DATABASE_TASK, parent::ERROR, "Dump NOT exists - cmd: " . $backupFile);
-//            log Error, $logMessage = 'No dump exists: ' . $backupDir; $this->scheduler->log($logMessage, 2, 'gjo_introduction');
+//            log Error, $logMessage = 'No dump exists: ' . $backupDir; $this->scheduler->log($logMessage, 2, 'gjo_site_package');
             return false;
         }
 

@@ -2,7 +2,7 @@
 
 return call_user_func(function () {
 
-    $ext      = 'gjo_introduction';
+    $ext      = 'gjo_site_package';
     $lll      = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
     $cePreKey = 'carousel_item.';
     $lllLang  = 'LLL:EXT:' . 'lang/Resources/Private/Language/locallang_general.xlf:';

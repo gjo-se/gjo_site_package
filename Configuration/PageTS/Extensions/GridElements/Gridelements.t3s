@@ -8,8 +8,8 @@ tx_gridelements {
             title = 2-Spalter
             description = TwitterBootstrap 2-spaltig
             frame = 1
-            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
-            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/2-Column.xml
+            icon = EXT:gjo_site_package/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_site_package/Configuration/FlexForms/Extensions/GridElements/2-Column.xml
             topLevelLayout = 0
             frame = 3
             config {
@@ -36,8 +36,8 @@ tx_gridelements {
             title = 3-Spalter
             description = TwitterBootstrap 3-spaltig
             frame = 3
-            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
-            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/3-Column.xml
+            icon = EXT:gjo_site_package/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_site_package/Configuration/FlexForms/Extensions/GridElements/3-Column.xml
             topLevelLayout = 0
             config {
                 colCount = 3

@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:if condition="{gjoSe:partialExists(extensionKey:'gjo_introduction', partial:'Form/Templates/{form.identifier}')}">
+<f:if condition="{gjoSe:partialExists(extensionKey:'gjo_site_package', partial:'Form/Templates/{form.identifier}')}">
     <f:then>
         <f:render partial="Form/Templates/{form.identifier}" arguments="{_all}"/>
     </f:then>

@@ -5,7 +5,7 @@ call_user_func(function () {
     $table  = 'tt_content';
     $column = 'tx_gjointroduction_carousel_item';
 
-    $ext = 'gjo_introduction';
+    $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
     // TODO: appearance ansehen, in tt_content.php verschieben

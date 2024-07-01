@@ -758,7 +758,7 @@ $GLOBALS['TCA']['tx_news_domain_model_news'] = $tx_news_domain_model_news;
 
 $table  = 'tx_news_domain_model_news';
 $column = 'fal_media';
-$ext    = 'gjo_introduction';
+$ext    = 'gjo_site_package';
 $lll    = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
 $defaultCropSettings = \GjoSe\GjoIntroduction\Utility\CroppingUtility::getDefaultCropSettings();

@@ -2,12 +2,12 @@
 
 //$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'] = 'pi_flexform';
 //\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('news_pi1',
-//    'FILE:EXT:gjo_introduction/Configuration/FlexForms/flexform_news.xml');
+//    'FILE:EXT:gjo_site_package/Configuration/FlexForms/flexform_news.xml');
 
 
 call_user_func(function () {
 
-    $ext   = 'gjo_introduction';
+    $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/';
     $table = 'tt_content';
 

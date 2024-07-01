@@ -32,7 +32,7 @@ class CroppingUtility extends AbstractUtility
     static function getDefaultCropSettings()
     {
         $defaultCropSettings = [
-            'title' => 'LLL:EXT:gjo_introduction/Resources/Private/Language/Backend.xlf:option.default',
+            'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
             'allowedAspectRatios' => [
                 '1:1' => [
                     'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',

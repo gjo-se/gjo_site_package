@@ -39,7 +39,7 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
 
         // --------------------
 
-        $dump = $taskInfo['gjo_introduction']['dump'];
+        $dump = $taskInfo['gjo_site_package']['dump'];
         if (empty($dump)) {
             if ($parentObject->CMD == 'edit') {
                 $dump = $task->dump;
@@ -58,8 +58,8 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
 
         }
 
-        $fieldID = 'gjo_introduction_dumps';
-        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_introduction][dump]" id="' . $fieldID . '">' . $options . '</select>';
+        $fieldID = 'gjo_site_package_dumps';
+        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_site_package][dump]" id="' . $fieldID . '">' . $options . '</select>';
 
         $additionalFields[$fieldID] = array(
             'code'     => $fieldCode,
@@ -69,7 +69,7 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
 
         // ----------------
 
-        $dbTarget = $taskInfo['gjo_introduction']['dbTarget'];
+        $dbTarget = $taskInfo['gjo_site_package']['dbTarget'];
 
         if (empty($dbTarget)) {
             if ($parentObject->CMD == 'edit') {
@@ -93,8 +93,8 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
             }
         }
 
-        $fieldID = 'gjo_introduction_dbTarget';
-        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_introduction][dbTarget]" id="' . $fieldID . '">' . $options . '</select>';
+        $fieldID = 'gjo_site_package_dbTarget';
+        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_site_package][dbTarget]" id="' . $fieldID . '">' . $options . '</select>';
 
         $additionalFields[$fieldID] = array(
             'code'     => $fieldCode,
@@ -106,7 +106,7 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
         // -----------------------
 
 
-        $email = $taskInfo['gjo_introduction']['email'];
+        $email = $taskInfo['gjo_site_package']['email'];
         if (empty($email)) {
             if ($parentObject->CMD === 'add') {
                 $email = $GLOBALS['BE_USER']->user['email'];
@@ -116,8 +116,8 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
                 $email = '';
             }
         }
-        $fieldID = 'gjo_introduction_email';
-        $fieldCode = '<input type="text" class="form-control" name="tx_scheduler[gjo_introduction][email]" id="' . $fieldID . '" value="' . htmlspecialchars($email) . '" size="30">';
+        $fieldID = 'gjo_site_package_email';
+        $fieldCode = '<input type="text" class="form-control" name="tx_scheduler[gjo_site_package][email]" id="' . $fieldID . '" value="' . htmlspecialchars($email) . '" size="30">';
 
         $additionalFields[$fieldID] = [
             'code' => $fieldCode,
@@ -131,8 +131,8 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
     {
         $result = true;
 
-        $submittedData['gjo_introduction']['email'] = trim($submittedData['gjo_introduction']['email']);
-        if (empty($submittedData['gjo_introduction']['email'])) {
+        $submittedData['gjo_site_package']['email'] = trim($submittedData['gjo_site_package']['email']);
+        if (empty($submittedData['gjo_site_package']['email'])) {
             $parentObject->addMessage($GLOBALS['LANG']->sL('LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:msg.noEmail'), FlashMessage::ERROR);
             $result = false;
         }
@@ -142,8 +142,8 @@ class RestoreDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvi
 
     public function saveAdditionalFields(array $submittedData, AbstractTask $task)
     {
-        $task->dump = $submittedData['gjo_introduction']['dump'];
-        $task->dbTarget = $submittedData['gjo_introduction']['dbTarget'];
-        $task->email = $submittedData['gjo_introduction']['email'];
+        $task->dump = $submittedData['gjo_site_package']['dump'];
+        $task->dbTarget = $submittedData['gjo_site_package']['dbTarget'];
+        $task->email = $submittedData['gjo_site_package']['email'];
     }
 }

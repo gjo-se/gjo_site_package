@@ -36,7 +36,7 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
 
         // -------------------------------
 
-        $dbSource = $taskInfo['gjo_introduction']['dbSource'];
+        $dbSource = $taskInfo['gjo_site_package']['dbSource'];
 
         if (empty($dbSource)) {
             if ($parentObject->CMD == 'edit') {
@@ -56,8 +56,8 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
             $options .= '<option value="' . $value . '" ' . ($value ==  $dbSource ? 'selected' : '') . ' >' . $option . '</option>';
         }
 
-        $fieldID = 'gjo_introduction_dbSource';
-        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_introduction][dbSource]" id="' . $fieldID . '">' . $options . '</select>';
+        $fieldID = 'gjo_site_package_dbSource';
+        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_site_package][dbSource]" id="' . $fieldID . '">' . $options . '</select>';
 
         $additionalFields[$fieldID] = array(
             'code'     => $fieldCode,
@@ -66,7 +66,7 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
 
         // -------------------------------
 
-        $dbTarget = $taskInfo['gjo_introduction']['dbTarget'];
+        $dbTarget = $taskInfo['gjo_site_package']['dbTarget'];
 
         if (empty($dbTarget)) {
             if ($parentObject->CMD == 'edit') {
@@ -85,8 +85,8 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
             $options .= '<option value="' . $value . '" ' . ($value ==  $dbTarget ? 'selected' : '') . ' >' . $option . '</option>';
         }
 
-        $fieldID = 'gjo_introduction_dbTarget';
-        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_introduction][dbTarget]" id="' . $fieldID . '">' . $options . '</select>';
+        $fieldID = 'gjo_site_package_dbTarget';
+        $fieldCode = '<select class="form-control" name="tx_scheduler[gjo_site_package][dbTarget]" id="' . $fieldID . '">' . $options . '</select>';
 
         $additionalFields[$fieldID] = array(
             'code'     => $fieldCode,
@@ -95,7 +95,7 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
 
         // -------------------------------
 
-        $email = $taskInfo['gjo_introduction']['email'];
+        $email = $taskInfo['gjo_site_package']['email'];
         if (empty($email)) {
             if ($parentObject->CMD === 'add') {
                 $email = $GLOBALS['BE_USER']->user['email'];
@@ -105,8 +105,8 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
                 $email = '';
             }
         }
-        $fieldID = 'gjo_introduction_email';
-        $fieldCode = '<input type="text" class="form-control" name="tx_scheduler[gjo_introduction][email]" id="' . $fieldID . '" value="' . htmlspecialchars($email) . '" size="30">';
+        $fieldID = 'gjo_site_package_email';
+        $fieldCode = '<input type="text" class="form-control" name="tx_scheduler[gjo_site_package][email]" id="' . $fieldID . '" value="' . htmlspecialchars($email) . '" size="30">';
 
         $additionalFields[$fieldID] = [
             'code' => $fieldCode,
@@ -119,8 +119,8 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
     {
         $result = true;
 
-        $submittedData['gjo_introduction']['email'] = trim($submittedData['gjo_introduction']['email']);
-        if (empty($submittedData['gjo_introduction']['email'])) {
+        $submittedData['gjo_site_package']['email'] = trim($submittedData['gjo_site_package']['email']);
+        if (empty($submittedData['gjo_site_package']['email'])) {
             $parentObject->addMessage($GLOBALS['LANG']->sL('LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:msg.noEmail'), FlashMessage::ERROR);
             $result = false;
         }
@@ -130,8 +130,8 @@ class BackupDatabaseTaskAdditionalFieldProvider implements AdditionalFieldProvid
 
     public function saveAdditionalFields(array $submittedData, AbstractTask $task)
     {
-        $task->dbSource = $submittedData['gjo_introduction']['dbSource'];
-        $task->dbTarget = $submittedData['gjo_introduction']['dbTarget'];
-        $task->email = $submittedData['gjo_introduction']['email'];
+        $task->dbSource = $submittedData['gjo_site_package']['dbSource'];
+        $task->dbTarget = $submittedData['gjo_site_package']['dbTarget'];
+        $task->email = $submittedData['gjo_site_package']['email'];
     }
 }

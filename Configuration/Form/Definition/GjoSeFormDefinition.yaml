@@ -3,7 +3,7 @@ TYPO3:
     Form:
       persistenceManager:
         allowedExtensionPaths:
-          10: EXT:gjo_introduction/Configuration/Form/Configuration/
+          10: EXT:gjo_site_package/Configuration/Form/Configuration/
         allowSaveToExtensionPaths: true
         allowDeleteFromExtensionPaths: true
 
@@ -15,7 +15,7 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  100: 'EXT:gjo_introduction/Resources/Private/Templates/Form'
+                  100: 'EXT:gjo_site_package/Resources/Private/Templates/Form'
                 partialRootPaths:
                   100: 'EXT:gjo_introduction/Resources/Private/Partials'
                 layoutRootPaths:

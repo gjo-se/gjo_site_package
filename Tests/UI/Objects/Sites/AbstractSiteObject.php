@@ -186,7 +186,7 @@ class AbstractSiteObject extends AbstractObject
 //    private function setConfig($configFile)
 //    {
 //        if (!$configFile) {
-//            $configFile = 'web/typo3conf/ext/gjo_introduction/Tests/UI/Configuration/Enviroment/' . getenv('ENV') . '/conf.json';
+//            $configFile = 'web/typo3conf/ext/gjo_site_package/Tests/UI/Configuration/Enviroment/' . getenv('ENV') . '/conf.json';
 //        }
 //        $this->config = json_decode(file_get_contents($configFile), true);
 //    }
@@ -221,7 +221,7 @@ class AbstractSiteObject extends AbstractObject
         //        $procs = array();
         //
         //        foreach ($GLOBALS['CONFIG']['environments'] as $key => $value) {
-        //            $cmd = "TASK_ID=$key vendor/bin/phpunit web/typo3conf/ext/gjo_introduction/Tests/UI/Tests/Sites/BrowserStackTest.php 2>&1\n";
+        //            $cmd = "TASK_ID=$key vendor/bin/phpunit web/typo3conf/ext/gjo_site_package/Tests/UI/Tests/Sites/BrowserStackTest.php 2>&1\n";
         //            print_r($cmd);
         //
         //            $procs[$key] = popen($cmd, "r");
@@ -235,7 +235,7 @@ class AbstractSiteObject extends AbstractObject
         //        }
 
         ////        if(!$config_file) $config_file = '../../phpunit-browserstack/config/single.conf.json';
-        //        if(!$config_file) $config_file = '/Volumes/MiniDaten/Users/gregoryjodaily/Documents/Dropbox/5-Berufsleben/gjoSe/Development/Projects/tiger.de/web/typo3conf/ext/gjo_introduction/Tests/phpunit-browserstack/config/single.conf.json';
+        //        if(!$config_file) $config_file = '/Volumes/MiniDaten/Users/gregoryjodaily/Documents/Dropbox/5-Berufsleben/gjoSe/Development/Projects/tiger.de/web/typo3conf/ext/gjo_site_package/Tests/phpunit-browserstack/config/single.conf.json';
         //        $GLOBALS['CONFIG'] = json_decode(file_get_contents($config_file), true);
         //
         //        $GLOBALS['BROWSERSTACK_USERNAME'] = getenv('BROWSERSTACK_USERNAME');

@@ -2,7 +2,7 @@
 
 call_user_func(function () {
 
-    $ext  = 'gjo_introduction';
+    $ext  = 'gjo_site_package';
     $path = '/Resources/Private/Language/';
     $file = 'ContentElements.xlf:';
     $lll  = 'LLL:EXT:' . $ext . $path . $file;
@@ -16,7 +16,7 @@ call_user_func(function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
-        'FILE:EXT:gjo_introduction/Configuration/FlexForms/ContentElement/Carousel.xml',
+        'FILE:EXT:gjo_site_package/Configuration/FlexForms/ContentElement/Carousel.xml',
         'carousel'
     );
 

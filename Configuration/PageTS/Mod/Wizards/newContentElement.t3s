@@ -4,8 +4,8 @@
 mod.wizards.newContentElement.wizardItems.common {
     elements {
         text {
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.text
-            description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.text.description
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.text
+            description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.text.description
         }
     }
     show = *
@@ -14,7 +14,7 @@ mod.wizards.newContentElement.wizardItems.common {
 mod.wizards.newContentElement.wizardItems.common {
     elements {
         image {
-            title = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.image
+            title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.image
             description = LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:content_element.image.description
         }
     }
