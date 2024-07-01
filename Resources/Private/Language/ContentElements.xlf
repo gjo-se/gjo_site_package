@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-02-13T09:11:39Z" product-name="hjo_introduction">
+        <header/>
+        <body>
+
+
+            #####################################
+            ###### TABS                    ######
+            #####################################
+
+            <trans-unit id="tab.options">
+                <source>Optionen</source>
+            </trans-unit>
+            <trans-unit id="tab.carousel_items">
+                <source>Carousel Elemente</source>
+            </trans-unit>
+            <trans-unit id="tab.carousel_item.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="tab.carousel_item.text">
+                <source>Text</source>
+            </trans-unit>
+
+            #####################################
+            ###### Palettes                ######
+            #####################################
+
+            <trans-unit id="palette.advanced">
+                <source>Advanced</source>
+            </trans-unit>
+            <trans-unit id="palette.composed">
+                <source>Composed ContentElement</source>
+            </trans-unit>
+            <trans-unit id="palette.carousel">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="palette.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="palette.text">
+                <source>Text</source>
+            </trans-unit>
+
+            #####################################
+            ###### GjoSe-ContentElements   ######
+            #####################################
+
+            <trans-unit id="content_group.gjose">
+                <source>GjoSe-ContentElements</source>
+            </trans-unit>
+
+            ###############################
+            ###### ContentElements   ######
+            ###############################
+
+            <trans-unit id="content_element.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="content_element.text.description">
+                <source>Text-Element</source>
+            </trans-unit>
+
+            <trans-unit id="content_element.image">
+                <source>Bild</source>
+            </trans-unit>
+            <trans-unit id="content_element.image.description">
+                <source>Bild-Element</source>
+            </trans-unit>
+
+            <trans-unit id="content_element.textteaser">
+                <source>Text mit Teaser</source>
+            </trans-unit>
+            <trans-unit id="content_element.textteaser.description">
+                <source>Text mit Teaser</source>
+            </trans-unit>
+
+            #############################################
+            ###### ContentElements - Composed   ######
+            #############################################
+
+            <trans-unit id="content_group.composed">
+                <source>Composed</source>
+            </trans-unit>
+
+            <trans-unit id="parallax">
+                <source>Parallax</source>
+            </trans-unit>
+            <trans-unit id="parallax.description">
+                <source>Parallax (Scroll-Effekt) mit unterschiedlichen Inhalten (Header / Text / Bild / Button)</source>
+            </trans-unit>
+
+            <trans-unit id="card">
+                <source>Card</source>
+            </trans-unit>
+            <trans-unit id="card.description">
+                <source>Card (Teaser) mit unterschiedlichen Inhalten (Header / Text / Bild / Button)</source>
+            </trans-unit>
+
+
+
+
+            #############################################
+            ###### ContentElements - Interactive   ######
+            #############################################
+
+            <trans-unit id="content_group.complexe">
+                <source>Komplexe Elemente</source>
+            </trans-unit>
+
+            <trans-unit id="carousel">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="carousel.description">
+                <source>Carousel (Slider) mit unterschiedlichen Inhalten (Header / Text / pure HTML)</source>
+            </trans-unit>
+            <trans-unit id="carousel_item">
+                <source>Carousel Elemente</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.tt_content">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.image">
+                <source>Bild</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.is_background_image">
+                <source>Als Hintergrundbild verwenden</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.header">
+                <source>Überschrift</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.header_layout">
+                <source>Überschrift-Layout</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.mask_css_class">
+                <source>Mask-CSS-Klasse</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.element_tag">
+                <source>Element-Tag</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.button_text">
+                <source>Button Text</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.button_link">
+                <source>Button Link</source>
+            </trans-unit>
+
+
+
+
+
+
+
+            <trans-unit id="carousel_item.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="carousel_item.additional_css">
+                <source>zusätzliches CSS (Element)</source>
+            </trans-unit>
+
+
+            ###############################
+            ###### Flexforms         ######
+            ###############################
+
+            <trans-unit id="flexforms.template.row_css">
+                <source>zusätzliches CSS Zeile (row)</source>
+            </trans-unit>
+            <trans-unit id="flexforms.template.col1_css">
+                <source>zusätzliches CSS Spalte 1 (col1)</source>
+            </trans-unit>
+            <trans-unit id="flexforms.template.col2_css">
+                <source>zusätzliches CSS Spalte 2 (col2)</source>
+            </trans-unit>
+            <trans-unit id="flexforms.template.col3_css">
+                <source>zusätzliches CSS Spalte 3 (col3)</source>
+            </trans-unit>
+            <trans-unit id="flexforms.template.col4_css">
+                <source>zusätzliches CSS Spalte 4 (col4)</source>
+            </trans-unit>
+            <trans-unit id="flexforms.template.col5_css">
+                <source>zusätzliches CSS Spalte 5 (col5)</source>
+            </trans-unit>
+            <trans-unit id="tx_gjointroduction_additional_css">
+                <source>zusätzliches CSS (Container)</source>
+            </trans-unit>
+
+
+            <trans-unit id="flexform.carousel.options">
+                <source>Optionen Carousel</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.intervall.0">
+                <source>Intervall: aus</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.intervall.2500">
+                <source>Intervall: schnell</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.ride">
+                <source>Autoplay</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.pause">
+                <source>Pause bei Mouse-Hover</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.fade">
+                <source>Fade-Effekt</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.loop">
+                <source>Loop</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.option.show_thumbnails">
+                <source>Thumbnails anzeigen</source>
+            </trans-unit>
+
+
+            <trans-unit id="flexform.carousel.count_items">
+                <source>Anzahl Elemente / Slide (Responsive => Mobile First)</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.xs_1">
+                <source>Mobile (xs): 1 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.xs_3">
+                <source>Mobile (xs): 3 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.sm_1">
+                <source>Tablet (sm): 1 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.sm_3">
+                <source>Tablet (sm): 3 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.md_1">
+                <source>Laptop (md): 1 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.md_3">
+                <source>Laptop (md): 3 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.lg_1">
+                <source>Desktop (lg): 1 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.lg_3">
+                <source>Desktop (lg): 3 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.xl_1">
+                <source>Widescreen (xl): 1 Items</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.count_items.xl_3">
+                <source>Widescreen (xl): 3 Items</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.carousel.ratio">
+                <source>Format Carousel (Responsive => Mobile First)</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sx_16_9">
+                <source>ab Mobile (sx): 16:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sx_21_9">
+                <source>ab Mobile (sx): 21:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sx_full">
+                <source>ab Mobile (sx): FullScreen</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sm_16_9">
+                <source>ab Tablet (sm): 16:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sm_21_9">
+                <source>ab Tablet (sm): 21:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.sm_full">
+                <source>ab Tablet (sm): FullScreen</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.md_16_9">
+                <source>ab Laptop (md): 16:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.md_21_9">
+                <source>ab Laptop (md): 21:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.md_full">
+                <source>ab Laptop (md): FullScreen</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.lg_16_9">
+                <source>ab Desktop (lg): 16:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.lg_21_9">
+                <source>ab Desktop (lg): 21:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.lg_full">
+                <source>ab Desktop (lg): FullScreen</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.xl_16_9">
+                <source>ab WideScreen (xl): 16:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.xl_21_9">
+                <source>ab WideScreen (xl): 21:9</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.ratio.xl_full">
+                <source>ab WideScreen (xl): FullScreen</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.carousel.caption_css_class">
+                <source>Bild-Caption CSS Class</source>
+            </trans-unit>
+
+
+            ###############################
+            ###### CropVariants      ######
+            ###############################
+
+            <trans-unit id="cropVariant.mobile">
+                <source>Mobil XS</source>
+            </trans-unit>
+            <trans-unit id="cropVariant.tablet">
+                <source>Tablet SM - 576</source>
+            </trans-unit>
+            <trans-unit id="cropVariant.laptop">
+                <source>Laptop MD - 768</source>
+            </trans-unit>
+            <trans-unit id="cropVariant.desktop">
+                <source>Desktop LG - 992</source>
+            </trans-unit>
+            <trans-unit id="cropVariant.wideScreen">
+                <source>Widescreen XL - 1200</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

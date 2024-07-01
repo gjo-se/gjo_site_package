@@ -1,0 +1,63 @@
+.card {
+  box-shadow: unset;
+  font-weight: unset;
+  border-radius: unset;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.accordion {
+  .card {
+    .card-body {
+      font-size: unset;
+      line-height: 1.75;
+      font-weight: unset;
+      color: unset;
+    }
+  }
+}
+
+.card.card-cascade .view.view-cascade {
+  box-shadow: unset;
+}
+
+footer .footer-menu .footer-width .menu .top-menu:last-child a {
+  /* uncomment later
+          &:after {
+               background-color: red;
+               content: "neu";
+               color: white;
+               text-transform: uppercase;
+               font-size: 8px;
+               padding: 0 3px;
+               border-radius: 35% 35%;
+               vertical-align: top;
+               margin-left: 2px;
+           }*/
+}
+.accordion-technicalnots, .accordion-downloads, .accordion-productGroup, .accessoryKitNavTabs, .accordion-variants {
+  .card {
+    border:none;
+  }
+  .card-header {
+    h4 {
+      border-bottom: $tiger-gray-200 2px solid;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  .card-body div.d-flex {
+    border-bottom: $tiger-gray-200 2px solid;
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+//Unset MD
+.accordion .card:first-of-type, .accordion .card:not(:first-of-type):not(:last-of-type) {
+  border-bottom: none;
+}

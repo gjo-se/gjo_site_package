@@ -1,0 +1,491 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+
+    <f:section name="NavBar">
+
+        <f:render section="mobileHeader"/>
+        <f:render section="desktopHeader"/>
+
+    </f:section>
+
+    <f:section name="mobileHeader">
+
+        <v:variable.set name="formName" value="mobile-loginForm"/>
+
+        <div class="container-fluid skin-black d-lg-none">
+            <div class="bg-tiger-gray-900 pb-12"></div>
+            <div class="bg-tiger-orange pb-4"></div>
+
+            <div class="row justify-content-center">
+                <div class="container">
+
+                    <nav class="p-0 px-16">
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+                                <button class="btn-menu navbar-toggler hover-tiger-orange p-0 py-32 px-2 collapsed border-0"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#mainNav"
+                                        aria-controls="mainNav"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                    <i class="icon-menu"></i>
+                                </button>
+
+                                <button class="btn-search navbar-toggler hover-tiger-orange p-0 py-32 pl-16"
+                                        type="button">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </div>
+
+                            <div>
+                                <f:render partial="Page/Header/Search" section="Search" arguments="{_all}"/>
+                                <div class="logo pt-8">
+                                    <f:link.page pageUid="1"
+                                                 class="navbar-brand p-0 m-0">
+                                        <f:image src="EXT:gjo_site_package/Resources/Public/Images/logo_orange.png"
+                                                 alt="Tiger Schiebetürbeschläge"/>
+                                    </f:link.page>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="btn-profile navbar-toggler hover-tiger-orange p-0 py-32 pr-20"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#feUserMenu"
+                                        aria-controls="feUserMenu"
+                                        aria-expanded="false"
+                                        aria-label="Toggle feUserMenu">
+                                    <f:security.ifAuthenticated>
+                                        <f:then>
+                                            <i class="icon-profile-active"></i>
+                                        </f:then>
+                                        <f:else>
+                                            <i class="icon-profile"></i>
+                                        </f:else>
+                                    </f:security.ifAuthenticated>
+
+                                </button>
+
+                                <f:link.page pageUid="87"
+                                             class="btn-shop navbar-toggler hover-tiger-orange p-0 py-32 pr-8 position-relative">
+                                    <i class="icon-shop"></i>
+                                    <i class="icon-shop-active d-none"></i>
+                                    <span class="badge badge-pill badge-shop-active d-none"></span>
+                                </f:link.page>
+
+                                <button class="btn-cross navbar-toggler hover-tiger-orange p-0 py-32 d-none"
+                                        type="button">
+                                    <i class="icon-cross "></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse main-nav" id="mainNav">
+                            <v:menu excludePages="5">
+                                <ul class="navbar-nav py-32">
+                                    <f:for each="{menu}" as="item-lvl-1">
+                                        <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')} {f:if(condition:'{item-lvl-1.uid} == \'99\'' ,then:' shop')}">
+                                            <a class="nav-link p-0"
+                                               href="{f:uri.page(pageUid:item-lvl-1.uid)}">
+                                                {item-lvl-1.linktext}
+                                                <f:if condition="{item-lvl-1.active}">
+                                                    <span class="sr-only">(current)</span>
+                                                </f:if>
+                                            </a>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </v:menu>
+
+                            <f:render section="LanguageMenu" partial="Page/Header/LanguageMenu"/>
+
+                        </div>
+
+                    </nav>
+
+                    <div class="search-suggestions"></div>
+
+                    <div class="collapse navbar-collapse fe-user-menu" id="feUserMenu">
+
+                        <v:variable.set name="userLoginPID" value="{settings.site.pid.userLogin}"/>
+                        <v:variable.set name="userLogoutPID" value="{settings.site.pid.userLogout}"/>
+                        <v:variable.set name="userDataPID" value="{settings.site.pid.userData}"/>
+                        <v:variable.set name="myTigerPID" value="{settings.site.pid.myTiger}"/>
+
+
+                        <div class="skin-black">
+                            <h2>myTiger</h2>
+                        </div>
+
+                        <f:security.ifAuthenticated>
+                            <f:then>
+                                <f:render section="isAuthenticated" arguments="{_all}"/>
+                            </f:then>
+                            <f:else>
+                                <f:render section="isNotAuthenticated" arguments="{_all}"/>
+                            </f:else>
+                        </f:security.ifAuthenticated>
+                    </div>
+
+                    <div class="row justify-content-center py-16">
+                        <div class="container px-xl-20">
+                            <div class="bg-tiger-orange mx-16 pb-1"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </f:section>
+
+    <f:section name="desktopHeader">
+
+        <v:variable.set name="formName" value="desktop-loginForm"/>
+
+        <div class="container-fluid d-none d-lg-block">
+
+            <div class="row justify-content-center bg-tiger-gray-900">
+                <div class="container px-xl-20">
+                    <div class="d-flex justify-content-end">
+                        <f:render section="LanguageMenu" partial="Page/Header/LanguageMenu"/>
+
+                        <div class="lang-helper d-none">
+                            <span id="lang-helper-sysLanguageUid">{v:page.language()}</span>
+                        </div>
+
+                        <button class="btn-search hover-tiger-orange navbar-toggler p-0 pr-16"
+                                type="button">
+                            <i class="icon-search desktop"></i>
+                        </button>
+
+                        <f:render partial="Page/Header/Search" section="Search" arguments="{_all}"/>
+
+                        <button class="btn-profile hover-tiger-orange navbar-toggler p-0 pr-16"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#feUserMenuDesktop"
+                                aria-controls="feUserMenuDesktop"
+                                aria-expanded="false"
+                                aria-label="Toggle feUserMenuDesktop">
+                            <f:security.ifAuthenticated>
+                                <f:then>
+                                    <i class="icon-profile-active"></i>
+                                </f:then>
+                                <f:else>
+                                    <i class="icon-profile"></i>
+                                </f:else>
+                            </f:security.ifAuthenticated>
+
+                        </button>
+                        <f:link.page pageUid="87"
+                                     class="btn-shop hover-tiger-orange navbar-toggler p-0 pr-16 py-8 position-relative">
+                            <i class="icon-shop"></i>
+                            <i class="icon-shop-active d-none"></i>
+                            <span class="badge badge-pill badge-shop-active d-none"></span>
+                        </f:link.page>
+
+                        <button class="btn-cross hover-tiger-orange navbar-toggler p-0 pr-16 d-none"
+                                type="button">
+                            <i class="icon-cross"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="search-suggestions"></div>
+
+                    <div class="collapse navbar-collapse fe-user-menu" id="feUserMenuDesktop">
+
+                        <v:variable.set name="userLoginPID" value="{settings.site.pid.userLogin}"/>
+                        <v:variable.set name="userLogoutPID" value="{settings.site.pid.userLogout}"/>
+                        <v:variable.set name="userDataPID" value="{settings.site.pid.userData}"/>
+                        <v:variable.set name="myTigerPID" value="{settings.site.pid.myTiger}"/>
+
+                        <div class="skin-black">
+                            <h2>myTiger</h2>
+                        </div>
+
+                        <f:security.ifAuthenticated>
+                            <f:then>
+                                <f:render section="isAuthenticated" arguments="{_all}"/>
+                            </f:then>
+                            <f:else>
+                                <f:render section="isNotAuthenticated" arguments="{_all}"/>
+                            </f:else>
+                        </f:security.ifAuthenticated>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-tiger-orange pb-4"></div>
+
+            <div class="row justify-content-center skin-black">
+                <div class="container px-xl-20">
+                    <div class="d-flex justify-content-between">
+
+                        <div class="">
+                            <div class="logo py-16 pl-16">
+                                <f:link.page pageUid="1"
+                                             class="navbar-brand p-0 m-0">
+                                    <f:image src="EXT:gjo_site_package/Resources/Public/Images/logo_orange.png"
+                                             alt="Tiger Schiebetürbeschläge"/>
+                                </f:link.page>
+                            </div>
+                        </div>
+
+                        <nav class="navbar navbar-expand-lg main-nav p-0">
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <v:menu excludePages="5">
+
+                                        <f:for each="{menu}" as="item-lvl-1" iteration="iteration">
+                                            <f:if condition="{item-lvl-1.hasSubPages}">
+                                                <f:then>
+                                                    <li class="nav-item dropdown {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')}">
+                                                        <a class="nav-link px-16 py-24"
+                                                           href="{f:uri.page(pageUid:item-lvl-1.uid)}"
+                                                           id="item-lvl-1_{item-lvl-1.uid}"
+                                                           data-toggle="dropdown"
+                                                           aria-haspopup="true"
+                                                           aria-expanded="false"
+                                                        >
+                                                            {item-lvl-1.linktext}
+                                                            <f:if condition="{item-lvl-1.active}">
+                                                                <span class="sr-only">(current)</span>
+                                                            </f:if>
+                                                        </a>
+
+                                                        <v:menu pageUid="{item-lvl-1.uid}">
+                                                            <div class="dropdown-menu skin-black p-0 {f:if(condition: '{iteration.isLast}', then:'dropdown-menu-right', else:'dropdown-menu-left')}"
+                                                                 aria-labelledby="item-lvl-1_{item-lvl-1.uid}">
+                                                                <f:for each="{menu}" as="item-lvl-2">
+                                                                    <a class="px-16 {f:if(condition: '{iteration.isLast}', then:'text-right')} dropdown-item {f:if(condition:'{item-lvl-2.active}',then:'active',else:'')}"
+                                                                       href="{f:uri.page(pageUid:item-lvl-2.uid)}"
+                                                                    >
+                                                                        {item-lvl-2.linktext}
+                                                                    </a>
+                                                                </f:for>
+                                                            </div>
+                                                        </v:menu>
+
+                                                    </li>
+                                                </f:then>
+                                                <f:else>
+                                                    <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')} {f:if(condition:'{item-lvl-1.uid} == \'99\'' ,then:' shop')}">
+                                                        <a class="nav-link px-16 py-24"
+                                                           href="{f:uri.page(pageUid:item-lvl-1.uid)}"
+                                                           id="item-lvl-1_{item-lvl-1.uid}"
+                                                        >
+                                                            {item-lvl-1.linktext}
+                                                            <f:if condition="{item-lvl-1.active}">
+                                                                <span class="sr-only">(current)</span>
+                                                            </f:if>
+                                                        </a>
+                                                    </li>
+
+                                                </f:else>
+                                            </f:if>
+
+
+
+                                        </f:for>
+                                    </v:menu>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+
+                    <div class="row justify-content-center py-16">
+                        <div class="container px-xl-20">
+                            <div class="bg-tiger-orange mx-16 pb-1"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </f:section>
+
+    <f:section name="isAuthenticated">
+
+        <f:security.ifHasRole role="uiTestUser">
+            <span class="uiTestUserIsLoggedIn" />
+        </f:security.ifHasRole>
+
+        <div class="skin-black">
+            <div class="fe-user-menu-header px-24 pb-32">
+                <h3 class="pb-16">Logout</h3>
+            </div>
+        </div>
+
+
+        <div class="skin-gray px-24 pt-24 pb-32">
+            <div class="row justify-content-center py-32 px-16">
+                <div class="max-width-600">
+
+                    <div class="fe-user-menu-form p-16">
+
+                        <p class="pb-24">
+                            <v:variable.set name="userName" value="{gjoSe:feUser.feUser(property: 'username')}" />
+                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text.salutation" arguments="{0: userName}"/> <br />
+                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text" arguments="{0: userName}" />
+                        </p>
+
+
+                        <form name="logout" action="{f:uri.page(pageUid: userLogoutPID)}" target="_top" method="post"
+                              onsubmit="return true;"
+                              autocomplete="off">
+
+                            <div class="felogin-hidden">
+                                <input type="hidden" name="logintype" value="logout">
+                                <input type="hidden" name="pid" value="{userDataPID}">
+                                <input type="hidden" name="redirect_url" value="{f:uri.page()}">
+                            </div>
+
+                            <div class="clearfix">
+                                <button type="submit" class="btn btn-tiger-default float-right">
+                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signOut"/>
+                                </button>
+                            </div>
+
+                        </form>
+
+                        <div>
+                            <f:link.page pageUid="{myTigerPID}">
+                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.yourProfile"/>
+                            </f:link.page>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </f:section>
+
+    <f:section name="isNotAuthenticated">
+
+        <v:variable.set name="userLoginPID" value="{settings.site.pid.userLogin}"/>
+        <v:variable.set name="userRegisterPID" value="{settings.site.pid.userRegister}"/>
+        <v:variable.set name="userDataPID" value="{settings.site.pid.userData}"/>
+
+        <v:variable.set name="action" value="{f:uri.page(pageUid: userLoginPID)}"/>
+
+        <v:variable.set name="class" value="gjoSe-form validate-js"/>
+        <v:variable.set name="additionalAttributes" value="{novalidate: 'novalidate'}"/>
+
+
+        <div class="skin-black">
+            <div class="fe-user-menu-header px-24 pb-32">
+                <h3 class="pb-16"> Login </h3>
+
+            </div>
+        </div>
+
+        <div class="skin-gray px-24 pt-24 pb-32">
+            <div class="row justify-content-center py-32 px-16">
+                <div class="max-width-600">
+
+                    <div class="fe-user-menu-form p-16">
+
+                        <p class="pb-24">
+                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.text"/>
+                        </p>
+
+                        <form name="{formName}"
+                              id="{formName}"
+                              action="{action}"
+                              class="{class}"
+                              novalidate="novalidate">
+
+
+                            <div class="md-form">
+                                <f:render partial="Form/Fields/Textfield"
+                                          arguments="{
+                                              name: 'user',
+                                              id: '{formName}_user',
+                                              formName: '{formName}',
+                                              data: '{
+                                                validation: \'required\'
+                                              }'
+                                          }"
+                                />
+                            </div>
+
+                            <div class="md-form my-0">
+                                <f:render partial="Form/Fields/Textfield"
+                                          arguments="{
+                                              name: 'pass',
+                                              id: '{formName}_pass',
+                                              formName: '{formName}',
+                                              type: 'password',
+                                              data: '{
+                                                validation: \'required\'
+                                              }'
+                                          }"
+                                />
+                            </div>
+
+                            <div class="form-check permalogin my-0 mb-32">
+                                <input type="checkbox"
+                                       class="form-check-input"
+                                       name="permalogin"
+                                       id="{formName}_permalogin"
+                                       value="1"
+                                       checked="checked"
+                                       onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;">
+                                <label class="form-check-label" for="{formName}_permalogin">
+                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.keep"/>
+                                </label>
+                            </div>
+                            <input name="permalogin" value="0" type="hidden" disabled="disabled" id="{formName}_permaloginHiddenField">
+
+                            <div class="felogin-hidden">
+                                <input type="hidden" name="logintype" value="login">
+                                <input type="hidden" name="pid" value="{userDataPID}">
+                                <input type="hidden" name="redirect_url" value="{f:uri.page()}">
+                            </div>
+
+                            <div class="clearfix">
+                                <button type="submit" class="btn btn-tiger-default float-right">
+                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signIn"/>
+                                </button>
+                            </div>
+
+
+                        </form>
+
+                        <div>
+                            <f:link.page pageUid="{userLoginPID}"
+                                         additionalParams="{'tx_felogin_pi1%5Bforgot%5D' : '1'}">
+                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.forgotPassword"/>
+                            </f:link.page>
+                        </div>
+                        <div>
+                            <f:link.page pageUid="{userRegisterPID}">
+                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.register"/>
+                            </f:link.page>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </f:section>
+
+</div>

@@ -1,0 +1,63 @@
+plugin.tx_news {
+
+    view {
+        templateRootPaths >
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = {$plugin.tx_gjointroduction.view.templateRootPath}
+        }
+        layoutRootPaths >
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            1 = {$plugin.tx_gjointroduction.view.layoutRootPath}
+        }
+        partialRootPaths >
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = {$plugin.tx_gjointroduction.view.partialRootPath}
+        }
+    }
+
+    templateLayouts {
+        1 = A custom layout
+        99 = List View Default
+    }
+
+    settings {
+        hidePagination = 1
+        list {
+            paginate {
+                insertAbove = 0
+            }
+        }
+    }
+
+#    persistence {
+#        classes {
+#
+#            GeorgRinger\News\Domain\Model\News {
+#                subclasses {
+#                    0 = GjoSe\GjoIntroduction\Domain\Model\NewsExtended
+#                }
+#            }
+#
+#            GjoSe\GjoIntroduction\Domain\Model\NewsExtended {
+#                mapping {
+#                    recordType = 0
+#                    tableName = tx_news_domain_model_news
+#                }
+#            }
+#
+#        }
+#    }
+
+
+
+}
+
+#config.tx_extbase {
+#    objects {
+#        GeorgRinger\News\Controller\NewsController.className = GjoSe\GjoIntroduction\Controller\NewsExtendedController
+#        GeorgRinger\News\Domain\Repository\NewsRepository.className = GjoSe\GjoIntroduction\Domain\Repository\NewsExtendedRepository
+#    }
+#}

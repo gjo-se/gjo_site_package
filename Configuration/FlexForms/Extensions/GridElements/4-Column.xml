@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+    <ROOT type="array">
+        <type>array</type>
+        <el type="array">
+            <row_css>
+                <TCEforms>
+                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.row_css</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </row_css>
+            <col1_css>
+                <TCEforms>
+                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col1_css</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </col1_css>
+            <col2_css>
+                <TCEforms>
+                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col2_css</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </col2_css>
+            <col3_css>
+                <TCEforms>
+                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col3_css</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </col3_css>
+            <col4_css>
+                <TCEforms>
+                    <label>LLL:EXT:gjo_introduction/Resources/Private/Language/ContentElements.xlf:flexforms.template.col4_css</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </col4_css>
+        </el>
+    </ROOT>
+</T3DataStructure>

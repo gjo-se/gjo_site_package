@@ -1,0 +1,36 @@
+ul {
+  &.languageMenu {
+    li{
+      display: inline-block;
+      a, span.pipe{
+        font-size: 1.5rem;
+        line-height: 2;
+      }
+      a.active{
+        color: $tiger-orange;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  ul {
+    &.languageMenu {
+      margin: 0;
+      li{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        a, span.pipe{
+          font-size: 0.75rem;
+          color:$white;
+        }
+        a:hover{
+          color: $tiger-orange;
+        }
+      }
+      li:last-child{
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}

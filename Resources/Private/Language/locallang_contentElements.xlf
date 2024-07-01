@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="gjo_introduction" date="2017-08-07T10:00:11+01:00">
+		<header/>
+		<body>
+
+            ##########################
+            ### Jumbotron-Slider   ###
+            ##########################
+
+                <trans-unit id="flux.slider">
+                    <source>Jumbotron-Slider</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.description">
+                    <source>Großer Slider (Startseite)</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.slider-text-headline">
+                    <source>Bild Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.slider-text-description">
+                    <source>Bild Beschreibungs-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.link">
+                    <source>Link</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.slider.objects.slide.isNew">
+                    <source>Neues Produkt</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Reference-Slider   ###
+            ##########################
+
+                <trans-unit id="flux.reference-slider.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider">
+                    <source>Referenz-Slider</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider.description">
+                    <source>Referenz Slider (Startseite)</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider.objects.slide.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider.objects.slide.slider-text-headline">
+                    <source>Bild Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider.objects.slide.slider-text-description">
+                    <source>Bild Beschreibungs-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.reference-slider.objects.slide.link">
+                    <source>Link</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Product-Slider     ###
+            ##########################
+
+                <trans-unit id="flux.productSlider">
+                    <source>Product-Slider</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.description">
+                    <source>Das TIGER-Produktsortiment</source>
+                </trans-unit>
+                
+                
+                
+                <trans-unit id="flux.productSlider.fields.settings.productSlider.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.slider-text-headline">
+                    <source>Teaser-Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.slider-text-headline2">
+                    <source>Teaser-Überschrift 2</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.slider-text-description">
+                    <source>Teaser Beschreibungs-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.link">
+                    <source>Link</source>
+                </trans-unit>
+                <trans-unit id="flux.productSlider.objects.slide.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Parallax           ###
+            ##########################
+
+                <trans-unit id="flux.parallax">
+                    <source>Parallax</source>
+                </trans-unit>
+                <trans-unit id="flux.parallax.description">
+                    <source>Der TIGER im Background</source>
+                </trans-unit>
+
+
+                <trans-unit id="flux.parallax.fields.settings.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.parallax.fields.settings.description">
+                    <source>Beschreibung</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Service-Teaser     ###
+            ##########################
+
+                <trans-unit id="flux.serviceTeaser.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser">
+                    <source>Serice-Teaser</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.description">
+                    <source>Serice-Teaser (Startseite)</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.objects.teaser.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.objects.teaser.overlayImage">
+                    <source>Overlay-Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.objects.teaser.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.objects.teaser.link">
+                    <source>Link</source>
+                </trans-unit>
+                <trans-unit id="flux.serviceTeaser.objects.teaser.isNew">
+                    <source>Neu</source>
+                </trans-unit>
+
+            ##########################
+            ### slidingGateHardware###
+            ##########################
+
+                <trans-unit id="flux.slidingGateHardware">
+                    <source>Torbeschläge/Downloads</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.description">
+                    <source>Torbeschläge / Downloads (Kataloge, Zertifikate)</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.fields.settings.description">
+                    <source>Beschreibung</source>
+                </trans-unit>
+
+
+                <trans-unit id="flux.slidingGateHardware.sheets.downloads" >
+                    <source>Downloads</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.downloads.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.downloads.overlayImage">
+                    <source>Overlay-Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.downloads.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.downloads.link">
+                    <source>Link</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.downloads.isNew">
+                    <source>Neu</source>
+                </trans-unit>
+
+                <trans-unit id="flux.slidingGateHardware.sheets.contacts" >
+                    <source>Kontakte</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.fields.settings.contactDescription">
+                    <source>Kontakt Beschreibung</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.contacts.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.slidingGateHardware.objects.contacts.link">
+                    <source>Link</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Conveyor Solutions ###
+            ##########################
+
+                <trans-unit id="flux.conveyorSolutions">
+                    <source>Transportanlagen</source>
+                </trans-unit>
+                <trans-unit id="flux.conveyorSolutions.description">
+                    <source>Produkte / Transportanlagen</source>
+                </trans-unit>
+
+                <trans-unit id="flux.conveyorSolutions.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.conveyorSolutions.fields.settings.description">
+                    <source>Beschreibung</source>
+                </trans-unit>
+
+                <trans-unit id="flux.conveyorSolutions.sheets.contacts" >
+                    <source>Kontakte</source>
+                </trans-unit>
+                <trans-unit id="flux.conveyorSolutions.fields.settings.contactDescription">
+                    <source>Kontakt Beschreibung</source>
+                </trans-unit>
+                <trans-unit id="flux.conveyorSolutions.objects.contacts.buttonText">
+                    <source>Button-Text</source>
+                </trans-unit>
+                <trans-unit id="flux.conveyorSolutions.objects.contacts.link">
+                    <source>Link</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Tradition          ###
+            ##########################
+
+                <trans-unit id="flux.tradition">
+                    <source>Tradition</source>
+                </trans-unit>
+                <trans-unit id="flux.tradition.description">
+                    <source>Tradition</source>
+                </trans-unit>
+
+                ----
+
+                <trans-unit id="flux.tradition.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.tradition.fields.settings.description">
+                    <source>Beschreibung</source>
+                </trans-unit>
+                <trans-unit id="flux.tradition.fields.settings.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.tradition.fields.settings.site">
+                    <source>Bild-Seite</source>
+                </trans-unit>
+
+
+            ##########################
+            ### Experts          ###
+            ##########################
+
+                <trans-unit id="flux.experts">
+                    <source>Ansprechpartner</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.description">
+                    <source>Ansprechpartner</source>
+                </trans-unit>
+
+                ----
+
+                <trans-unit id="flux.experts.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.fields.settings.name">
+                    <source>Name</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.fields.settings.image">
+                    <source>Bild</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.fields.settings.email">
+                    <source>Email</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.fields.settings.fon">
+                    <source>Telefon</source>
+                </trans-unit>
+                <trans-unit id="flux.experts.fields.settings.fax">
+                    <source>Fax</source>
+                </trans-unit>
+
+            ##########################
+            ### headlineAndText          ###
+            ##########################
+
+                <trans-unit id="flux.headlineAndText">
+                    <source>Überschrift und Text</source>
+                </trans-unit>
+                <trans-unit id="flux.headlineAndText.description">
+                    <source>Impressum / AGB</source>
+                </trans-unit>
+
+                ----
+
+                <trans-unit id="flux.headlineAndText.fields.settings.headline">
+                    <source>Überschrift</source>
+                </trans-unit>
+                <trans-unit id="flux.headlineAndText.fields.settings.description">
+                    <source>Beschreibung</source>
+                </trans-unit>
+
+		</body>
+	</file>
+</xliff>

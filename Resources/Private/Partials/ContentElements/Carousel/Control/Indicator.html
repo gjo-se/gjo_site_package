@@ -1,0 +1,72 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:if condition="{indicator} == 'thumbnails'">
+        <ol class="carousel-indicators carousel-indicators-numbers pb-32 mb-0 pt-24">
+            <f:for each="{records}" as="slide" iteration="iteration">
+                <li data-target="#{carousel_id}" data-slide-to="{iteration.index}"
+                    class="mx-4 pb-12 {f:if(condition: '{iteration.cycle} == 1', then: 'active')}">
+
+                    <span class="d-lg-none">
+                        0{iteration.cycle}
+                    </span>
+
+                    <span class="d-none d-lg-block">
+                                                        <f:if condition="{slide.images}">
+                            <f:for each="{slide.images}" as="file" iteration="iteration">
+                                <f:render partial="ContentElements/Media/Type"
+                                          arguments="{
+                                              width: 90,
+                                              breakpoints: {
+                                                0: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 90}}
+                                              },
+                                              file: file,
+                                              data: slide.data,
+                                              class: 'img-thumbnail'
+                                              }"
+                                />
+                            </f:for>
+                        </f:if>
+                        <f:if condition="{slide.image}">
+                                <f:render partial="ContentElements/Media/Type"
+                                          arguments="{
+                                              width: 90,
+                                              breakpoints: {
+                                                0: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 100}}
+                                              },
+                                              file: slide.image,
+                                              data: slide.data,
+                                              class: 'img-thumbnail'
+                                              }"
+                                />
+                        </f:if>
+                    </span>
+                </li>
+            </f:for>
+        </ol>
+    </f:if>
+
+    <f:if condition="{indicator} == 'points'">
+        <ol class="carousel-indicators">
+            <f:for each="{records}" as="slide" iteration="iteration">
+                <li data-target="#{carousel_id}" data-slide-to="{iteration.index}"
+                    class="{f:if(condition: '{iteration.cycle} == 1', then: 'active')}">
+                </li>
+            </f:for>
+        </ol>
+    </f:if>
+
+    <f:if condition="{indicator} == 'numbers'">
+        <ol class="carousel-indicators carousel-indicators-numbers pb-32 mb-0 pt-24">
+            <f:for each="{records}" as="slide" iteration="iteration">
+                <li data-target="#{carousel_id}" data-slide-to="{iteration.index}"
+                    class="mx-8 pb-12 {f:if(condition: '{iteration.cycle} == 1', then: 'active')}">0{iteration.cycle}
+                </li>
+                <!--<hr>-->
+            </f:for>
+        </ol>
+    </f:if>
+
+</div>

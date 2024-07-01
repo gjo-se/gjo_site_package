@@ -1,0 +1,53 @@
+footer .news-letter {
+  width: 1104px;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+footer .news-letter h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+
+footer .news-letter .text-field-button {
+  width: 589px;
+  margin: 40px auto 45px auto;
+  display: table;
+  display: -ms-flexbox;
+}
+
+footer .news-letter .text-field-button::after {
+  clear: both;
+}
+
+footer .news-letter .text-field-button .textbox {
+  background: transparent;
+  border: 1px solid grey;
+  outline: 0;
+  height: 35px;
+  width: 385px;
+  float: left;
+  color: white;
+  margin-right: 30px;
+}
+
+footer .news-letter .text-field-button .button-box {
+  font-size: 16px;
+  width: 170px;
+  text-align: center;
+  color: black;
+  background-color: orange;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  float: left;
+}
+
+footer .news-letter form {
+  display: inline-flex;
+}

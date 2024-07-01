@@ -1,0 +1,61 @@
+<f:section name="Assets">
+
+    <f:comment><!--CSS Vendor--></f:comment>
+    <f:asset.css identifier="font-awesome" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <f:asset.css identifier="bootstrap.min.css" href="EXT:gjo_site_package/Resources/Public/Css/Vendor/bootstrap.min.css" />
+    <f:asset.css identifier="jquery.fancybox-3.2.5.css" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <f:asset.css identifier="slick.min.css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" />
+    <f:asset.css identifier="slick-theme.min.css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" />
+    <f:asset.css identifier="nouislider.min.css" href="EXT:gjo_boilterplate/Resources/Public/Component/noUISlider/nouislider.min.css" />
+
+    <!--Allow GA opt-out Cookie-->
+    <script>
+        var gaProperty = 'UA-102026860-1';
+        var disableStr = 'ga-disable-' + gaProperty;
+        if (document.cookie.indexOf(disableStr + '=true') > -1) {
+            window[disableStr] = true;
+        }
+        function gaOptout() {
+            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102026860-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102026860-1', { 'anonymize_ip': true });
+    </script>
+
+    <f:comment><!--Css Project--></f:comment>
+    <f:asset.css identifier="gjo-se.css" href="EXT:gjo_site_package/Resources/Public/Css/gjo-se.css" />
+
+    <f:comment><!--JavaScript Vendor--></f:comment>
+    <f:asset.script identifier="modernizr" src="EXT:gjo_boilerplate/Resources/Public/Vendor/JavaScript/modernizr.js" />
+    <f:asset.script identifier="polyfill.min.js" src="//cdn.polyfill.io/v2/polyfill.min.js" />
+    <f:asset.script identifier="jquery-3.3.1.min.js" src="//code.jquery.com/jquery-3.3.1.min.js" />
+    <!-- wird von Bootstrap genutzt-->
+    <f:asset.script identifier="popper-1.12.9.min.js" src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" />
+    <f:asset.script identifier="bootstrap.min.js" src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" />
+    <f:asset.script identifier="mdb.js" src="EXT:gjo_site_package/Resources/Public/JavaScript/Vendor/MDB/js-4.8.11/mdb.js" />
+    <f:asset.script identifier="jquery.fancybox-3.2.5.pack.min.js" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" />
+    <f:asset.script identifier="slick.min.js" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" />
+    <f:asset.script identifier="js.cookie.min.js" src="//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" />
+
+    <f:comment><!--JavaScript Project--></f:comment>
+    <f:asset.script identifier="app.js" src="EXT:gjo_site_package/Resources/Public/JavaScript/app.js" />
+    <f:asset.script identifier="autocomplete_simple.js" src="EXT:gjo_boilerplate//Resources/Public/Component/Autocomplete/autocomplete_simple.js" />
+    <f:asset.script identifier="cookiesdirective.js" src="EXT:gjo_site_package/Resources/Public/JavaScript/cookiesdirective.js" />
+    <f:asset.script identifier="gjo-se.js" src="EXT:gjo_site_package/Resources/Public/JavaScript/gjo-se.js" />
+    <f:asset.script identifier="countCartProductsAjax.js" src="EXT:gjo_boilerplate/Resources/Public/Component/Shop/countCartProductsAjax.js" />
+    <f:asset.script identifier="modifyContentElements.js" src="EXT:gjo_boilerplate/Resources/Public/Component/ContentElements/modifyContentElements.js" />
+    <f:asset.script identifier="validation.js" src="EXT:gjo_boilerplate/Resources/Public/Component/Validation/validation.js" />
+    <f:asset.script identifier="" src="" />
+    <f:asset.script identifier="" src="" />
+    <f:asset.script identifier="" src="" />
+
+</f:section>

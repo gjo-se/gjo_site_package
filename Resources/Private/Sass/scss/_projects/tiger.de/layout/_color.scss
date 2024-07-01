@@ -1,0 +1,77 @@
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+body {
+  color: $black;
+}
+
+a {
+  color: $black;
+}
+
+a:hover {
+  color: $gray-500;
+}
+
+.skin-black {
+  color: $white;
+  background-color: $black;
+  h1, h2, h3, h4, h5, h6, a, table, .card, .card-body, &.container, &.container-fluid, .ajax-lists-products, .fe-user-menu-header {
+    color: $white;
+    background-color: $black;
+  }
+  &.product-set-variants {
+    .card-body, h3, h4 {
+      color: $black;
+      background-color: $white;
+    }
+  }
+  a:hover {
+    color: $tiger-orange;
+  }
+}
+
+.skin-gray {
+  color: $black;
+  background-color: $tiger-gray-200;
+  h1, h2, h3, h4, h5, h6, ul, a, .carousel, .filter-material, .filter-measure, .filter-design, .filter-configuration, .accordion-technicalnots, .accessoryKitNavTabs {
+    background-color: $tiger-gray-200;
+  }
+  .card-header, .card-body, .filter-material-body, .filter-measure-body, .filter-design-body, .filter-configuration-body, .fe-user-menu-form {
+    background-color: $white;
+    h1, h2, h3, h4, h5, h6, ul, a {
+      background-color: $white;
+    }
+  }
+  .fe-user-menu-form {
+    a {
+      color: $black;
+    }
+  }
+  &.ce-tradition{
+    p {
+      background-color: $white;
+    }
+  }
+  a:hover {
+    color: $tiger-orange;
+  }
+}
+
+.skin-white {
+  color: $black;
+  background-color: $white;
+  h2, h4, a, .card-header, .card-body {
+    color: $black;
+    background-color: $white;
+  }
+  a:hover {
+    color: $tiger-orange;
+  }
+}

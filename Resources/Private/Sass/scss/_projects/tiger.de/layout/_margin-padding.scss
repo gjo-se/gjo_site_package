@@ -1,0 +1,184 @@
+// Margin and Padding
+
+body, .container, .container-fluid, h1, h2, h3, h4, h5, h6, p, .row {
+  margin: 0;
+  padding: 0;
+}
+
+h1, .h1 {
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+h2, .h2 {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+@include media-breakpoint-up(lg) {
+  h2, .h2 {
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+.min-height-131{
+  min-height: 131px;
+}
+
+@include media-breakpoint-up(lg) {
+  .min-height-lg-146{
+    min-height: 146px;
+  }
+}
+
+.double-height-h3{
+  height: $font-size-base * 2 * 1.2 * 2;
+}
+
+@include media-breakpoint-up(lg) {
+  .triple-height-h4{
+    height: $font-size-base * 1.5 * 1.2 * 3;
+  }
+
+  .four-times-height-p{
+    height: $font-size-base * 1.2 * 1.75 * 4;
+  }
+}
+
+
+
+
+.skin-black {
+  .card-body {
+    padding: 1.5rem 0.5rem 2rem 0.5rem;
+    h3, .h3 {
+      padding: 0rem 0rem 1rem 0rem;
+    }
+    h4, .h4 {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+    p {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+  }
+  &.product-set-variants {
+    .card-body{
+      padding: 1rem 1rem 2rem 1rem;
+    }
+  }
+  &.ce-service {
+    h4{
+      padding: 0 1.5rem 0rem 1.5rem;
+      //font-weight: bold;
+    }
+    p{
+      padding: 0 1.5rem 2rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+.skin-gray {
+  .filter-material, .filter-measure, .filter-design, .filter-configuration {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .card-body {
+    padding: 1.5rem 1rem 1rem 1rem;
+    h3, .h3 {
+      padding: 0rem 0rem 1rem 0rem;
+    }
+    h4, .h4 {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+    p {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+    ul {
+      padding: 0rem 0rem 1.5rem 0rem;
+      &.error-message {
+        padding: 0rem 1rem 0rem 1rem;
+      }
+    }
+  }
+  ul {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+  }
+  &.ce-tradition{
+    padding: 0rem 1rem 0rem 1rem;
+    p {
+      padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+  }
+
+}
+
+.skin-white {
+  .card-body {
+    padding: 1.5rem .5rem 0rem .5rem;
+    h3, .h3 {
+      padding: 0rem 0rem 1rem 0rem;
+    }
+    h4, .h4 {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+    p {
+      padding: 0rem 0rem 1.5rem 0rem;
+    }
+  }
+  .product-set-group-teaser {
+    .card-body {
+      padding: 1.5rem 0.5rem 2rem 0.5rem;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto {
+      margin: auto !important;
+    }
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
+}

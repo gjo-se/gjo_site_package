@@ -1,0 +1,92 @@
+.btn {
+  border: solid 2px;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.17rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: unset;
+  &.btn-flat{
+    border: none;
+  }
+}
+.btn:not([disabled]):not(.disabled).active,
+.btn:hover{
+  box-shadow: unset;
+}
+
+
+.skin-black {
+  .btn-tiger-default{
+    color: $white;
+    background-color: $black;
+    border-color: $white;
+  }
+  .btn-tiger-default:hover{
+    color: $black;
+    background-color: $tiger-orange;
+    border-color: $black;
+  }
+  .btn-tiger-primary{
+    color: $black;
+    background-color: $tiger-orange;
+    border-color: $black;
+  }
+  .btn-tiger-primary:hover {
+    background-color: $white;
+  }
+}
+
+.skin-white {
+  .btn-tiger-default{
+    color: $black;
+    background-color: $white;
+    border-color: $black;
+  }
+  .btn-tiger-default:hover{
+    color: $black;
+    background-color: $tiger-orange;
+  }
+  .btn-tiger-primary{
+    color: $black;
+    background-color: $tiger-orange;
+    border-color: $black;
+  }
+  .btn-tiger-primary:hover {
+    background-color: $white;
+  }
+  .btn-flat-tiger-default{
+    color: $black;
+    background-color: $white;
+    border-color: $black;
+  }
+  .btn-flat-tiger-default:hover{
+    background-color: $tiger-orange;
+  }
+  .btn-tiger-light-orange{
+    background-color: $tiger-light-orange;
+  }
+  .btn-tiger-light-orange.active{
+    background-color: $tiger-orange;
+  }
+}
+
+.skin-gray {
+  .btn-tiger-default{
+    color: $black;
+    background-color: $white;
+    border-color: $black;
+  }
+  .btn-tiger-default:hover{
+    color: $black;
+    background-color: $tiger-orange;
+    border-color: $black;
+  }
+  .btn-tiger-primary{
+    color: $black;
+    background-color: $tiger-orange;
+    border-color: $black;
+  }
+  .btn-tiger-primary:hover {
+    background-color: $white;
+  }
+}

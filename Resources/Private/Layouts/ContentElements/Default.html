@@ -1,0 +1,21 @@
+<f:switch expression="{data.layout}">
+    <f:case value="0">
+        <div class="{data.tx_gjointroduction_additional_css}">
+            <f:render section="Main"/>
+        </div>
+    </f:case>
+    <f:case value="1">
+        <div class="container {data.tx_gjointroduction_additional_css}">
+            <f:render section="Main"/>
+        </div>
+    </f:case>
+    <f:case value="2">
+        <div class="container-fluid {data.tx_gjointroduction_additional_css} {data.flexform_row_css}">
+            <div class="row justify-content-center">
+                <div class="container px-xl-20">
+                    <f:render section="Main"/>
+                </div>
+            </div>
+        </div>
+    </f:case>
+</f:switch>

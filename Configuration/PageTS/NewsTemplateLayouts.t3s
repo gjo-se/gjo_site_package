@@ -1,0 +1,4 @@
+tx_news.templateLayouts {
+    1 = Default ListView
+    2 = Homepage ListView
+}

@@ -1,0 +1,96 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:section name="Footer">
+
+        <footer>
+
+            <div class="container-fluid skin-black">
+
+                <div class="row justify-content-center pt-12">
+                    <div class="container px-xl-20">
+                        <div class="bg-tiger-orange mx-16 pb-1"></div>
+
+                        <div class="pt-12 pb-48 px-24">
+                            <f:render section="footerContact"/>
+                            <f:render section="subFooter"/>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+    </f:section>
+
+    <f:section name="footerContact">
+
+        <h2 class="p-0 pb-16">
+            <f:translate
+                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:tiger.page.name.kontakt"/>
+        </h2>
+
+        <div class="row">
+            <div class="col-12 col-lg-6 p-0 font-size-16">
+                <p class="p-0 pb-24">Hermann Francksen Nachf. GmbH &amp; Co.KG <br/>
+                    Baubeschlagfabrik</p>
+                <p class="p-0 pb-24">TEL: +49 (0) 421 / 69 44 6 - 0<br>
+                    FAX: +49 (0) 421 / 69 44 6 - 11<br>
+                    E-MAIL: <a href="mailto:info@tiger.de" class="navbar-text py-0">info@tiger.de</a></p>
+                <p class="p-0 pb-48">Lesumbroker Landstr. 22<br>
+                    DE-28719 Bremen<br>
+                    Deutschland</p>
+            </div>
+            <div class="col-12 col-lg-6 p-0">
+                <p class="slogan p-0 pb-48">
+                    <f:format.raw>
+                        <f:translate
+                                key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:tiger.page.slogan"/>
+                    </f:format.raw>
+                </p>
+            </div>
+        </div>
+
+
+    </f:section>
+
+    <f:section name="subFooter">
+
+        <p class="p-0">&copy; Hermann Francksen Nachf. GmbH &amp; Co. KG</p>
+
+        <f:link.page pageUid="12"
+                     class="navbar-text py-0"
+                     title="{v:page.info(pageUid: 12, field: 'title')}">
+            {v:page.info(pageUid: 12, field: 'title')}
+        </f:link.page>
+        |
+        <f:link.page pageUid="13"
+                     class="navbar-text py-0"
+                     title="{v:page.info(pageUid: 13, field: 'title')}">
+            {v:page.info(pageUid: 13, field: 'title')}
+        </f:link.page>
+        |
+        <f:link.page pageUid="93"
+                     class="navbar-text py-0"
+                     title="{v:page.info(pageUid: 93, field: 'title')}">
+            {v:page.info(pageUid: 93, field: 'title')}
+        </f:link.page>
+        |
+        <f:link.page pageUid="126"
+                     class="navbar-text py-0"
+                     title="{v:page.info(pageUid: 126, field: 'title')}">
+            {v:page.info(pageUid: 126, field: 'title')}
+        </f:link.page>
+        |
+        <f:link.page pageUid="127"
+                     class="navbar-text py-0"
+                     title="{v:page.info(pageUid: 127, field: 'title')}">
+            {v:page.info(pageUid: 127, field: 'title')}
+        </f:link.page>
+
+    </f:section>
+
+</div>

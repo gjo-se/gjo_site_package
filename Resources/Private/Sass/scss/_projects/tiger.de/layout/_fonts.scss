@@ -1,0 +1,110 @@
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base * 0.75;
+  font-weight: $font-weight-normal;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  text-transform: uppercase;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+}
+
+p {
+  line-height: $p-line-height;
+}
+
+.slogan {
+  font-size: 2rem;
+  line-height: 2.67rem;
+}
+
+.product-set-price {
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: $font-size-base;
+  }
+
+  h1, .h1 {
+    font-size: $font-size-base * 3;
+    line-height: 1.2;
+  }
+
+  h2, .h2 {
+    font-size: $font-size-base * 3;
+    line-height: 1.2;
+  }
+
+  h3, .h3 {
+    font-size: $font-size-base * 2;
+    line-height: 1.2;
+  }
+
+  h4, .h4 {
+    font-size: $font-size-base * 1.5;
+    line-height: 1.2;
+  }
+
+  h5, .h5 {
+    font-size: $font-size-base;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  //.slogan {
+  //  font-size: 2rem;
+  //  line-height: 2.67rem;
+  //}
+  //
+  //.product-set-price {
+  //  font-size: 1.5rem;
+  //  line-height: 1rem;
+  //}
+}
+
+
+// font-sizes * breakpionts * spacer
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (font-size: font-size) {
+      @each $size, $length in $spacers {
+
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+      }
+    }
+  }
+}
+

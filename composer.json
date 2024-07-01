@@ -1,7 +1,7 @@
 {
     "name": "gjo-se/gjo-site-package",
     "type": "typo3-cms-extension",
-    "description": "Gjo-Site-Package",
+    "description": "Gjo Site Package",
     "authors": [
         {
             "name": "Gregory Jo Erdmann",

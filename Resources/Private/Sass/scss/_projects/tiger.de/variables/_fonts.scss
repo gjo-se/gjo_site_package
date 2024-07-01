@@ -1,0 +1,104 @@
+// TODO: zu klären:
+
+// - color ?! typo3conf/ext/gjo_introduction/Resources/Private/Sass/scss/vendor/bootstrap/_variables.scss:150 (linkColor)
+//    - typo3conf/ext/gjo_introduction/Resources/Private/Sass/scss/_projects/tiger.de/layout/_color.scss
+//    - https://getbootstrap.com/docs/4.0/utilities/colors/ (und meine Erweiterungen dazu)
+// - Bundled Helpers
+
+
+// ########### FONT-FAMILY #############
+
+$font-family-sans-serif:      "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif;
+
+
+// ########### FONT-STYLE  #############
+// - siehe Sass/scss/vendor/bootstrap/utilities/_text.scss
+
+
+// ########### FONT-SIZE  #############
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+// GJO
+
+// DefaultBoootstrap
+
+$h1-font-size:                $font-size-base * 1.5;
+$h1-line-height:              28px;
+
+$h2-font-size:                $font-size-base * 1.5;
+$h2-line-height:              28px;
+
+$h3-font-size:                $font-size-base * 1.5;
+$h3-line-height:              28px;
+
+$h4-font-size:                $font-size-base * 1;
+$h4-line-height:              23px;
+
+$h5-font-size:                $font-size-base * 0.85;
+$h5-line-height:              16px;
+
+$p-line-height:               21px;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+// ########### FONT-WEIGHT  #############
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+// ########### LINKS  #############
+
+$link-color:                $white-base;
+$link-decoration:           underline;
+$link-hover-color:          $mdb-color-lighten-4;
+$link-hover-decoration:     underline;
+
+// ########### FONT-MISC  #############
+
+$line-height-base:            1.5 !default;
+
+$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        300 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;
+
+$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-weight:            300 !default;
+
+$text-muted:                  $gray-600 !default;
+
+$blockquote-small-color:      $gray-600 !default;
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+
+$hr-border-color:             rgba($black, .1) !default;
+$hr-border-width:             $border-width !default;
+$hr-margin-y:                 $spacer !default;
+
+$mark-padding:                .2em !default;
+$mark-bg:                     #fcf8e3 !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+

@@ -1,11 +1,264 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0"?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2024-06-27UTC04:23:030">
-        <header>
-            <authorName>Gregory Jo</authorName>
-            <authorEmail>gregory.jo@gjo-se.com</authorEmail>
-        </header>
-        <body>
-        </body>
-    </file>
+	<file source-language="en" datatype="plaintext" original="messages" product-name="gjo_introduction" date="2017-08-07T10:00:11+01:00">
+		<header/>
+		<body>
+
+            ##########################
+            ### OneColumn          ###
+            ##########################
+
+            <trans-unit id="flux.oneColumn" xml:space="preserve">
+                <source>Page - oneColumn</source>
+            </trans-unit>
+
+            <trans-unit id="tiger.page.name.kontaktformular">
+                <source>Contactform</source>
+            </trans-unit>
+            <trans-unit id="tiger.page.name.kontakt">
+                <source>Contact</source>
+            </trans-unit>
+             <trans-unit id="tiger.page.slogan" >
+                 <source>
+                 Powerful. Quiet. Convincing. <![CDATA[<br>]]>
+                 Proven TIGER  Quality for more than 100 years.
+                 </source>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective" >
+                 <source>
+                 In order to give you a better service, we uses cookies. By continuing to browse the site you are agreeing to our use of cookies.
+                 </source>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective.linktext" >
+                 <source>
+                 cookies.
+                 </source>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective.buttontext" >
+                 <source>
+                 I agree.
+                 </source>
+             </trans-unit>
+
+
+            ##########################
+            ### Content-Elements   ###
+            ##########################
+
+            <!-- Carousel.html -->
+            <trans-unit id="flux.carousel" xml:space="preserve">
+                <source>Element Carousel</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.description" xml:space="preserve">
+                <source>Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change.</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.quickselect" xml:space="preserve">
+                <source>Display circle icons for direct selection of slides, default top right corner</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.quickselectType" xml:space="preserve">
+                <source>Choose navigation display type</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.interval" xml:space="preserve">
+                <source>Interval between image changes, in milliseconds (default: 5000)</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.id" xml:space="preserve">
+                <source>DOM element ID (override not necessary but possible)</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.labelNext" xml:space="preserve">
+                <source>Label: next (empty will display default arrow)</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.labelPrev" xml:space="preserve">
+                <source>Label: previous (empty will display default arrow)</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.width" xml:space="preserve">
+                <source>Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.sheets.elements" xml:space="preserve">
+                <source>Content Elements</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.sections.elements" xml:space="preserve">
+                <source>Content Elements</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.title" xml:space="preserve">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.size" xml:space="preserve">
+                <source>Text Size</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.text" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.header" xml:space="preserve">
+                <source>Optional Header for Caption</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.caption" xml:space="preserve">
+                <source>Optional Caption Body Text</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.text.iconImage" xml:space="preserve">
+                <source>Optional Image for Navigation Dots</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.content" xml:space="preserve">
+                <source>Content Elements</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.content.id" xml:space="preserve">
+                <source>Content Area ID</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.content.header" xml:space="preserve">
+                <source>Optional Header for Caption</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.content.caption" xml:space="preserve">
+                <source>Optional Caption Body Text</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.content.iconImage" xml:space="preserve">
+                <source>Optional Image for Navigation Dots</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.image" xml:space="preserve">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.image.file" xml:space="preserve">
+                <source>Image File</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.image.header" xml:space="preserve">
+                <source>Optional Header for Caption</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.image.caption" xml:space="preserve">
+                <source>Optional Caption Body Text</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.objects.image.iconImage" xml:space="preserve">
+                <source>Optional Image for Navigation Dots</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.sheets.styles" xml:space="preserve">
+                <source>Styles</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.void" xml:space="preserve">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.autostart" xml:space="preserve">
+                <source>Should the carousel start sliding on page-load?</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.quickselectStyles" xml:space="preserve">
+                <source>Optional CSS rule for the quick slide selector dots container</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.quickselectDotStyles" xml:space="preserve">
+                <source>Optional CSS rule for the quick slide selector dots</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.navigationStyles" xml:space="preserve">
+                <source>Optional CSS rule for the navigation dots</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.fields.settings.carousel.innerStyles" xml:space="preserve">
+                <source>CSS rule for inside of carousel</source>
+            </trans-unit>
+            <trans-unit id="flux.carousel.label.grid.column.prefix" xml:space="preserve">
+                <source>CSS rule for inside of carousel</source>
+            </trans-unit>
+            <!-- /Carousel.html -->
+
+            ##########################
+            ### Form               ###
+            ##########################
+
+            <trans-unit id="form.page.findUs" >
+                <source>How to find us:</source>
+            </trans-unit>
+            <trans-unit id="form.page.map" >
+                <source>Map</source>
+            </trans-unit>
+
+            ##########################
+            ### MyTiger            ###
+            ##########################
+
+            <trans-unit id="myTiger.login.text" >
+                <source>Enter your username and password to log in to the website:</source>
+            </trans-unit>
+            <trans-unit id="myTiger.login.keep" >
+                <source>Stay logged in</source>
+            </trans-unit>
+            <trans-unit id="myTiger.forgotPassword" >
+                <source>Forgot your password?</source>
+            </trans-unit>
+            <trans-unit id="myTiger.signIn" >
+                <source>Login</source>
+            </trans-unit>
+            <trans-unit id="myTiger.register" >
+                <source>Register</source>
+            </trans-unit>
+            <trans-unit id="myTiger.logout.text.salutation" >
+                <source>Hello %s,</source>
+            </trans-unit>
+            <trans-unit id="myTiger.logout.text" >
+                <source>Here you can logout from the website or change your profile.</source>
+            </trans-unit>
+            <trans-unit id="myTiger.signOut" >
+                <source>Logout</source>
+            </trans-unit>
+            <trans-unit id="myTiger.yourProfile" >
+                <source>myTiger - your profile</source>
+            </trans-unit>
+            <trans-unit id="myTiger.register.text" >
+                <source>Enter your username, password and email to signIn in to the website:</source>
+            </trans-unit>
+            <trans-unit id="myTiger.profile.text" >
+                <source>Here you can change your profile:</source>
+            </trans-unit>
+            <trans-unit id="myTiger.profile.change" >
+                <source>Change profile</source>
+            </trans-unit>
+
+            ##########################
+            ### News               ###
+            ##########################
+
+            <trans-unit id="slide.data.button_text" >
+                <source>See Article</source>
+            </trans-unit>
+
+
+            ##########################
+            ### Contact            ###
+            ##########################
+
+            <trans-unit id="contact.confirmation.header" >
+                <source>Contact Confirmation</source>
+            </trans-unit>
+            <trans-unit id="contact.confirmation.text1" >
+                <source>Thank you, your request is being processed.</source>
+            </trans-unit>
+            <trans-unit id="contact.confirmation.text2" >
+                <source>We have sent you a confirmation by email.</source>
+            </trans-unit>
+
+            ##########################
+            ### Task               ###
+            ##########################
+
+            <trans-unit id="backupDatabaseTask.name" >
+                <source>Backup Database</source>
+            </trans-unit>
+            <trans-unit id="backupDatabaseTask.description" >
+                <source>backupDatabaseTask Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="restoreDatabaseTask.name" >
+                <source>Restore Database</source>
+            </trans-unit>
+            <trans-unit id="restoreDatabaseTask.description" >
+                <source>restoreDatabaseTask Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="deploymentDatabaseTask.name" >
+                <source>Deployment Database</source>
+            </trans-unit>
+            <trans-unit id="deploymentDatabaseTask.description" >
+                <source>DeploymentDatabaseTask Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="cleanupDumpsTask.name" >
+                <source>Cleanup Dumps</source>
+            </trans-unit>
+            <trans-unit id="cleanupDumpsTask.description" >
+                <source>CleanupDumpsTask Beschreibung</source>
+            </trans-unit>
+		</body>
+	</file>
 </xliff>

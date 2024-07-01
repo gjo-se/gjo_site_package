@@ -1,0 +1,16 @@
+.service {
+  .caption {
+    a {
+      background-color: $white;
+    }
+    background-color: $white;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 1.5rem 1rem 2rem 1rem;
+  }
+}
+
+ul.ce-uploads a:after,
+div.smooth-scroll a:after {
+  content: "\2197";
+}

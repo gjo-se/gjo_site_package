@@ -1,0 +1,27 @@
+.experts {
+  background-color: $tiger-gray-200;
+  padding: 0 1rem 0 1rem;
+  .container {
+    background-color: $white;
+  }
+  h3 {
+    padding: 0rem 1rem 1.5rem 1rem;
+  }
+  ul {
+    padding: 0 1rem 0 1rem;
+    margin: 0;
+    li{
+      list-style: none;
+      line-height: 1.75;
+      a:hover {
+        color: $tiger-orange;
+      }
+      .icon-mail, .icon-phone, .icon-fax {
+        color: $black;
+        font-size: 0.75rem;
+        line-height: 1.75;
+        padding-right: 1rem;
+      }
+    }
+  }
+}

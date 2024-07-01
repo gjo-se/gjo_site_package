@@ -1,0 +1,57 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+
+    <f:section name="controlPrevNext">
+        <f:switch expression="{control_type}">
+            <f:case value="inner"><f:render section="controlPrevNextInner" arguments="{_all}" /> </f:case>
+            <f:case value="top"><f:render section="controlPrevNextTop" arguments="{_all}" /></f:case>
+            <f:case value="bottom"><f:render section="controlPrevNextBottom" arguments="{_all}" /></f:case>
+            <f:case default="TRUE"></f:case>
+        </f:switch>
+    </f:section>
+
+
+    <f:section name="controlPrevNextInner">
+
+        <a class="carousel-control-prev" href="#{carousel_id}" role="button" data-slide="prev">
+            <i class="icon-arrow icon-rotate-180 font-size-48 pr-24" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#{carousel_id}" role="button" data-slide="next">
+            <i class="icon-arrow font-size-48 pr-24" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </f:section>
+
+    <f:section name="controlPrevNextTop">
+
+        <div class="controls-top">
+            <a class="btn-floating" href="#{carousel_id}" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn-floating" href="#{carousel_id}" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </f:section>
+
+    <f:section name="controlPrevNextBottom">
+
+        <div class="controls-bottom pt-24">
+            <a class="pr-12 prev" href="#{carousel_id}" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="pl-12 next" href="#{carousel_id}" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </f:section>
+
+</div>

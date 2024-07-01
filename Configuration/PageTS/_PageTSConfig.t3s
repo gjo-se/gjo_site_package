@@ -1,0 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/Mod/Wizards/newContentElement.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/TCEFORM.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/Rte/RTE.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/Extensions/GridElements/Gridelements.t3s">
+
+#TODO: das geht auch anders
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/DefaultLanguage.t3s">
+
+#?!?!?
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_introduction/Configuration/PageTS/NewsTemplateLayouts.t3s">

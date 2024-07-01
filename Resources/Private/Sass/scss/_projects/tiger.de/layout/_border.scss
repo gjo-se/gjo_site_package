@@ -1,0 +1,49 @@
+@each $color, $value in $colors {
+  .border-#{$color} {
+    border-color: $value !important;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@each $color, $value in $colors {
+  .border-top-#{$color} {
+    border-top-color: $value;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+}
+
+@each $color, $value in $colors {
+  .border-right-#{$color} {
+    border-right-color: $value;
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+}
+
+@each $color, $value in $colors {
+  .border-left-#{$color} {
+    border-left-color: $value;
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+}
+
+@each $color, $value in $colors {
+  .border-bottom-#{$color} {
+    border-bottom-color: $value;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+
+// border-width * spacer
+// TODO: wenn gefordert * breakpoints erweitern
+
+@each $spacer, $value in $spacers {
+  .border-width-#{$spacer} {
+    border-width: $value !important;
+  }
+}
+

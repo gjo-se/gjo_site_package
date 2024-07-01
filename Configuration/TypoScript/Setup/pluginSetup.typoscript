@@ -1,0 +1,59 @@
+plugin.tx_gjointroduction {
+    view {
+        templateRootPaths {
+            0 = EXT:gjo_boilerplate/Resources/Private/Templates/
+            10 = {$plugin.tx_gjointroduction.view.templateRootPath}
+
+        }
+
+        partialRootPaths {
+            0 = EXT:gjo_boilerplate/Resources/Private/Partials/
+            10 = {$plugin.tx_gjointroduction.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:gjo_boilerplate/Resources/Private/Layouts/
+            10 = {$plugin.tx_gjointroduction.view.layoutRootPath}
+        }
+    }
+
+    settings {
+        gridSystem = 12
+        cropVariants {
+            wideScreen {
+                container = 1140
+                media = (min-width: 1200px)
+            }
+
+            desktop {
+                container = 960
+                media = (min-width: 992px)
+            }
+
+            laptop {
+                container = 720
+                media = (min-width: 768px)
+            }
+
+            tablet {
+                container = 540
+                media = (min-width: 576px)
+            }
+
+            mobile {
+                container = 300
+                media = (min-width: 300px)
+            }
+        }
+
+        site {
+            pid {
+                userLogin = {$plugin.tx_gjointroduction.settings.site.pid.userLogin}
+                userLogout = {$plugin.tx_gjointroduction.settings.site.pid.userLogout}
+                userRegister = {$plugin.tx_gjointroduction.settings.site.pid.userRegister}
+                userData = {$plugin.tx_gjointroduction.settings.site.pid.userData}
+                myTiger = {$plugin.tx_gjointroduction.settings.site.pid.myTiger}
+            }
+        }
+    }
+}

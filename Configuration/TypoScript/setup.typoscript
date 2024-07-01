@@ -1,0 +1,23 @@
+
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
+@import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/pageSetup.typoscript'
+@import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/configSetup.typoscript'
+@import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/dynamicContentSetup.typoscript'
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/_ContentElement.t3s">
+#
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_form.t3s">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_news.t3s">
+
+#[applicationContext = Development]
+#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Development/development.t3s">
+#[end]
+#
+#[applicationContext = Testing]
+#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Testing/testing.t3s">
+#[end]
+#
+#[applicationContext = Production]
+#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Production/production.t3s">
+#[end]

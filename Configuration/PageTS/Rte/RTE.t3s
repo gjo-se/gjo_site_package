@@ -1,0 +1,4 @@
+RTE.default.preset = gjo_custom
+#RTE.default.preset = default
+#RTE.config.tt_content.bodytext.preset = full
+#RTE.config.tx_news_domain_model_news.bodytext.preset = default

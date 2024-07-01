@@ -1,0 +1,144 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+
+    <f:for each="{carouselCountItems}" as="carouselCountItem">
+        <f:if condition="{carouselCountItem} == 'xs-3' ">
+            <v:variable.set name="xs-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'sm-3' ">
+            <v:variable.set name="sm-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'md-3' ">
+            <v:variable.set name="md-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'lg-3' ">
+            <v:variable.set name="lg-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'xl-3' ">
+            <v:variable.set name="xl-display" value="block"/>
+        </f:if>
+
+    </f:for>
+
+    <div class="d-none d-sm-none d-md-{md-display} d-lg-{lg-display} d-xl-{xl-display}">
+
+        <div id="carousel_3_{data.uid}"
+             class="carousel ui-test-carousel-col4 carousel-multi-item {f:if(condition: '{fade}', then:'slide carousel-fade ')} {f:if(condition: '{show_thumbnails}', then:'carousel-thumbnails ')} mb-80"
+             data-ride="{f:if(condition: '{ride}', then:'carousel')}"
+             data-interval="{f:if(condition: '{intervall} == 0 || {intervall}', then:'{intervall}', else:'5000')}"
+             data-pause="{f:if(condition: '{pause}', then:'hover', else: 'false')}"
+             data-wrap="{f:if(condition: '{loop}', then:'true', else: 'false')}"
+        >
+
+            <div class="carousel-inner" role="listbox">
+
+                <f:if condition="{records -> f:count()} >= 3">
+                    <div class="carousel-item items_container_1 active">
+                        <v:iterator.for from="0" to="2" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 4">
+                    <div class="carousel-item items_container_2">
+                        <v:iterator.for from="1" to="3" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 5">
+                    <div class="carousel-item items_container_3">
+                        <v:iterator.for from="2" to="4" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 6">
+                    <div class="carousel-item items_container_4">
+                        <v:iterator.for from="3" to="5" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 7">
+                    <div class="carousel-item items_container_5">
+                        <v:iterator.for from="4" to="6" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 8">
+                    <div class="carousel-item items_container_6">
+                        <v:iterator.for from="5" to="7" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+                <f:if condition="{records -> f:count()} >= 9">
+                    <div class="carousel-item items_container_7">
+                        <v:iterator.for from="6" to="8" iteration="i">
+                            <f:render partial="Carousel/Item/Item" section="col-4-Item"
+                                      arguments="{
+                                            records: records,
+                                            carousel: carousel,
+                                            i:i
+                                          }"/>
+                        </v:iterator.for>
+                    </div>
+                </f:if>
+
+            </div>
+
+            <f:render partial="Carousel/Control/ControlPrevNext" section="controlPrevNext"
+                      arguments="{
+                            control_type: 'bottom',
+                            carousel_id: 'carousel_3_{data.uid}'
+                          }"/>
+
+
+
+        </div>
+
+    </div>
+
+</div>

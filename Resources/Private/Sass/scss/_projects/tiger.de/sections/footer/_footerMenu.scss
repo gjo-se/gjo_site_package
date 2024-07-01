@@ -1,0 +1,70 @@
+footer .footer-menu {
+  //border-top: 1px solid grey;
+  //border-bottom: 1px solid grey;
+  //display: flex;
+  //display: -webkit-flex;
+  //height: 169px;
+}
+
+footer .footer-menu .footer-width {
+  //width: 1064px;
+  //margin: 25px auto;
+}
+
+footer .footer-menu .footer-width::after {
+  //clear: both;
+}
+
+footer .footer-menu .footer-width .footer-logo {
+  //float: left;
+}
+
+footer .footer-menu .footer-width .menu {
+  //float: left;
+}
+
+footer .footer-menu .footer-width .menu .top-menu {
+  //font-size: 14px;
+  //font-weight: bold;
+  //display: inline-block;
+  //margin-left: 40px;
+  //vertical-align: top;
+}
+
+footer .footer-menu .footer-width .menu .top-menu:first-child {
+  //margin-left: 115px;
+}
+
+footer .footer-menu .footer-width .menu .top-menu a {
+  //text-transform: uppercase;
+  //text-decoration: none;
+  //list-style: none;
+  //color: white;
+}
+
+footer .footer-menu .footer-width .menu .top-menu .child-menu {
+  //margin-top: 20px;
+}
+
+footer .footer-menu .footer-width .menu .top-menu .child-menu .child-menu-list {
+  //list-style: none;
+}
+
+footer .footer-menu .footer-width .menu .top-menu .child-menu .child-menu-list li a {
+  //text-transform: capitalize;
+}
+
+footer .footer-menu .footer-width .menu .top-menu:last-child a {
+  /* uncomment later
+          &:after {
+               background-color: red;
+               content: "neu";
+               color: white;
+               text-transform: uppercase;
+               font-size: 8px;
+               padding: 0 3px;
+               border-radius: 35% 35%;
+               vertical-align: top;
+               margin-left: 2px;
+           }*/
+}

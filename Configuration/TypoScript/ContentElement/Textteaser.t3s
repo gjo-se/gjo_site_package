@@ -1,0 +1,14 @@
+###########################
+#### CTYPE: TEXTTEASER ####
+###########################
+
+tt_content.gjointroduction_textteaser >
+tt_content.gjointroduction_textteaser =< lib.contentElement
+tt_content.gjointroduction_textteaser {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Textteaser
+
+}

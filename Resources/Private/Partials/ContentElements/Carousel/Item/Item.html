@@ -1,0 +1,202 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+
+    <f:section name="col-12-Item">
+        <div class="carousel-inner" role="listbox">
+
+            <f:for each="{records}" as="slide" iteration="iteration">
+
+                <v:variable.set name="currentSlide" value="{iteration.cycle}"/>
+
+
+                <div class="carousel-item {f:if(condition: '{iteration.cycle} == 1', then: 'active')}">
+                    <div class="{f:if(condition: '{carousel.caption_position} == \'inside\'', then: 'view ')}
+                                {f:if(condition: '{carousel.caption_position} == \'below\'', then: 'card ')}">
+                        <div class="d-block min-height-xl-500">
+
+                            <div class="row justify-content-center">
+
+                                <f:if condition="{slide.images}">
+                                    <f:for each="{slide.images}" as="file" iteration="iteration">
+                                        <f:render partial="ContentElements/Media/Type"
+                                                  arguments="{
+                                                      file: file,
+                                                      width: 1100,
+                                                      breakpoints: {
+                                                        0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 1100}},
+                                                        1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 950}},
+                                                        2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 720}},
+                                                        3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 540}},
+                                                        4: {cropVariant: 'mobile', media: '(min-width: 300px)', srcset: {0: 350}}
+                                                      },
+                                                      data: slide.data
+                                                  }"
+                                        />
+                                    </f:for>
+                                </f:if>
+
+                                <f:if condition="{slide.image}">
+                                    <f:render partial="ContentElements/Media/Type"
+                                              arguments="{
+                                                      file: slide.image,
+                                                      width: 1100,
+                                                      breakpoints: {
+                                                        0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 1100}},
+                                                        1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 950}},
+                                                        2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 720}},
+                                                        3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 540}},
+                                                        4: {cropVariant: 'mobile', media: '(min-width: 300px)', srcset: {0: 350}}
+                                                      },
+                                                      data: slide.data
+                                                  }"
+                                    />
+                                </f:if>
+
+                                <f:if condition="{carousel.control_type} != 'none' ">
+                                    <f:render partial="Carousel/Control/ControlPrevNext" section="controlPrevNext"
+                                              arguments="{
+                                            carousel_id: carousel_id,
+                                            control_type: carousel.control_type
+                                          }"/>
+                                </f:if>
+
+                            </div>
+                        </div>
+
+
+                        <f:if condition="{carousel.indicator_type} == 'lines' ">
+                            <div class="row mt-2 indicator-line">
+                                <f:for each="{records}" as="indicator" iteration="indicatorIteration">
+                                    <div class="col {f:if(condition: '{currentSlide} == {indicatorIteration.cycle}', then:'bg-tiger-orange', else:'black')} pb-4">
+                                        {iteration.cycle}
+                                    </div>
+                                </f:for>
+                            </div>
+                        </f:if>
+
+                        <div class="mask {f:if(condition: '{slide.data.mask_css_class}', then: '{slide.data.mask_css_class}')}">
+                            <div class=" {f:if(condition: '{carousel.caption_position} == \'inside\'', then: 'carousel-caption ')}
+                                {f:if(condition: '{carousel.caption_position} == \'below\'', then: 'card-body ')}
+                                {f:if(condition: '{carousel.caption_css_class}', then: '{carousel.caption_css_class}')}">
+
+
+                                <f:render partial="ContentElements/Header/All"
+                                          arguments="{
+                                                data: {
+                                                    header_layout: carousel.header_layout,
+                                                    header: slide.data.header,
+                                                    additionalCss: carousel.header_css_class
+                                                }
+
+                                              }"/>
+                                <f:if condition="{slide.data.datetime}">
+                                    <h4>
+                                        <f:format.date format="d.m.Y">{slide.data.datetime}</f:format.date>
+                                    </h4>
+                                </f:if>
+                                <f:if condition="{slide.data.sub_header}">
+                                    <h4>
+                                        {slide.data.sub_header}
+                                    </h4>
+                                </f:if>
+
+                                <div class="{f:if(condition: '{carousel.bodytext_css_class}', then: '{carousel.bodytext_css_class}')}">
+                                    <f:format.raw>{slide.data.bodytext}</f:format.raw>
+                                </div>
+
+                                <div class="clearfix {f:if(condition: '{carousel.button_wrap_css_class}', then: '{carousel.button_wrap_css_class}')}">
+                                    <f:if condition="{slide.data.newsId}">
+                                        <f:then>
+                                            <f:link.action controller="News" action="detail" pageUid="62"
+                                                           additionalParams="{'tx_news_pi1%5Bnews%5D': slide.data.newsId}"
+                                                           class="btn btn-tiger-default float-right waves-effect waves-light {f:if(condition: '{records -> f:count()} > 1', then:'', else:'mb-24')}">
+                                                <f:translate
+                                                        key="LLL:EXT:gjo_introduction/Resources/Private/Language/locallang.xlf:slide.data.button_text"/>
+                                            </f:link.action>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{slide.data.button_text}">
+                                                <f:link.typolink parameter="{slide.data.button_link}"
+                                                                 class="btn {f:if(condition: '{carousel.button_css_class}', then: '{carousel.button_css_class}', else: 'btn-default')}">
+                                                    {slide.data.button_text}
+                                                </f:link.typolink>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:section>
+
+
+    <f:section name="col-4-Item">
+        <div class="col-md-4">
+
+            <f:if condition="{records.{i.index}.data.header} || {records.{i.index}.data.bodytext}">
+                <f:then>
+                    <div class="card card-cascade narrower item_{i.index} {f:if(condition: '{carousel.card_css_class}', then: '{carousel.card_css_class}')}">
+                        <f:render section="col-4-image" arguments="{_all}"/>
+                        <div class="card-body">
+                            <v:variable.set name="header" value="{records.{i.index}.data.header}"/>
+                            <f:render partial="Header/All"
+                                      arguments="{
+                                                data: {
+                                                    header_layout: carousel.header_layout,
+                                                    header: header,
+                                                    additionalCss: carousel.header_css_class
+                                                }
+                                          }"/>
+
+                            <div class="{f:if(condition: '{carousel.bodytext_css_class}', then: '{carousel.bodytext_css_class}')}">
+                                <f:format.raw>{records.{i.index}.data.bodytext}</f:format.raw>
+                            </div>
+
+                            <f:if condition="{records.{i.index}.data.button_text}">
+                                <div class="{f:if(condition: '{carousel.button_wrap_css_class}', then: '{carousel.button_wrap_css_class}')}">
+                                    <f:link.typolink parameter="{records.{i.index}.data.button_link}"
+                                                     class="btn {f:if(condition: '{carousel.button_css_class}', then: '{carousel.button_css_class}', else: 'btn-default')}">
+                                        {records.{i.index}.data.button_text}
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+
+
+                </f:then>
+                <f:else>
+                    <f:render section="col-4-image" arguments="{_all}"/>
+                </f:else>
+            </f:if>
+
+
+        </div>
+    </f:section>
+
+    <f:section name="col-4-image">
+        <f:for each="{records.{i.index}.images}" as="file" iteration="iteration">
+            <f:render partial="Media/Type"
+                      arguments="{
+                                  file: file,
+                                  width: 338,
+                                  breakpoints: {
+                                    0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 338}},
+                                    1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 288}},
+                                    2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 198}},
+                                    3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 150}}
+                                  },
+                                  data: slide.data
+                              }"
+            />
+        </f:for>
+
+    </f:section>
+
+</div>

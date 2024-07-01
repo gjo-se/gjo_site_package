@@ -1,0 +1,149 @@
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+
+    setup {
+
+        col2 {
+            title = 2-Spalter
+            description = TwitterBootstrap 2-spaltig
+            frame = 1
+            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/2-Column.xml
+            topLevelLayout = 0
+            frame = 3
+            config {
+                colCount = 2
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 1
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        col3 {
+            title = 3-Spalter
+            description = TwitterBootstrap 3-spaltig
+            frame = 3
+            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/3-Column.xml
+            topLevelLayout = 0
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 1
+#                                TODO: so kann ich die überflüssigen Ordner ausschließen
+#                                allowed {
+#                                    CType = gjointroduction_textteaser,header,text,textpic,image,textmedia,bullets,table,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,shortcut,list,div,html,login,form_formframework,gridelements_pi1,fluidcontent_content
+#                                    list_type = news_pi1,femanager_pi1,gjotiger_product,gjoshop_cart,gjoshop_checkoutbillingaddress,gjoshop_checkoutdeliveryaddress,gjoshop_checkoutshippingservice,gjoshop_checkoutpayment,gjoshop_checkoutproduct,gjoshop_checkoutordernow,gjoshop_checkoutorder,gjoshop_paypalsuccess
+#                                }
+#                                disallowed {
+#                                    CType = gjointroduction_textteaser,header,text,textpic,image,textmedia,bullets,table,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,shortcut,list,div,html,login,form_formframework,gridelements_pi1,fluidcontent_content
+#                                    list_type = news_pi1,femanager_pi1,gjotiger_product,gjoshop_cart,gjoshop_checkoutbillingaddress,gjoshop_checkoutdeliveryaddress,gjoshop_checkoutshippingservice,gjoshop_checkoutpayment,gjoshop_checkoutproduct,gjoshop_checkoutordernow,gjoshop_checkoutorder,gjoshop_paypalsuccess
+#                                }
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 2
+                            }
+                            3 {
+                                name = Spalte 3
+                                colPos = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        col4 {
+            title = 4-Spalter
+            description = TwitterBootstrap 4-spaltig
+            frame = 3
+            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/4-Column.xml
+            topLevelLayout = 0
+            config {
+                colCount = 4
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 1
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 2
+                            }
+                            3 {
+                                name = Spalte 3
+                                colPos = 3
+                            }
+                            4 {
+                                name = Spalte 4
+                                colPos = 4
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        col5 {
+            title = 5-Spalter
+            description = TwitterBootstrap 5-spaltig
+            frame = 3
+            icon = EXT:gjo_introduction/Resources/Public/Images/BackendLayouts/default.gif
+            flexformDS = FILE:EXT:gjo_introduction/Configuration/FlexForms/Extensions/GridElements/5-Column.xml
+            topLevelLayout = 0
+            config {
+                colCount = 4
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 1
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 2
+                            }
+                            3 {
+                                name = Spalte 3
+                                colPos = 3
+                            }
+                            4 {
+                                name = Spalte 4
+                                colPos = 4
+                            }
+                            5 {
+                                name = Spalte 5
+                                colPos = 5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

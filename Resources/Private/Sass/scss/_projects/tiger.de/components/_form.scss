@@ -1,0 +1,79 @@
+.form-check-input[type="checkbox"] + label:before {
+  border: 2px solid $black;
+}
+
+.form-check-input[type="checkbox"]:checked + label:before {
+  border-right: 2px solid $black;
+  border-bottom: 2px solid $black;
+}
+
+.md-form {
+  label {
+    color: $black;
+    font-size: 0.75rem;
+    &.select-label {
+      top: -0.75rem;
+    }
+  }
+  .validate {
+    margin-bottom: 1.5rem;
+  }
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  textarea.md-textarea {
+    border-color: $black;
+  }
+  input[type=text].search-sword {
+    border-color: $white;
+  }
+  input[type=text].search-sword:focus {
+    border-color: $tiger-orange;
+    box-shadow: none;
+  }
+}
+
+.product-set-price {
+  .input-group {
+    height: 24px;
+  }
+  .form-control {
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $black;
+    border: 1px solid $white;
+    border-radius: unset;
+    transition: unset;
+    width: 100px;
+  }
+}
+
+.contact-form {
+  padding: 0 2rem;
+  background-color: $white;
+  ul {
+    background-color: $white;
+  }
+}
+.max-width-600{
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.select-wrapper input.select-dropdown {
+  font-size: 1rem;
+  border-color: $black;
+  margin-bottom: 0;
+  color: #495057;
+}
+
+.select-wrapper ul.select-dropdown {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  font-size: 1rem;
+  color: $black;
+}

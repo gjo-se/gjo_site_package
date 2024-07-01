@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="slider">
+    <div class="slider-image">
+        <div class="news-img-wrap mt-3">
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+                    <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
+                </n:renderMedia>
+            </n:link>
+        </div>
+    </div>
+
+    <div class="slider-text">
+        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+            <div class="mb-3">
+                <h2 class="mb-3">{newsItem.title}</h2>
+                <h3>
+                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                </h3>
+            </div>
+        </n:link>
+        <n:removeMediaTags>
+            <f:if condition="{newsItem.teaser}">
+                <f:then>
+                    <p>{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}',
+                        respectWordBoundaries:'1') -> f:format.html()}</p>
+                </f:then>
+                <f:else>
+                    <p>{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}',
+                        respectWordBoundaries:'1') -> f:format.html()}</p>
+                </f:else>
+            </f:if>
+        </n:removeMediaTags>
+
+
+        <n:link class="button-box button-rayen" newsItem="{newsItem}" settings="{settings}"
+                title="{newsItem.title}">
+            <span>mehr...</span>
+        </n:link>
+    </div>
+
+
+</div>
+
+
+</html>

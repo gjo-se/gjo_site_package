@@ -1,0 +1,54 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:layout name="Default"/>
+
+    <f:section name="Main">
+
+        <v:variable.set name="carouselOptions"
+                        value="{data.pi_flexform.settings.carousel.options -> v:iterator.explode(glue: ',')}"/>
+        <v:variable.set name="carouselCountItems"
+                        value="{data.pi_flexform.settings.carousel.count_items -> v:iterator.explode(glue: ',')}"/>
+
+        <v:variable.set name="intervall" value="5000"/>
+        <v:variable.set name="xs-display" value="none"/>
+        <v:variable.set name="sm-display" value="none"/>
+        <v:variable.set name="md-display" value="none"/>
+        <v:variable.set name="lg-display" value="none"/>
+        <v:variable.set name="xl-display" value="none"/>
+
+        <f:for each="{carouselOptions}" as="carouselOption">
+            <f:switch expression="{carouselOption}">
+                <f:case value="intervall-0">
+                    <v:variable.set name="intervall" value="0"/>
+                </f:case>
+                <f:case value="intervall-2500">
+                    <v:variable.set name="intervall" value="2500"/>
+                </f:case>
+            </f:switch>
+
+            <f:if condition="{carouselOption} == 'ride' ">
+                <v:variable.set name="ride" value="true"/>
+            </f:if>
+            <f:if condition="{carouselOption} == 'pause' ">
+                <v:variable.set name="pause" value="true"/>
+            </f:if>
+            <f:if condition="{carouselOption} == 'fade' ">
+                <v:variable.set name="fade" value="true"/>
+            </f:if>
+            <f:if condition="{carouselOption} == 'loop' ">
+                <v:variable.set name="loop" value="true"/>
+            </f:if>
+            <f:if condition="{carouselOption} == 'show_thumbnails' ">
+                <v:variable.set name="show_thumbnails" value="true"/>
+            </f:if>
+        </f:for>
+
+        <f:alias map="{carousel: data.pi_flexform.settings.carousel}">
+            <f:render partial="Carousel/Carousel-col-12" arguments="{_all}"/>
+            <f:render partial="Carousel/Carousel-col-4" arguments="{_all}"/>
+        </f:alias>
+
+    </f:section>
+</div>

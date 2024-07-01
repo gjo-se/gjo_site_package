@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="col-12 col-lg-6 px-16">
+
+    <div class="card">
+        <div class="view overlay">
+            <f:for each="{record.images}" as="file" iteration="iteration">
+                <f:render partial="ContentElements/Media/Type"
+                          arguments="{
+                          file: file,
+                          data: record.data
+                      }"
+                />
+            </f:for>
+            <f:link.action controller="News" action="detail" pageUid="62"
+                           additionalParams="{'tx_news_pi1%5Bnews%5D': record.data.newsId}">
+                <div class="mask rgba-orange-light"></div>
+            </f:link.action>
+
+        </div>
+
+        <div class="card-body">
+
+            <f:render partial="ContentElements/Header/All"
+                      arguments="{
+                                                data: {
+                                                    header_layout: 3,
+                                                    header: record.data.header
+                                                }
+
+                                              }"/>
+            <f:if condition="{record.data.datetime}">
+                <h4>
+                    <f:format.date format="d.m.Y">{record.data.datetime}</f:format.date>
+                </h4>
+            </f:if>
+
+            <div class="">
+                <f:format.raw>{record.data.bodytext}</f:format.raw>
+            </div>
+
+            <div class="clearfix">
+                <!--TODO: aus Settings News die pageUid holen
+                - Umbauarbeiten der übergebenen Argumente notwendig-->
+                <f:link.action controller="News" action="detail" pageUid="62"
+                               additionalParams="{'tx_news_pi1%5Bnews%5D': record.data.newsId}">
+                    <button type="button"
+                            class="btn btn-tiger-default float-right waves-effect waves-light">
+                        <f:translate key="LLL:EXT:gjo_introduction/Resources/Private/Language/locallang.xlf:slide.data.button_text"/>
+                    </button>
+                </f:link.action>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

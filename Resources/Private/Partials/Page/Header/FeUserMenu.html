@@ -1,0 +1,122 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+
+    <f:section name="FeUserMenu_OLD">
+
+        <!--TODO: der Bereich wurde komplett ersetzt mit: typo3conf/ext/gjo_site_package/Resources/Private/Partials/Page/Header/NavBar.html:144
+        - KOntrolle (Section auf _OLD setzen) und löschen!-->
+
+            <div class="row">
+                <div class="col-8 offset-4 text-center text-sm-right mt-1">
+                    <div class="dropdown">
+
+                        <a data-toggle="dropdown">myTiger</a> |
+                        <f:link.page pageUid="{v:variable.typoscript(path: 'plugin.tx_felogin_pi1.settings.pid.cart')}">
+                            Warenkorb (<span class="openOrderCountProducts">0</span>)
+                        </f:link.page>
+
+                        <div class="dropdown-menu">
+                            <div class="tx-felogin-pi1">
+                                <div class="container">
+                                    <f:security.ifAuthenticated>
+                                        <f:then>
+                                            <f:render section="isAuthenticated" arguments="{_all}" />
+                                        </f:then>
+                                        <f:else>
+                                            <f:render section="isNotAuthenticated" arguments="{_all}" />
+                                        </f:else>
+                                    </f:security.ifAuthenticated>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </f:section>
+
+    <f:section name="isNotAuthenticated">
+        <h4 class="mt-2 text-center">Anmelden</h4>
+
+        <form action="feuser/login/" target="_top" method="post" onsubmit="; return true;" class="px-4 mb-2">
+
+            <div class="form-group">
+                <label for="user" class="col-sm-2 col-form-label">Benutzername:</label>
+                <div class="col">
+                    <input type="text" class="form-control" id="user" name="user">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pass" class="col-sm-2 col-form-label">Passwort:</label>
+                <div class="col">
+                    <input type="password" class="form-control" id="pass" name="pass">
+                </div>
+            </div>
+
+            <div>
+                <label for="permalogin">Angemeldet bleiben:</label>
+                <input name="permalogin" value="0" type="hidden" disabled="disabled" id="permaloginHiddenField">
+                <input name="permalogin" value="1" type="checkbox" checked="checked" id="permalogin" onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Anmelden</button>
+
+            <div class="felogin-hidden">
+                <input type="hidden" name="logintype" value="login">
+                <input type="hidden" name="pid" value="69">
+                <input type="hidden" name="redirect_url" value="/">
+                <!--<input type="hidden" name="tx_felogin_pi1[noredirect]" value="0">-->
+            </div>
+        </form>
+
+        <div class="dropdown-divider"></div>
+
+        <p class="px-4">
+            <f:link.page pageUid="{v:variable.typoscript(path: 'plugin.tx_felogin_pi1.settings.pid.userLogin')}"
+                         additionalParams="{
+                                                        'tx_felogin_pi1%5Bforgot%5D' : '1'
+                                                        }"
+            >
+                Passwort vergessen?
+            </f:link.page>
+        </p>
+
+        <p class="px-4">
+            <f:link.page pageUid="{v:variable.typoscript(path: 'plugin.tx_felogin_pi1.settings.pid.userRegister')}">
+                Registrieren
+            </f:link.page>
+        </p>
+    </f:section>
+
+    <f:section name="isAuthenticated">
+
+        <h4 class="mt-2 text-center">Abmelden</h4>
+
+        <form action="{v:uri.typolink(configuration: {parameter: '83'})}" target="_top" method="post" class="px-4 mb-2">
+            <div>
+                Sie sind als <br />
+                {gjoSe:feUser.feUser(property: 'username')} angemeldet
+            </div>
+            <button class="btn btn-primary" type="submit">Abmelden</button>
+
+            <div class="felogin-hidden">
+                <input type="hidden" name="logintype" value="logout">
+                <input type="hidden" name="pid" value="69">
+                <input type="hidden" name="tx_felogin_pi1[redirect]" value="1">
+            </div>
+        </form>
+
+        <p class="px-4">
+            <f:link.page pageUid="{v:variable.typoscript(path: 'plugin.tx_felogin_pi1.settings.pid.myTiger')}">
+                MyTiger - Ihr Profil
+            </f:link.page>
+        </p>
+
+    </f:section>
+
+
+</div>

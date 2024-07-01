@@ -1,0 +1,84 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+
+    <f:layout name="Default"/>
+
+    <f:section name="Main">
+
+        <div class="row">
+            <f:switch expression="{data.tx_gridelements_backend_layout}">
+                <f:case value="col2">
+                    <f:render section="col2" arguments="{_all}"/>
+                </f:case>
+                <f:case value="col3">
+                    <f:render section="col3" arguments="{_all}"/>
+                </f:case>
+                <f:case value="col4">
+                    <f:render section="col4" arguments="{_all}"/>
+                </f:case>
+                <f:case value="col5">
+                    <f:render section="col5" arguments="{_all}"/>
+                </f:case>
+            </f:switch>
+
+        </div>
+    </f:section>
+
+    <f:section name="col2">
+        <div class="{data.flexform_col1_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.1}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col2_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.2}</f:format.raw>
+        </div>
+    </f:section>
+
+    <f:section name="col3">
+        <div class="{data.flexform_col1_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.1}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col2_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.2}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col3_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.3}</f:format.raw>
+        </div>
+    </f:section>
+
+    <f:section name="col4">
+        <div class="{data.flexform_col1_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.1}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col2_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.2}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col3_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.3}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col4_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.4}</f:format.raw>
+        </div>
+    </f:section>
+
+    <f:section name="col5">
+        <div class="{data.flexform_col1_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.1}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col2_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.2}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col3_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.3}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col4_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.4}</f:format.raw>
+        </div>
+        <div class="{data.flexform_col5_css}">
+            <f:format.raw>{data.tx_gridelements_view_columns.5}</f:format.raw>
+        </div>
+    </f:section>
+
+
+</div>

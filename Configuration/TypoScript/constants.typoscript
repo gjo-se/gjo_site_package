@@ -1,0 +1,94 @@
+
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Page/
+        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+#    tracking {
+#        google {
+#            trackingID =
+#            anonymizeIp = 1
+#        }
+#    }
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    sendCacheHeaders = 1
+}
+
+plugin.tx_gjositepackage {
+
+#    view{
+#        templateRootPath    = EXT:gjo_site_package/Resources/Private/Templates/
+#        layoutRootPath      = EXT:gjo_site_package/Resources/Private/Layouts/
+#        partialRootPath     = EXT:gjo_site_package/Resources/Private/Partials/
+#    }
+
+    settings {
+#        site{
+#            pid {
+#                userLogin = 110
+#                userLogout = 83
+#                userRegister = 84
+#                userData = 69
+#                myTiger = 70
+#
+#                agb = 13
+#                dataPrivacyStatement = 93
+#                instructionsForCancellation = 126
+#
+#                shop = 99
+#                cart = 87
+#                checkout = 88
+#                orderConfirmation = 92
+#                shippingCosts = 127
+#                payment {
+#                    payPal {
+#                        success = 96
+#                        failure = 88
+#                    }
+#                }
+#
+#                applicationBusinessCustomerFormConfirmation = 113
+#
+#            }
+#        }
+
+    }
+}

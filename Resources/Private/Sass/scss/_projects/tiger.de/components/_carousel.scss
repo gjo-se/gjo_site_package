@@ -1,0 +1,54 @@
+// Optional indicator numbers
+
+.carousel {
+  a {
+    background-color: transparent;
+  }
+  .carousel-control-next, .carousel-control-prev {
+    width: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .carousel-indicators-numbers {
+    // unset bootstrap and mdb
+    position: static;
+
+    //TODO: sollte aus Theme kommen
+    font-size: 0.75rem;
+    color: $black;
+
+    li {
+      // unset bootstrap and mdb
+      width: unset;
+      height: unset;
+      text-indent: unset;
+      background-color: inherit;
+      border-radius: unset;
+    }
+    :hover{
+      color: $tiger-orange;
+    }
+
+    .active {
+      color: $black;
+      background-color: unset !important;
+      border-bottom: $tiger-orange solid 2px;
+      opacity: unset;
+      img {
+        opacity: 0.5;
+
+      }
+    }
+  }
+  .carousel-indicators-thumbnails {
+
+  }
+  &.carousel-multi-item{
+    .controls-bottom {
+      text-align: center;
+    }
+    h4 {
+      min-height: 80px;
+    }
+  }
+}

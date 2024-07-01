@@ -1,0 +1,5 @@
+config {
+    baseURL = http://dev.tiger.de/
+    admPanel = 0
+    no_cache = 1
+}

@@ -1,0 +1,95 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:section name="BootstrapMegaMenu">
+        <header class="navbar-fixed-top">
+            <div id="mainHeader" class="gradient-header" role="banner">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-default scrollMenu" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"><img src="/path/logo.svg" height="" width="" class="img-responsive" alt=" Alt Text"/></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="mainMenu">
+                            <v:page.menu>
+                                <ul class="nav navbar-nav pull-right">
+                                    <f:for each="{menu}" as="item">
+                                        <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images">
+                                            {images -> v:iterator.first() -> v:variable.set(name: 'image')}
+                                            <li class="primary {v:media.exists(then: 'MegaMenuTrigger', else: '', file: '{image.url}')}">
+                                                <f:link.page pageUid="{item.uid}"
+                                                             title="{item.title}"
+                                                             class="firstLevel{f:if(condition: item.hasSubPages, then: ' hasSubMenu', else: '')}{f:if(condition: item.active, then: ' active', else: '')}">
+                                                    {item.title}
+                                                </f:link.page>
+                                                <f:if condition="{item.hasSubPages}">
+                                                    <v:page.menu pageUid="{item.uid}">
+                                                        <f:if condition="{v:media.exists(then: '1', else: '', file: '{image.url}')}">
+                                                            <f:then>
+                                                                <div class="MegaMenu subMenu">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <h2>{item.title}</h2>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="megaInner">
+                                                                                    <f:image src="{image.url}"
+                                                                                             alt="{image.alternative}{f:if(condition: image.description, then: ' {image.description}', else: '')}"
+                                                                                             class="img-responsive" width=""/>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="megaInner">
+                                                                                    <p>{item.abstract}</p>
+                                                                                    <ul>
+                                                                                        <f:for each="{menu}" as="subItem">
+                                                                                            <li>
+                                                                                                <f:link.page pageUid="{subItem.uid}"
+                                                                                                             title="{subItem.title}">
+                                                                                                    {subItem.title}
+                                                                                                </f:link.page>
+                                                                                            </li>
+                                                                                        </f:for>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <ul class="subMenu">
+                                                                    <f:for each="{menu}" as="subItem">
+                                                                        <li>
+                                                                            <f:link.page pageUid="{subItem.uid}"
+                                                                                         title="{subItem.title}"
+                                                                                         class="{f:if(condition: item.active, then: ' active', else: '')}">
+                                                                                {subItem.title}
+                                                                            </f:link.page>
+                                                                        </li>
+                                                                    </f:for>
+                                                                </ul>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </v:page.menu>
+                                                </f:if>
+                                            </li>
+                                        </v:page.resources.fal>
+                                    </f:for>
+                                </ul>
+                            </v:page.menu>
+                        </div>
+                </div>
+                </nav>
+            </div>
+</div>
+</header>
+</f:section>
+
+</div>

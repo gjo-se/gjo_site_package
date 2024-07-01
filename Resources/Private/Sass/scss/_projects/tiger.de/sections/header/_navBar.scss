@@ -1,0 +1,109 @@
+.navbar-toggler {
+  .icon-menu, .icon-profile-active, .icon-shop-active {
+    color: $tiger-orange;
+  }
+  &.collapsed {
+    .icon-menu {
+      color: $white;
+    }
+  }
+  &.hover-tiger-orange:hover i {
+    color: $tiger-orange;
+  }
+  .icon-profile-active:hover, .icon-shop-active:hover {
+    color: $white;
+  }
+}
+
+.main-nav {
+  align-items: unset;
+  ul {
+    li {
+      a {
+        font-size: 3rem;
+        line-height: 1.15;
+      }
+      a:hover {
+        color: $tiger-orange;
+      }
+      &.active {
+        a {
+          color: $tiger-orange;
+        }
+      }
+    }
+  }
+}
+
+.badge-shop-active {
+  background-color: $tiger-orange;
+  font-size: 0.65rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.2rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .badge-shop-active {
+    top: 0.2rem;
+    left: 1.2rem;
+  }
+  .main-nav {
+    ul {
+      li {
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .navbar {
+    .dropdown-menu {
+      margin-top: -1rem;
+      .dropdown-item {
+        font-size: 1.5rem;
+        color: $white;
+        &.active {
+          background-color: $black;
+          color: $tiger-orange;
+        }
+      }
+      a.dropdown-item:hover {
+        background-color: $black;
+        color: $tiger-orange !important;
+      }
+
+    }
+  }
+  .mobile-subnav {
+    display: none !important;
+  }
+}
+
+ul.languageMenu {
+  li {
+    a {
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+  }
+}
+
+.mobile-subnav {
+  background-color: $black;
+  color: $white;
+  ul {
+    margin: 0;
+    padding: 0 1.5rem 0 1.5rem;
+    background-color: $black;
+    list-style: none;
+    font-size: $font-size-base;
+    line-height: 1.438;
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $tiger-orange;
+    }
+  }
+}

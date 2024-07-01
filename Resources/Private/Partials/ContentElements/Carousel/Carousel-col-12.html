@@ -1,0 +1,62 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:for each="{carouselCountItems}" as="carouselCountItem">
+        <f:if condition="{carouselCountItem} == 'xs-1' ">
+            <v:variable.set name="xs-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'sm-1' ">
+            <v:variable.set name="sm-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'md-1' ">
+            <v:variable.set name="md-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'lg-1' ">
+            <v:variable.set name="lg-display" value="block"/>
+        </f:if>
+        <f:if condition="{carouselCountItem} == 'xl-1' ">
+            <v:variable.set name="xl-display" value="block"/>
+        </f:if>
+
+    </f:for>
+
+    <div class="row justify-content-center">
+        <div class="container px-16 px-xl-20">
+
+            <div class="d-{xs-display} d-sm-{sm-display} d-md-{md-display} d-lg-{lg-display} d-xl-{xl-display}">
+                <div id="carousel_1_{data.uid}"
+                     class="carousel ui-test-carousel-col12 {f:if(condition: '{fade}', then:'slide carousel-fade ')} {f:if(condition: '{show_thumbnails}', then:'carousel-thumbnails mb-0')}"
+                     data-ride="{f:if(condition: '{ride}', then:'carousel')}"
+                     data-interval="{f:if(condition: '{intervall} == 0 || {intervall}', then:'{intervall}', else:'5000')}"
+                     data-pause="{f:if(condition: '{pause}', then:'hover', else: 'false')}"
+                     data-wrap="{f:if(condition: '{loop}', then:'true', else: 'false')}"
+                >
+
+                    <f:if condition="{paginatedRecords}">
+                        <v:variable.set name="records" value="{paginatedRecords}"/>
+                    </f:if>
+
+                    <f:render partial="ContentElements/Carousel/Item/Item" section="col-12-Item"
+                              arguments="{
+                                records: records,
+                                carousel: carousel,
+                                carousel_id: 'carousel_1_{data.uid}'
+                          }"/>
+
+                    <f:if condition="{records -> f:count()} > 1 ">
+                        <f:render partial="ContentElements/Carousel/Control/Indicator"
+                                  arguments="{
+                                    indicator: '{carousel.indicator_type}',
+                                    records: records,
+                                    carousel_id: 'carousel_1_{data.uid}'
+                          }"/>
+                    </f:if>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

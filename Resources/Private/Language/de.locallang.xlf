@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="gjo_introduction" date="2017-08-07T10:00:11+01:00">
+		<header/>
+		<body>
+
+            ##########################
+            ### OneColumn          ###
+            ##########################
+
+            <trans-unit id="flux.oneColumn" xml:space="preserve">
+                <source>Page - oneColumn</source>
+            </trans-unit>
+
+            <trans-unit id="tiger.page.name.kontaktformular" xml:space="preserve">
+                <source>Contactform</source>
+                <target>Kontaktformular</target>
+             </trans-unit>
+            <trans-unit id="tiger.page.name.kontakt" xml:space="preserve">
+                <source>Contact</source>
+                <target>Kontakt</target>
+             </trans-unit>
+             <trans-unit id="tiger.page.slogan" >
+                 <source>
+                 Powerful. Quiet. Convincing. <![CDATA[<br>]]>
+                 Proven TIGER  Quality for more than 100 years.
+                 </source>
+                 <target>
+                    Kraftvoll. Leise. Überzeugend. <![CDATA[<br>]]>
+                    Bewährte TIGER-Qualität seit mehr als 100 Jahren.
+                 </target>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective" >
+                 <source>
+                 In order to give you a better service, we uses cookies. By continuing to browse the site you are agreeing to our use of cookies.
+                 </source>
+                 <target>
+                    Wir verwenden Cookies, um Ihnen den bestmöglichen Service zu gewährleisten. Wenn Sie auf der Seite weitersurfen stimmen Sie der
+                 </target>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective.linktext" >
+                 <source>
+                 cookies.
+                 </source>
+                 <target>
+                    Cookie-Nutzung zu.
+                 </target>
+             </trans-unit>
+             <trans-unit id="tiger.page.cookieDerective.buttontext" >
+                 <source>
+                 I agree.
+                 </source>
+                 <target>
+                    Ich stimme zu.
+                 </target>
+             </trans-unit>
+
+
+            ##########################
+            ### Form               ###
+            ##########################
+
+            <trans-unit id="form.page.findUs" >
+                <source>How to find us:</source>
+                <target>Hier finden Sie uns:</target>
+            </trans-unit>
+            <trans-unit id="form.page.map" >
+                <source>Map</source>
+                <target>Anfahrt</target>
+            </trans-unit>
+
+
+            ##########################
+            ### MyTiger            ###
+            ##########################
+
+            <trans-unit id="myTiger.login.text" >
+                <source>Enter your username and password to log in to the website:</source>
+                <target>Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden:</target>
+            </trans-unit>
+            <trans-unit id="myTiger.login.keep" >
+                <source>Stay logged in</source>
+                <target>angemeldet bleiben</target>
+            </trans-unit>
+            <trans-unit id="myTiger.signIn" >
+                <source>login</source>
+                <target>anmelden</target>
+            </trans-unit>
+            <trans-unit id="myTiger.forgotPassword" >
+                <source>Forgot your password?</source>
+                <target>Passwort vergessen</target>
+            </trans-unit>
+            <trans-unit id="myTiger.register" >
+                <source>Register</source>
+                <target>Registrieren</target>
+            </trans-unit>
+            <trans-unit id="myTiger.logout.text.salutation" >
+                <source>Hello %s,</source>
+                <target>Hallo %s,</target>
+            </trans-unit>
+            <trans-unit id="myTiger.logout.text" >
+                <source>Here you can logout from the website or change your profile.</source>
+                <target>Hier können Sie sich von der Website abmelden oder Ihr Profil ändern.</target>
+            </trans-unit>
+            <trans-unit id="myTiger.signOut" >
+                <source>Logout</source>
+                <target>Abmelden</target>
+            </trans-unit>
+            <trans-unit id="myTiger.yourProfile" >
+                <source>myTiger - your profile</source>
+                <target>myTiger - Ihr Profil</target>
+            </trans-unit>
+            <trans-unit id="myTiger.register.text" >
+                <source>Enter your username, password and email to signIn in to the website:</source>
+                <target>Geben Sie Ihren Benutzernamen, Passwort und Email ein, um sich an der Website registrieren:</target>
+            </trans-unit>
+            <trans-unit id="myTiger.profile.text" >
+                <source>Here you can change your profile:</source>
+                <target>Hier können Sie ihr hinterlegtes Benutzerprofil ändern:</target>
+            </trans-unit>
+            <trans-unit id="myTiger.profile.change" >
+                <source>Change profile</source>
+                <target>Profil ändern:</target>
+            </trans-unit>
+
+
+            ##########################
+            ### News               ###
+            ##########################
+
+            <trans-unit id="slide.data.button_text" >
+                <source>See Article</source>
+                <target>Zum Artikel</target>
+            </trans-unit>
+
+
+            ##########################
+            ### Contact            ###
+            ##########################
+
+            <trans-unit id="contact.confirmation.header" >
+                <source>Contact Confirmation</source>
+                <target>Anfrage Bestätigung</target>
+            </trans-unit>
+            <trans-unit id="contact.confirmation.text1" >
+                <source>Thank you, your request is being processed.</source>
+                <target>Vielen Dank, Ihre Anfrage wird bearbeitet.</target>
+            </trans-unit>
+            <trans-unit id="contact.confirmation.text2" >
+                <source>We have sent you a confirmation by email.</source>
+                <target>Wir haben Ihnen eine Bestätigung per Email geschickt.</target>
+            </trans-unit>
+
+		</body>
+	</file>
+</xliff>

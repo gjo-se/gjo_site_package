@@ -1,0 +1,54 @@
+// the sections (specific stuff)
+
+// set Container, Rows, Col margin & padding = 0
+//$grid-gutter-width:           0px;
+
+
+// the basic stuff
+@import "_projects/tiger.de/layout/color";
+@import "_projects/tiger.de/layout/fonts";
+@import "_projects/tiger.de/layout/border";
+@import "_projects/tiger.de/layout/button";
+@import "_projects/tiger.de/layout/margin-padding";
+@import "_projects/tiger.de/layout/icon";
+@import "_projects/tiger.de/utilities/extbase_debugger_fix";
+
+// HTML-Elements & Components
+@import "_projects/tiger.de/components/card";
+@import "_projects/tiger.de/components/carousel";
+@import "_projects/tiger.de/components/list";
+@import "_projects/tiger.de/components/form";
+@import "_projects/tiger.de/components/logo";
+@import "_projects/tiger.de/components/productFinder";
+@import "_projects/tiger.de/components/experts";
+@import "_projects/tiger.de/components/service";
+@import "_projects/tiger.de/components/downloads";
+//@import "_projects/tiger.de/components/slick-slider";
+
+
+
+// TODO: da gibts noch haufen Natives-CSS drin, ansehen, auflösen
+@import "_projects/tiger.de/sections/header/navBar";
+@import "_projects/tiger.de/sections/header/searchBar";
+@import "_projects/tiger.de/sections/header/languageMenu";
+@import "_projects/tiger.de/sections/header/feUserMenu";
+@import "_projects/tiger.de/sections/header/scrollTop";
+@import "_projects/tiger.de/sections/footer/footerContact";
+@import "_projects/tiger.de/sections/footer/footerMenu";
+@import "_projects/tiger.de/sections/footer/footerSub";
+
+
+//#############  TODO: Typografie - noch auflösen  ################
+
+//#############  Auflösen  ################
+
+// TODO: der wird benutzt - noch mehr Klassen dazu anlegen,
+// vielleicht Bereich Background anlegen
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+
+
+

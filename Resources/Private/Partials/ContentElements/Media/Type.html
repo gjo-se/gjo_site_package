@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<!--TODO: file.type per Default auf 2 setzen, wenn Videos gefordert, ämdern-->
+
+<v:variable.set name="fileType" value="2"/>
+
+<f:switch expression="{fileType}">
+    <f:case value="2">
+
+        <f:render partial="ContentElements/Media/Type/Image"
+                  arguments="{
+                  width: width,
+                  breakpoints: breakpoints,
+                  file: file,
+                  link: link,
+                  L: L,
+                  is_shop: is_shop,
+                  data: data,
+                  class: class,
+                  figure-class: figure-class
+                  }"
+        />
+    </f:case>
+    <f:case value="3">
+        <!--TODO: muss noch wie Image angepasst werden-->
+        <f:render partial="ContentElements/Media/Type/Audio" arguments="{file: file, data: data, settings: settings}" />
+    </f:case>
+    <f:case value="4">
+        <!--TODO: muss noch wie Image angepasst werden-->
+        <f:render partial="ContentElements/Media/Type/Video" arguments="{file: file, data: data, settings: settings}" />
+    </f:case>
+    <f:defaultCase>
+        <!-- NOT SUPPORTED MEDIA TYPE -->
+    </f:defaultCase>
+</f:switch>
+
+<!--for MappedNews-->
+
