@@ -178,24 +178,12 @@ return call_user_func(function () {
             ],
 
             'image' => [
-                'label'  => 'Bild',
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                    'image',
-                    [
-                        'maxitems'         => 1,
-                        'overrideChildTca' => [
-                            'types' => [
-                                \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                    'showitem' => '
-                                            --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette_TitleAltTextCrop,
-                                            --palette--;;filePalette'
-                                ],
-                            ],
-                        ],
-
-                    ],
-                    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-                ),
+                'label' => 'Bild',
+                'config' => [
+                    'type' => 'file',
+                    'maxitems' => 1,
+                    'allowed' => 'common-image-types'
+                ],
             ],
 
             'image_mask_css_class' => [
