@@ -10,10 +10,6 @@ defined('TYPO3') or die('Access denied.');
 
 $extensionKey = 'gjo_site_package';
 
-//workaround for Exception 1288965219: $className must be a non empty string
-// see https://github.com/FluidTYPO3/flux/issues/1375
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ElementBrowsers']['file_reference'] = $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ElementBrowsers']['file'];
-
 /***************
  * Register Icons
  */

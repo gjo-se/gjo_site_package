@@ -12,5 +12,3 @@ call_user_func(function()
         'Gjo Site Package'
     );
 });
-
-//Configuration/TypoScript/constants.typoscript
