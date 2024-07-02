@@ -41,7 +41,7 @@
                             </div>
 
                             <div>
-                                <f:render partial="Page/Header/Search" section="Search" arguments="{_all}"/>
+                                <f:render partial="Header/Search" section="Search" arguments="{_all}"/>
                                 <div class="logo pt-8">
                                     <f:link.page pageUid="1"
                                                  class="navbar-brand p-0 m-0">
@@ -102,7 +102,7 @@
                                 </ul>
                             </v:menu>
 
-                            <f:render section="LanguageMenu" partial="Page/Header/LanguageMenu"/>
+                            <f:render section="LanguageMenu" partial="Header/LanguageMenu"/>
 
                         </div>
 
@@ -155,7 +155,7 @@
             <div class="row justify-content-center bg-tiger-gray-900">
                 <div class="container px-xl-20">
                     <div class="d-flex justify-content-end">
-                        <f:render section="LanguageMenu" partial="Page/Header/LanguageMenu"/>
+                        <f:render section="LanguageMenu" partial="Header/LanguageMenu"/>
 
                         <div class="lang-helper d-none">
                             <span id="lang-helper-sysLanguageUid">{v:page.language()}</span>
@@ -166,7 +166,7 @@
                             <i class="icon-search desktop"></i>
                         </button>
 
-                        <f:render partial="Page/Header/Search" section="Search" arguments="{_all}"/>
+                        <f:render partial="Header/Search" section="Search" arguments="{_all}"/>
 
                         <button class="btn-profile hover-tiger-orange navbar-toggler p-0 pr-16"
                                 type="button"

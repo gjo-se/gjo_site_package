@@ -1,11 +1,27 @@
 
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
-page {
-     fluidtemplate {
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
         layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/
         partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/
         templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Page/
+        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Page/
     }
     meta {
         description =
