@@ -1,6 +1,6 @@
 <f:layout name="DefaultPageLayout"/>
 
-<f:section name="Main">
+<f:section name="DefaultPageTemplateSection">
     <main>
 
         <f:if condition="{page.uid} > 1 ">
@@ -9,13 +9,14 @@
 
         <div style="padding: 0.5em 1em;">
             <dl>
-                <dt>Static Content aus Template </dt>
+                <dt>Static Content aus Template Berta</dt>
                 <dd>
                     <code>typo3conf/ext/mysitepacke/Resources/Private/Templates/Page/Default.html</code>
                 </dd>
             </dl>
         </div>
 
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 
 <!--        hier kommen ContentElements rein-->
 
