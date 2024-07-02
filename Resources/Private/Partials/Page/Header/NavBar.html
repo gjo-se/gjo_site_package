@@ -294,7 +294,6 @@
                                             </f:if>
 
 
-
                                         </f:for>
                                     </v:menu>
                                 </ul>
@@ -321,7 +320,7 @@
     <f:section name="isAuthenticated">
 
         <f:security.ifHasRole role="uiTestUser">
-            <span class="uiTestUserIsLoggedIn" />
+            <span class="uiTestUserIsLoggedIn"/>
         </f:security.ifHasRole>
 
         <div class="skin-black">
@@ -338,9 +337,14 @@
                     <div class="fe-user-menu-form p-16">
 
                         <p class="pb-24">
-                            <v:variable.set name="userName" value="{gjoSe:feUser.feUser(property: 'username')}" />
-                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text.salutation" arguments="{0: userName}"/> <br />
-                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text" arguments="{0: userName}" />
+                            <v:variable.set name="userName" value="{gjoSe:feUser.feUser(property: 'username')}"/>
+                            <f:translate
+                                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text.salutation"
+                                    arguments="{0: userName}"/>
+                            <br/>
+                            <f:translate
+                                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text"
+                                    arguments="{0: userName}"/>
                         </p>
 
 
@@ -356,7 +360,8 @@
 
                             <div class="clearfix">
                                 <button type="submit" class="btn btn-tiger-default float-right">
-                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signOut"/>
+                                    <f:translate
+                                            key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signOut"/>
                                 </button>
                             </div>
 
@@ -364,7 +369,8 @@
 
                         <div>
                             <f:link.page pageUid="{myTigerPID}">
-                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.yourProfile"/>
+                                <f:translate
+                                        key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.yourProfile"/>
                             </f:link.page>
                         </div>
                     </div>
@@ -400,7 +406,8 @@
                     <div class="fe-user-menu-form p-16">
 
                         <p class="pb-24">
-                            <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.text"/>
+                            <f:translate
+                                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.text"/>
                         </p>
 
                         <form name="{formName}"
@@ -410,9 +417,11 @@
                               novalidate="novalidate">
 
 
-                            <div class="md-form">
-                                <f:render partial="Form/Fields/Textfield"
-                                          arguments="{
+                            <f:comment>
+<!--                                TODO: f:form not exists without extbase-->
+                                <div class="md-form">
+                                    <f:render partial="Form/Fields/Textfield"
+                                              arguments="{
                                               name: 'user',
                                               id: '{formName}_user',
                                               formName: '{formName}',
@@ -420,12 +429,12 @@
                                                 validation: \'required\'
                                               }'
                                           }"
-                                />
-                            </div>
+                                    />
+                                </div>
 
-                            <div class="md-form my-0">
-                                <f:render partial="Form/Fields/Textfield"
-                                          arguments="{
+                                <div class="md-form my-0">
+                                    <f:render partial="Form/Fields/Textfield"
+                                              arguments="{
                                               name: 'pass',
                                               id: '{formName}_pass',
                                               formName: '{formName}',
@@ -434,8 +443,9 @@
                                                 validation: \'required\'
                                               }'
                                           }"
-                                />
-                            </div>
+                                    />
+                                </div>
+                            </f:comment>
 
                             <div class="form-check permalogin my-0 mb-32">
                                 <input type="checkbox"
@@ -446,10 +456,12 @@
                                        checked="checked"
                                        onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;">
                                 <label class="form-check-label" for="{formName}_permalogin">
-                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.keep"/>
+                                    <f:translate
+                                            key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.login.keep"/>
                                 </label>
                             </div>
-                            <input name="permalogin" value="0" type="hidden" disabled="disabled" id="{formName}_permaloginHiddenField">
+                            <input name="permalogin" value="0" type="hidden" disabled="disabled"
+                                   id="{formName}_permaloginHiddenField">
 
                             <div class="felogin-hidden">
                                 <input type="hidden" name="logintype" value="login">
@@ -459,7 +471,8 @@
 
                             <div class="clearfix">
                                 <button type="submit" class="btn btn-tiger-default float-right">
-                                    <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signIn"/>
+                                    <f:translate
+                                            key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.signIn"/>
                                 </button>
                             </div>
 
@@ -469,12 +482,14 @@
                         <div>
                             <f:link.page pageUid="{userLoginPID}"
                                          additionalParams="{'tx_felogin_pi1%5Bforgot%5D' : '1'}">
-                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.forgotPassword"/>
+                                <f:translate
+                                        key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.forgotPassword"/>
                             </f:link.page>
                         </div>
                         <div>
                             <f:link.page pageUid="{userRegisterPID}">
-                                <f:translate key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.register"/>
+                                <f:translate
+                                        key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.register"/>
                             </f:link.page>
                         </div>
 
