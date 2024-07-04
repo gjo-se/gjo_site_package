@@ -1,28 +1,7 @@
 
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
 
-
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/
-        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/
-        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/
-    }
-}
-
-
-############
-### PAGE ###
-############
 page {
-     fluidtemplate {
-        layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Page/
-        templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Page/
-    }
     meta {
         description =
         author =
@@ -40,10 +19,6 @@ page {
 #    }
 }
 
-
-##############
-### CONFIG ###
-##############
 config {
     no_cache = 0
     removeDefaultJS = 0
@@ -53,6 +28,33 @@ config {
 }
 
 plugin.tx_gjositepackage {
+    fluidtemplate {
+        page{
+            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Page/
+            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Page/
+            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Page/
+        }
+        contentElement {
+            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/ContentElements/
+            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/ContentElements/
+            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/ContentElements/
+        }
+        gridelements {
+            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Gridelements/
+            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Gridelements/
+            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Gridelements/
+        }
+        news {
+            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/News/
+            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/News/
+            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/News/
+        }
+        default {
+            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/
+            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/
+            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/
+        }
+    }
 
     settings {
 #        site{

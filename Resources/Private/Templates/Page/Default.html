@@ -4,28 +4,12 @@
     <main>
 
         <f:if condition="{page.uid} > 1 ">
-            <f:render partial="Page/Header/BreadcrumbMenu" section="BreadcrumbMenu"/>
+            <f:render partial="Header/BreadcrumbMenu" section="BreadcrumbMenu"/>
         </f:if>
-
-        <div style="padding: 0.5em 1em;">
-            <dl>
-                <dt>Static Content aus Template Berta</dt>
-                <dd>
-                    <code>typo3conf/ext/mysitepacke/Resources/Private/Templates/Page/Default.html</code>
-                </dd>
-            </dl>
-        </div>
 
         <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 
-<!--        hier kommen ContentElements rein-->
-
-        <f:render partial="Page/Header/MoveTopMenu" section="MoveTopMenu"/>
+        <f:render partial="Header/MoveTopMenu" section="MoveTopMenu"/>
 
     </main>
 </f:section>
-
-
-<!--<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />-->
-
-
