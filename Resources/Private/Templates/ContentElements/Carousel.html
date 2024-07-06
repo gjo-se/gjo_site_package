@@ -2,14 +2,14 @@
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Default"/>
+    <f:layout name="CeDefaultLayout"/>
 
-    <f:section name="Main">
+    <f:section name="CeMainSection">
 
         <v:variable.set name="carouselOptions"
-                        value="{data.pi_flexform.settings.carousel.options -> v:iterator.explode(glue: ',')}"/>
+                        value="{flexFormData.settings.carousel.options -> f:split(separator:',')}"/>
         <v:variable.set name="carouselCountItems"
-                        value="{data.pi_flexform.settings.carousel.count_items -> v:iterator.explode(glue: ',')}"/>
+                        value="{flexFormData.settings.carousel.count_items -> f:split(separator:',')}"/>
 
         <v:variable.set name="intervall" value="5000"/>
         <v:variable.set name="xs-display" value="none"/>
@@ -45,10 +45,11 @@
             </f:if>
         </f:for>
 
-        <f:alias map="{carousel: data.pi_flexform.settings.carousel}">
+        <f:alias map="{carousel: flexFormData.settings.carousel}">
             <f:render partial="Carousel/Carousel-col-12" arguments="{_all}"/>
             <f:render partial="Carousel/Carousel-col-4" arguments="{_all}"/>
         </f:alias>
 
     </f:section>
+
 </div>

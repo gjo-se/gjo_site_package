@@ -1,0 +1,10 @@
+
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/Mod/Wizards/newContentElement.tsconfig'
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/Tce/TCEFORM.tsconfig'
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TsConfig/Page/RTE.tsconfig">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/PageTS/Extensions/GridElements/Gridelements.t3s">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+#?!?!?
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/PageTS/NewsTemplateLayouts.t3s">

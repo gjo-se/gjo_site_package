@@ -1,21 +1,22 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
 
 
-<f:if condition="{file.link}">
-    <v:variable.set name="link" value="{file.link}"/>
-</f:if>
+    <f:if condition="{file.link}">
+        <v:variable.set name="link" value="{file.link}"/>
+    </f:if>
 
-<figure class="{f:if(condition: '{figure-class}', then: '{figure-class}', else: 'mb-0')}">
+    <figure class="{f:if(condition: '{figure-class}', then: '{figure-class}', else: 'mb-0')}">
 
-
-    <f:if condition="{data.isNews}">
-        <f:then>
-            <div class="view view-cascade overlay">
-                <f:link.action controller="News" action="detail" pageUid="62"
-                               additionalParams="{'tx_news_pi1%5Bnews%5D': data.newsId}">
-                    <f:render partial="ContentElements/Media/Rendering/Image"
-                              arguments="{
+        <f:if condition="{data.isNews}">
+            <f:then>
+                <div class="view view-cascade overlay">
+                    <f:link.action controller="News" action="detail" pageUid="62"
+                                   additionalParams="{'tx_news_pi1%5Bnews%5D': data.newsId}">
+                        <f:render partial="Media/Rendering/Image"
+                                  arguments="{
                                   width: width,
                                   breakpoints: breakpoints,
                                   file: file,
@@ -23,20 +24,21 @@
                                   data: data,
                                   class: class
                                   }"
-                    />
-                    <div class="mask rgba-orange-light"></div>
-                </f:link.action>
-            </div>
-        </f:then>
-        <f:else>
-            <f:if condition="{link}">
-                <f:then>
-                    <div class="view view-cascade overlay">
-                        <f:if condition="{L}">
-                            <f:then>
-                                <f:link.page pageUid="{link}" title="{file.title}" additionalParams="{L: '{L}', is_shop: is_shop}">
-                                    <f:render partial="ContentElements/Media/Rendering/Image"
-                                              arguments="{
+                        />
+                        <div class="mask rgba-orange-light"></div>
+                    </f:link.action>
+                </div>
+            </f:then>
+            <f:else>
+                <f:if condition="{link}">
+                    <f:then>
+                        <div class="view view-cascade overlay">
+                            <f:if condition="{L}">
+                                <f:then>
+                                    <f:link.page pageUid="{link}" title="{file.title}"
+                                                 additionalParams="{L: '{L}', is_shop: is_shop}">
+                                        <f:render partial="Media/Rendering/Image"
+                                                  arguments="{
                                   width: width,
                                   breakpoints: breakpoints,
                                   file: file,
@@ -44,13 +46,14 @@
                                   data: data,
                                   class: class
                                   }"
-                                    />
-                                </f:link.page>
-                            </f:then>
-                            <f:else>
-                                <f:link.page pageUid="{link}" title="{file.title}" additionalParams="{is_shop: is_shop}">
-                                    <f:render partial="ContentElements/Media/Rendering/Image"
-                                              arguments="{
+                                        />
+                                    </f:link.page>
+                                </f:then>
+                                <f:else>
+                                    <f:link.page pageUid="{link}" title="{file.title}"
+                                                 additionalParams="{is_shop: is_shop}">
+                                        <f:render partial="Media/Rendering/Image"
+                                                  arguments="{
                                   width: width,
                                   breakpoints: breakpoints,
                                   file: file,
@@ -58,11 +61,11 @@
                                   data: data,
                                   class: class
                                   }"
-                                    />
-                                </f:link.page>
-                            </f:else>
-                        </f:if>
-                    </div>
+                                        />
+                                    </f:link.page>
+                                </f:else>
+                            </f:if>
+                        </div>
 
                         <f:if condition="{file.description}">
                             <figcaption class="caption">
@@ -72,32 +75,27 @@
                             </figcaption>
                         </f:if>
 
-                </f:then>
-                <f:else>
-                    <f:render partial="ContentElements/Media/Rendering/Image"
-                              arguments="{
+                    </f:then>
+                    <f:else>
+                        <f:render partial="Media/Rendering/Image"
+                                  arguments="{
                           width: width,
                           breakpoints: breakpoints,
                           file: file,
                           data: data,
                           class: class
                           }"
-                    />
+                        />
 
-                    <f:if condition="{file.description}">
-                        <figcaption class="caption">
-                            <f:format.nl2br>{file.description}</f:format.nl2br>
-                        </figcaption>
-                    </f:if>
+                        <f:if condition="{file.description}">
+                            <figcaption class="caption">
+                                <f:format.nl2br>{file.description}</f:format.nl2br>
+                            </figcaption>
+                        </f:if>
 
-                </f:else>
-            </f:if>
-        </f:else>
-
-
-    </f:if>
-
-
-</figure>
-
-</html>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </figure>
+</div>

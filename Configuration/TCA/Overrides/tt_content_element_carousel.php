@@ -2,41 +2,43 @@
 
 call_user_func(function () {
 
-    $ext  = 'gjo_site_package';
+    $ext = 'gjo_site_package';
     $path = '/Resources/Private/Language/';
     $file = 'ContentElements.xlf:';
-    $lll  = 'LLL:EXT:' . $ext . $path . $file;
+    $lll = 'LLL:EXT:' . $ext . $path . $file;
 
-    $table  = 'tt_content';
+    $table = 'tt_content';
     $column = 'carousel';
+    $contentTypeName = $ext . '_' . $column;
 
-    if (!is_array($GLOBALS['TCA'][$table]['types'][$column])) {
-        $GLOBALS['TCA'][$table]['types'][$column] = [];
+    if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentTypeName] ?? false)) {
+        $GLOBALS['TCA']['tt_content']['types'][$contentTypeName] = [];
     }
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:gjo_site_package/Configuration/FlexForms/ContentElement/Carousel.xml',
-        'carousel'
+        $contentTypeName
     );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        $table,
+        'tt_content',
         'CType',
         [
-            $lll . 'carousel',
-            'carousel',
-            'content-bootstrappackage-carousel'
+            'label' => $lll . $column,
+            'value' => $contentTypeName,
+            'icon' => 'content-bootstrappackage-carousel',
+            'group' => 'gjo-se',
+            'description' => 'Beschreibung aus addTcaSelectItem()',
         ],
         '--div--',
-        'after'
+        'after',
     );
 
-    $GLOBALS['TCA'][$table]['ctrl']['typeicon_classes'][$column] = 'content-bootstrappackage-carousel';
+    $GLOBALS['TCA'][$table]['ctrl']['typeicon_classes'][$contentTypeName] = 'content-bootstrappackage-carousel';
 
-    // TODO: language Files Struktur überlegen
-    $GLOBALS['TCA'][$table]['types'][$column] = array_replace_recursive(
-        $GLOBALS['TCA']['tt_content']['types'][$column],
+    $GLOBALS['TCA']['tt_content']['types'][$contentTypeName] = array_replace_recursive(
+        $GLOBALS['TCA']['tt_content']['types'][$contentTypeName],
         [
             'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,

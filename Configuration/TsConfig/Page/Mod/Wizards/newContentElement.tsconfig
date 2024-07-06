@@ -51,7 +51,7 @@ mod.wizards.newContentElement.wizardItems.complexe {
             title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel
             description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel.description
             tt_content_defValues {
-                CType = carousel
+                CType = gjo_site_package_carousel
             }
         }
     }

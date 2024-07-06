@@ -1,20 +1,21 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
 
-<f:if condition="{file}">
-    <gjoSe:media.media file="{file}"
-                       class="img-fluid {class}"
-                       alt="{file.alternative}"
-                       width="{width}"
-                       breakpoints="{breakpoints}"
-                       contentElementData="{data}"
-                       picturefill="false"
-    />
+    <f:if condition="{file}">
+        <picture>
+            <f:for each="{breakpoints}" as="breakpoint" iteration="iteration">
+                <source srcset="{f:uri.image(image: file, cropVariant: breakpoint.cropVariant)}"
+                        media="{breakpoint.media}"/>
+            </f:for>
+            <img class="img-fluid " src="{f:uri.image(image: file)}" alt="{file.alternative}"
+                 title="{file.alternative}"/>
+        </picture>
 
-    <f:if condition="{link}">
-        <div class="mask rgba-orange-light"></div>
+        <f:if condition="{link}">
+            <div class="mask rgba-orange-light"></div>
+        </f:if>
     </f:if>
-</f:if>
 
-
-</html>
+</div>

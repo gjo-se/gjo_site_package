@@ -1,366 +1,258 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<!--TODO: LLL-->
 <T3DataStructure>
-    <meta>
-        <langDisable>1</langDisable>
-    </meta>
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
+                </sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.carousel.options>
-                        <TCEforms>
-                            <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectMultipleSideBySide</renderType>
-                                <items type="array">
-<!--                                    <numIndex index="0" type="array">-->
-<!--                                        <numIndex index="0">-->
-<!--                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.0-->
-<!--                                        </numIndex>-->
-<!--                                        <numIndex index="1">intervall-0</numIndex>-->
-<!--                                    </numIndex>-->
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500
-                                        </numIndex>
-                                        <numIndex index="1">intervall-2500</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride
-                                        </numIndex>
-                                        <numIndex index="1">ride</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause
-                                        </numIndex>
-                                        <numIndex index="1">pause</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade
-                                        </numIndex>
-                                        <numIndex index="1">fade</numIndex>
-                                    </numIndex>
-                                    <numIndex index="5" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop
-                                        </numIndex>
-                                        <numIndex index="1">loop</numIndex>
-                                    </numIndex>
-                                </items>
-                                <size>6</size>
-                                <minitems>0</minitems>
-                                <maxitems>8</maxitems>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectMultipleSideBySide</renderType>
+                            <items type="array">
+                                <numIndex index="1" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500
+                                    </label>
+                                    <value>intervall-2500</value>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride
+                                    </label>
+                                    <value>ride</value>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause
+                                    </label>
+                                    <value>pause</value>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade
+                                    </label>
+                                    <value>fade</value>
+                                </numIndex>
+                                <numIndex index="5" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop
+                                    </label>
+                                    <value>loop</value>
+                                </numIndex>
+                            </items>
+                            <size>6</size>
+                            <minitems>0</minitems>
+                            <maxitems>8</maxitems>
+                        </config>
                     </settings.carousel.options>
-
                 </el>
             </ROOT>
         </sDEF>
         <layout-col-4>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout
+                </sheetTitle>
                 <type>array</type>
                 <el>
-                    <!--<settings.carousel.ratio>-->
-                    <!--<TCEforms>-->
-                    <!--<label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio</label>-->
-                    <!--<config>-->
-                    <!--<type>select</type>-->
-                    <!--<renderType>selectMultipleSideBySide</renderType>-->
-                    <!--<items type="array">-->
-                    <!--<numIndex index="0" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_16_9</numIndex>-->
-                    <!--<numIndex index="1">sx-16</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--<numIndex index="1" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_21_9</numIndex>-->
-                    <!--<numIndex index="1">sx-21</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--&lt;!&ndash;<numIndex index="2" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sx_full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="1">sx-full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
-                    <!--<numIndex index="3" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_16_9</numIndex>-->
-                    <!--<numIndex index="1">sm-16</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--<numIndex index="4" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_21_9</numIndex>-->
-                    <!--<numIndex index="1">sm-21</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--&lt;!&ndash;<numIndex index="5" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.sm_full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="1">sm-full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
-                    <!--<numIndex index="6" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_16_9</numIndex>-->
-                    <!--<numIndex index="1">md-16</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--<numIndex index="7" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_21_9</numIndex>-->
-                    <!--<numIndex index="1">md-21</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--&lt;!&ndash;<numIndex index="8" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.md_full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="1">md-full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
-                    <!--<numIndex index="9" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_16_9</numIndex>-->
-                    <!--<numIndex index="1">lg-16</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--<numIndex index="10" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_21_9</numIndex>-->
-                    <!--<numIndex index="1">lg-21</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--&lt;!&ndash;<numIndex index="11" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.lg_full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="1">lg-full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
-                    <!--<numIndex index="12" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_16_9</numIndex>-->
-                    <!--<numIndex index="1">xl-16</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--<numIndex index="13" type="array">-->
-                    <!--<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_21_9</numIndex>-->
-                    <!--<numIndex index="1">xl-21</numIndex>-->
-                    <!--</numIndex>-->
-                    <!--&lt;!&ndash;<numIndex index="14" type="array">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.ratio.xl_full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<numIndex index="1">xl-full</numIndex>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</numIndex>&ndash;&gt;-->
-                    <!--</items>-->
-                    <!--<size>6</size>-->
-                    <!--<minitems>0</minitems>-->
-                    <!--<maxitems>8</maxitems>-->
-                    <!--</config>-->
-                    <!--</TCEforms>-->
-                    <!--</settings.carousel.ratio>-->
                     <settings.carousel.count_items>
-                        <TCEforms>
-                            <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items
-                            </label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectMultipleSideBySide</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xs_1
-                                        </numIndex>
-                                        <numIndex index="1">xs-1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.sm_1
-                                        </numIndex>
-                                        <numIndex index="1">sm-1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_1
-                                        </numIndex>
-                                        <numIndex index="1">md-1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="5" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_3
-                                        </numIndex>
-                                        <numIndex index="1">md-3</numIndex>
-                                    </numIndex>
-                                    <numIndex index="6" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_1
-                                        </numIndex>
-                                        <numIndex index="1">lg-1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="7" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_3
-                                        </numIndex>
-                                        <numIndex index="1">lg-3</numIndex>
-                                    </numIndex>
-                                    <numIndex index="8" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_1
-                                        </numIndex>
-                                        <numIndex index="1">xl-1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="9" type="array">
-                                        <numIndex index="0">
-                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_3
-                                        </numIndex>
-                                        <numIndex index="1">xl-3</numIndex>
-                                    </numIndex>
-                                </items>
-                                <size>6</size>
-                                <minitems>0</minitems>
-                                <maxitems>8</maxitems>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items
+                        </label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectMultipleSideBySide</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xs_1
+                                    </label>
+                                    <value>xs-1</value>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <label>
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.sm_1
+                                    </label>
+                                    <value index="1">sm-1</value>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_1
+                                    </label>
+                                    <value index="1">md-1</value>
+                                </numIndex>
+                                <numIndex index="5" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.md_3
+                                    </label>
+                                    <value index="1">md-3</value>
+                                </numIndex>
+                                <numIndex index="6" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_1
+                                    </label>
+                                    <value index="1">lg-1</value>
+                                </numIndex>
+                                <numIndex index="7" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.lg_3
+                                    </label>
+                                    <value index="1">lg-3</value>
+                                </numIndex>
+                                <numIndex index="8" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_1
+                                    </label>
+                                    <value index="1">xl-1</value>
+                                </numIndex>
+                                <numIndex index="9" type="array">
+                                    <label index="0">
+                                        LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.count_items.xl_3
+                                    </label>
+                                    <value index="1">xl-3</value>
+                                </numIndex>
+                            </items>
+                            <size>6</size>
+                            <minitems>0</minitems>
+                            <maxitems>8</maxitems>
+                        </config>
                     </settings.carousel.count_items>
                     <settings.carousel.caption_position>
-                        <TCEforms>
-                            <label>Caption Lage</label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">innerhalb des Bildes</numIndex>
-                                        <numIndex index="1">inside</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">unterhalb des Bildes</numIndex>
-                                        <numIndex index="1">below</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>Caption Lage</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>innerhalb des Bildes</label>
+                                    <value index="1">inside</value>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <label index="0">unterhalb des Bildes</label>
+                                    <value index="1">below</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.carousel.caption_position>
                     <settings.carousel.caption_css_class>
-                        <TCEforms>
-                            <label>
-                                LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.caption_css_class
-                            </label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <label>
+                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.caption_css_class
+                        </label>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </settings.carousel.caption_css_class>
                     <settings.carousel.header_layout>
-                        <TCEforms>
-                            <label>Überschrift - Layout</label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">H1</numIndex>
-                                        <numIndex index="1">1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">H2</numIndex>
-                                        <numIndex index="1">2</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">H3</numIndex>
-                                        <numIndex index="1">3</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">H4</numIndex>
-                                        <numIndex index="1">4</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>Überschrift - Layout</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>H1</label>
+                                    <value>1</value>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <label>H2</label>
+                                    <value>2</value>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <label>H3</label>
+                                    <value>3</value>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <label>H4</label>
+                                    <value>4</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.carousel.header_layout>
                     <settings.carousel.header_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Überschrift CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>Überschrift CSS Class</label>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </settings.carousel.header_css_class>
                     <settings.carousel.bodytext_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Bodytext CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>Bodytext CSS Class</label>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </settings.carousel.bodytext_css_class>
                     <settings.carousel.button_wrap_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Button Wrap CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>Button Wrap CSS Class</label>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </settings.carousel.button_wrap_css_class>
                     <settings.carousel.button_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Button CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>Button CSS Class</label>
+                        <config>
+                            <type>input</type>
+                        </config>
                     </settings.carousel.button_css_class>
                     <settings.carousel.control_type>
-                        <TCEforms>
-                            <label>Control Type (Prev/Next)</label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">nicht anzeigen</numIndex>
-                                        <numIndex index="1">none</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">Innerhalb</numIndex>
-                                        <numIndex index="1">inner</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">Darunter</numIndex>
-                                        <numIndex index="1">top</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>Control Type (Prev/Next)</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>nicht anzeigen</label>
+                                    <value>none</value>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <label>Innerhalb</label>
+                                    <value>inner</value>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <label>Darunter</label>
+                                    <value>top</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.carousel.control_type>
                     <settings.carousel.indicator_type>
-                        <TCEforms>
-                            <label>Indicator Type</label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">nicht anzeigen</numIndex>
-                                        <numIndex index="1">none</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">Thumbnails</numIndex>
-                                        <numIndex index="1">thumbnails</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">Points</numIndex>
-                                        <numIndex index="1">points</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">Zahlen</numIndex>
-                                        <numIndex index="1">numbers</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">Linien</numIndex>
-                                        <numIndex index="1">lines</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>Indicator Type</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>nicht anzeigen</label>
+                                    <value>none</value>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <label>Thumbnails</label>
+                                    <value>thumbnails</value>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <label>Points</label>
+                                    <value>points</value>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <label>Zahlen</label>
+                                    <value>numbers</value>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <label>Linien</label>
+                                    <value>lines</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.carousel.indicator_type>
-
                 </el>
             </ROOT>
         </layout-col-4>
         <layout>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout-col-4</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout-col-4
+                </sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.carousel.card_css_class>
@@ -372,44 +264,6 @@
                             </config>
                         </TCEforms>
                     </settings.carousel.card_css_class>
-
-
-                    <!--<settings.carousel.header_css_class>-->
-                    <!--<TCEforms>-->
-                    <!--<exclude>1</exclude>-->
-                    <!--<label>Überschrift CSS Class</label>-->
-                    <!--<config>-->
-                    <!--<type>input</type>-->
-                    <!--</config>-->
-                    <!--</TCEforms>-->
-                    <!--</settings.carousel.header_css_class>-->
-                    <!--<settings.carousel.bodytext_css_class>-->
-                    <!--<TCEforms>-->
-                    <!--<exclude>1</exclude>-->
-                    <!--<label>Bodytext CSS Class</label>-->
-                    <!--<config>-->
-                    <!--<type>input</type>-->
-                    <!--</config>-->
-                    <!--</TCEforms>-->
-                    <!--</settings.carousel.bodytext_css_class>-->
-                    <!--<settings.carousel.button_wrap_css_class>-->
-                    <!--<TCEforms>-->
-                    <!--<exclude>1</exclude>-->
-                    <!--<label>Button Wrap CSS Class</label>-->
-                    <!--<config>-->
-                    <!--<type>input</type>-->
-                    <!--</config>-->
-                    <!--</TCEforms>-->
-                    <!--</settings.carousel.button_wrap_css_class>-->
-                    <!--<settings.carousel.button_css_class>-->
-                    <!--<TCEforms>-->
-                    <!--<exclude>1</exclude>-->
-                    <!--<label>Button CSS Class</label>-->
-                    <!--<config>-->
-                    <!--<type>input</type>-->
-                    <!--</config>-->
-                    <!--</TCEforms>-->
-                    <!--</settings.carousel.button_css_class>-->
                 </el>
             </ROOT>
         </layout>

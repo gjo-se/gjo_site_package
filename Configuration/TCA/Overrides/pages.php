@@ -8,7 +8,7 @@ call_user_func(function()
 
     ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-        'Configuration/TsConfig/Page/All.tsconfig',
-        'gjo_site_package'
+        'Configuration/TsConfig/Page/Page.tsconfig',
+        'gjo_site_package Page TSConfig'
     );
 });

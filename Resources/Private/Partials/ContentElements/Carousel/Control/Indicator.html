@@ -16,7 +16,7 @@
                     <span class="d-none d-lg-block">
                                                         <f:if condition="{slide.images}">
                             <f:for each="{slide.images}" as="file" iteration="iteration">
-                                <f:render partial="ContentElements/Media/Type"
+                                <f:render partial="Media/Type"
                                           arguments="{
                                               width: 90,
                                               breakpoints: {
@@ -30,7 +30,7 @@
                             </f:for>
                         </f:if>
                         <f:if condition="{slide.image}">
-                                <f:render partial="ContentElements/Media/Type"
+                                <f:render partial="Media/Type"
                                           arguments="{
                                               width: 90,
                                               breakpoints: {

@@ -50,17 +50,12 @@ call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, 'tx_gjositepackage_additional_css', '', 'after:layout');
 
-    // TODO: überprüfen: wird mE nicht mehr benutzt
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
         'CType',
-        [
-            $lll . 'ContentElements.xlf:content_group.gjose',
-            '--div--'
-        ],
-        '--div--',
-        'before'
+        'gjo-se',
+        $lll . 'ContentElements.xlf:content_group.gjose',
+        'before:default'
     );
-
 
 });

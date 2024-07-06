@@ -19,7 +19,6 @@
         <f:if condition="{carouselCountItem} == 'xl-1' ">
             <v:variable.set name="xl-display" value="block"/>
         </f:if>
-
     </f:for>
 
     <div class="row justify-content-center">
@@ -38,7 +37,7 @@
                         <v:variable.set name="records" value="{paginatedRecords}"/>
                     </f:if>
 
-                    <f:render partial="ContentElements/Carousel/Item/Item" section="col-12-Item"
+                    <f:render partial="Carousel/Item/Item" section="col-12-Item"
                               arguments="{
                                 records: records,
                                 carousel: carousel,
@@ -46,7 +45,7 @@
                           }"/>
 
                     <f:if condition="{records -> f:count()} > 1 ">
-                        <f:render partial="ContentElements/Carousel/Control/Indicator"
+                        <f:render partial="Carousel/Control/Indicator"
                                   arguments="{
                                     indicator: '{carousel.indicator_type}',
                                     records: records,

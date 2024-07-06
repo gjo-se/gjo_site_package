@@ -11,7 +11,6 @@
 
                 <v:variable.set name="currentSlide" value="{iteration.cycle}"/>
 
-
                 <div class="carousel-item {f:if(condition: '{iteration.cycle} == 1', then: 'active')}">
                     <div class="{f:if(condition: '{carousel.caption_position} == \'inside\'', then: 'view ')}
                                 {f:if(condition: '{carousel.caption_position} == \'below\'', then: 'card ')}">
@@ -21,7 +20,7 @@
 
                                 <f:if condition="{slide.images}">
                                     <f:for each="{slide.images}" as="file" iteration="iteration">
-                                        <f:render partial="ContentElements/Media/Type"
+                                        <f:render partial="Media/Type"
                                                   arguments="{
                                                       file: file,
                                                       width: 1100,
@@ -39,7 +38,7 @@
                                 </f:if>
 
                                 <f:if condition="{slide.image}">
-                                    <f:render partial="ContentElements/Media/Type"
+                                    <f:render partial="Media/Type"
                                               arguments="{
                                                       file: slide.image,
                                                       width: 1100,
@@ -53,6 +52,9 @@
                                                       data: slide.data
                                                   }"
                                     />
+                                    <f:if condition="{link}">
+                                        <div class="mask rgba-orange-light"></div>
+                                    </f:if>
                                 </f:if>
 
                                 <f:if condition="{carousel.control_type} != 'none' ">
@@ -66,12 +68,10 @@
                             </div>
                         </div>
 
-
                         <f:if condition="{carousel.indicator_type} == 'lines' ">
                             <div class="row mt-2 indicator-line">
                                 <f:for each="{records}" as="indicator" iteration="indicatorIteration">
                                     <div class="col {f:if(condition: '{currentSlide} == {indicatorIteration.cycle}', then:'bg-tiger-orange', else:'black')} pb-4">
-                                        {iteration.cycle}
                                     </div>
                                 </f:for>
                             </div>
@@ -83,7 +83,7 @@
                                 {f:if(condition: '{carousel.caption_css_class}', then: '{carousel.caption_css_class}')}">
 
 
-                                <f:render partial="ContentElements/Header/All"
+                                <f:render partial="Header/All"
                                           arguments="{
                                                 data: {
                                                     header_layout: carousel.header_layout,
@@ -187,7 +187,7 @@
                                   file: file,
                                   width: 338,
                                   breakpoints: {
-                                    0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 338}},
+                                    0: {cropVariant: 'col-4-wideScreen', media: '(min-width: 1200px)', srcset: {0: 338}},
                                     1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 288}},
                                     2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 198}},
                                     3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 150}}
