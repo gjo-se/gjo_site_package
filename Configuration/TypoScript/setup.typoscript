@@ -11,15 +11,3 @@
 #
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_form.t3s">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_news.t3s">
-
-#[applicationContext = Development]
-#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Development/development.t3s">
-#[end]
-#
-#[applicationContext = Testing]
-#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Testing/testing.t3s">
-#[end]
-#
-#[applicationContext = Production]
-#    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/Environment/Production/production.t3s">
-#[end]

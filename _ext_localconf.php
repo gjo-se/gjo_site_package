@@ -17,10 +17,6 @@ call_user_func(
 
         $extensionKey = 'gjo_site_package';
 
-        ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $extensionKey . '/Configuration/PageTS/_PageTSConfig.t3s">'
-        );
-
         $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['gjo_custom'] =
             'EXT:' . $extensionKey . '/Configuration/PageTS/Rte/Custom.yaml';
 
