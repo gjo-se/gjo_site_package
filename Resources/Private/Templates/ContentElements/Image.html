@@ -2,78 +2,13 @@
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-    <f:layout name="Default"/>
+    <f:layout name="CeDefaultLayout"/>
 
-    <f:section name="Main">
+    <f:section name="CeMainSection">
 
-        <f:if condition="{data.parentgrid_tx_gridelements_backend_layout}">
-            <f:then>
-                <f:comment>Gridelements: 2-Spaltig</f:comment>
-                <f:if condition="{data.parentgrid_tx_gridelements_backend_layout} == 'col2' ">
-                    <f:for each="{files}" as="file" iteration="iteration">
-                        <f:render partial="ContentElements/Media/Type"
-                                  arguments="{
-                          file: file,
-                          width: 550,
-                          breakpoints: {
-                            0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 550}},
-                            1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 475}},
-                            2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 360}},
-                            3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 270}},
-                            4: {cropVariant: 'mobile', media: '(min-width: 300px)', srcset: {0: 175}}
-                          },
-                          data: data
-                      }"
-                        />
-                    </f:for>
-                </f:if>
-
-                <f:comment>Gridelements: 3-Spaltig</f:comment>
-                <f:if condition="{data.parentgrid_tx_gridelements_backend_layout} == 'col3' ">
-                    <f:for each="{files}" as="file" iteration="iteration">
-                        <f:render partial="ContentElements/Media/Type"
-                                  arguments="{
-                          file: file,
-                          width: 370,
-                          breakpoints: {
-                            0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 370}},
-                            1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 320}},
-                            2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 240}},
-                            3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 180}},
-                            4: {cropVariant: 'mobile', media: '(min-width: 300px)', srcset: {0: 120}}
-                          },
-                          data: data
-                      }"
-                        />
-                    </f:for>
-                </f:if>
-
-                <f:comment>Gridelements: 4-Spaltig</f:comment>
-                <f:if condition="{data.parentgrid_tx_gridelements_backend_layout} == 'col4' ">
-                    <f:for each="{files}" as="file" iteration="iteration">
-                        <f:render partial="ContentElements/Media/Type"
-                                  arguments="{
-                          file: file,
-                          width: 300,
-                          breakpoints: {
-                            0: {cropVariant: 'wideScreen', media: '(min-width: 1200px)', srcset: {0: 300}},
-                            1: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 250}},
-                            2: {cropVariant: 'laptop', media: '(min-width: 768px)', srcset: {0: 180}},
-                            3: {cropVariant: 'tablet', media: '(min-width: 576px)', srcset: {0: 140}},
-                            4: {cropVariant: 'mobile', media: '(min-width: 300px)', srcset: {0: 90}}
-                          },
-                          data: data
-                      }"
-                        />
-                    </f:for>
-                </f:if>
-
-            </f:then>
-            <f:else>
-                <f:comment>ohne Gridelements</f:comment>
-                <f:for each="{files}" as="file" iteration="iteration">
-                    <f:render partial="ContentElements/Media/Type"
-                              arguments="{
+        <f:for each="{files}" as="file" iteration="iteration">
+            <f:render partial="Media/Type"
+                      arguments="{
                           file: file,
                           width: 1100,
                           breakpoints: {
@@ -85,10 +20,8 @@
                           },
                           data: data
                       }"
-                    />
-                </f:for>
-            </f:else>
-        </f:if>
-    </f:section>
+            />
+        </f:for>
 
+    </f:section>
 </div>

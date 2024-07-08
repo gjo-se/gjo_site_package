@@ -3,7 +3,6 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
      data-namespace-typo3-fluid="true">
 
-
     <f:if condition="{file.link}">
         <v:variable.set name="link" value="{file.link}"/>
     </f:if>
@@ -35,43 +34,42 @@
                         <div class="view view-cascade overlay">
                             <f:if condition="{L}">
                                 <f:then>
-                                    <f:link.page pageUid="{link}" title="{file.title}"
+                                    <f:link.typolink parameter="{link}" title="{file.title}"
                                                  additionalParams="{L: '{L}', is_shop: is_shop}">
                                         <f:render partial="Media/Rendering/Image"
                                                   arguments="{
-                                  width: width,
-                                  breakpoints: breakpoints,
-                                  file: file,
-                                  link: link,
-                                  data: data,
-                                  class: class
-                                  }"
+                                              width: width,
+                                              breakpoints: breakpoints,
+                                              file: file,
+                                              link: link,
+                                              data: data,
+                                              class: class
+                                              }"
                                         />
-                                    </f:link.page>
+                                    </f:link.typolink>
                                 </f:then>
                                 <f:else>
-                                    <f:link.page pageUid="{link}" title="{file.title}"
-                                                 additionalParams="{is_shop: is_shop}">
+                                    <f:link.typolink parameter="{link}" title="{file.title}">
                                         <f:render partial="Media/Rendering/Image"
                                                   arguments="{
-                                  width: width,
-                                  breakpoints: breakpoints,
-                                  file: file,
-                                  link: link,
-                                  data: data,
-                                  class: class
-                                  }"
+                                              width: width,
+                                              breakpoints: breakpoints,
+                                              file: file,
+                                              link: link,
+                                              data: data,
+                                              class: class
+                                              }"
                                         />
-                                    </f:link.page>
+                                    </f:link.typolink>
                                 </f:else>
                             </f:if>
                         </div>
 
                         <f:if condition="{file.description}">
                             <figcaption class="caption">
-                                <f:link.page pageUid="{link}" title="{file.title}">
+                                <f:link.typolink parameter="{link}" title="{file.title}">
                                     <f:format.nl2br>{file.description}</f:format.nl2br>
-                                </f:link.page>
+                                </f:link.typolink>
                             </figcaption>
                         </f:if>
 
