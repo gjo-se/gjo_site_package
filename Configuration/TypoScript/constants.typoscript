@@ -43,11 +43,6 @@ plugin.tx_gjositepackage {
             partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/ContentElements/
             layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/ContentElements/
         }
-        news {
-            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/News/
-            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/News/
-            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/News/
-        }
         default {
             templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/
             partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/
