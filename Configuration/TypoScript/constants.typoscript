@@ -43,11 +43,6 @@ plugin.tx_gjositepackage {
             partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/ContentElements/
             layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/ContentElements/
         }
-        gridelements {
-            templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Gridelements/
-            partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Gridelements/
-            layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Gridelements/
-        }
         news {
             templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/News/
             partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/News/
