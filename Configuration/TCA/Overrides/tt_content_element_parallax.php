@@ -8,8 +8,11 @@ call_user_func(function () {
     $lll   = 'LLL:EXT:' . $ext . $path . $file;
 
     $table = 'tt_content';
-    $type = 'parallax';
+    $contentTypeName = 'parallax';
 
+    if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentTypeName] ?? false)) {
+        $GLOBALS['TCA']['tt_content']['types'][$contentTypeName] = [];
+    }
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         $table,
@@ -30,12 +33,8 @@ call_user_func(function () {
     );
 
 
-    if (!is_array($GLOBALS['TCA'][$table]['types'][$type])) {
-        $GLOBALS['TCA'][$table]['types'][$type] = [];
-    }
-
-    $GLOBALS['TCA'][$table]['types'][$type] = array_replace_recursive(
-        $GLOBALS['TCA'][$table]['types'][$type],
+    $GLOBALS['TCA'][$table]['types'][$contentTypeName] = array_replace_recursive(
+        $GLOBALS['TCA'][$table]['types'][$contentTypeName],
         [
             'showitem' => '
             --div--;Allgemein,
