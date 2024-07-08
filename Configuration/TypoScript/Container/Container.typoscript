@@ -1,0 +1,27 @@
+tt_content.container-col =< lib.contentElement
+tt_content.container-col {
+    templateRootPaths {
+        10 = EXT:gjo_site_package/Resources/Private/Templates/Container/
+    }
+    layoutRootPaths {
+        10 = EXT:gjo_site_package/Resources/Private/Layouts/Container/
+    }
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-2col =< tt_content.container-col
+tt_content.container-2col {
+    templateName = Container-2col
+}
+
+tt_content.container-3col =< tt_content.container-col
+tt_content.container-3col {
+    templateName = Container-3col
+}
+
+tt_content.container-4col =< tt_content.container-col
+tt_content.container-4col {
+    templateName = Container-4col
+}

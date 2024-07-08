@@ -6,6 +6,7 @@
 @import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/pluginSetup.typoscript'
 @import 'EXT:gjo_site_package/Configuration/TypoScript/Setup/dynamicContentSetup.typoscript'
 
+@import 'EXT:gjo_site_package/Configuration/TypoScript/Container/Container.typoscript'
 @import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/ContentElement.typoscript'
 
 #
