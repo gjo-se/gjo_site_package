@@ -1,10 +1,10 @@
 tt_content.container-col =< lib.contentElement
 tt_content.container-col {
     templateRootPaths {
-        10 = EXT:gjo_site_package/Resources/Private/Templates/Container/
+        10 = {$plugin.tx_gjositepackage.fluidtemplate.container.templateRootPath}
     }
     layoutRootPaths {
-        10 = EXT:gjo_site_package/Resources/Private/Layouts/Container/
+        10 = {$plugin.tx_gjositepackage.fluidtemplate.container.layoutRootPath}
     }
     dataProcessing {
         200 = B13\Container\DataProcessing\ContainerProcessor
