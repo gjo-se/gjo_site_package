@@ -2,10 +2,10 @@
 
 call_user_func(function () {
 
-    $ext   = 'gjo_site_package';
+    $ext = 'gjo_site_package';
     $path = '/Resources/Private/Language/';
     $file = 'ContentElements.xlf:';
-    $lll   = 'LLL:EXT:' . $ext . $path . $file;
+    $lll = 'LLL:EXT:' . $ext . $path . $file;
 
     $table = 'tt_content';
     $contentTypeName = 'parallax';
@@ -18,9 +18,12 @@ call_user_func(function () {
         $table,
         'CType',
         [
-            $lll . 'parallax',
-            'parallax',
-            'content-bootstrappackage-carousel'
+            'label' => $lll . 'parallax',
+            'value' => 'parallax',
+            'icon' => 'content-bootstrappackage-carousel',
+            'group' => 'gjo-se',
+            'description' => 'Beschreibung aus addTcaSelectItem()',
+
         ],
         'carousel',
         'after'

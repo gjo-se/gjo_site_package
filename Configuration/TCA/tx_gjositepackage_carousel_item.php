@@ -2,10 +2,10 @@
 
 return call_user_func(function () {
 
-    $ext      = 'gjo_site_package';
-    $lll      = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
+    $ext = 'gjo_site_package';
+    $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
     $cePreKey = 'carousel_item.';
-    $lllLang  = 'LLL:EXT:' . 'lang/Resources/Private/Language/locallang_general.xlf:';
+    $lllLang = 'LLL:EXT:' . 'lang/Resources/Private/Language/locallang_general.xlf:';
 
     $table = 'tx_gjositepackage_carousel_item';
 
@@ -15,111 +15,89 @@ return call_user_func(function () {
             'title' => $lll . 'carousel',
             'label' => 'header',
 
-            'tstamp'    => 'tstamp',
-            'crdate'    => 'crdate',
-            'cruser_id' => 'cruser_id',
+            'tstamp' => 'tstamp',
+            'crdate' => 'crdate',
 
             'dividers2tabs' => true,
-            'sortby'        => 'sorting',
-            'iconfile'      => 'EXT:' . $ext . '/Resources/Public/Icons/ContentElements/carousel-item.svg',
+            'sortby' => 'sorting',
+            'iconfile' => 'EXT:' . $ext . '/Resources/Public/Icons/ContentElements/carousel-item.svg',
 
-            'languageField'            => 'sys_language_uid',
-            'transOrigPointerField'    => 'l10n_parent',
+            'languageField' => 'sys_language_uid',
+            'transOrigPointerField' => 'l10n_parent',
             'transOrigDiffSourceField' => 'l10n_diffsource',
 
-            'delete'        => 'deleted',
+            'delete' => 'deleted',
             'enablecolumns' => [
-                'disabled'  => 'hidden',
+                'disabled' => 'hidden',
                 'starttime' => 'starttime',
-                'endtime'   => 'endtime',
+                'endtime' => 'endtime',
             ],
 
         ],
 
         'columns' => [
 
-            'hidden'           => [
-                'exclude' => true,
-                'label'   => $lllLang . 'LGL.hidden',
-                'config'  => [
-                    'type'  => 'check',
+            'hidden' => [
+                'label' => $lllLang . 'LGL.hidden',
+                'config' => [
+                    'type' => 'check',
                     'items' => [
-                        '1' => [
-                            '0' => $lllLang . 'LGL.hidden'
+                        [
+                            'label' => $lllLang . 'LGL.hidden',
+                            'value' => 0
                         ]
                     ]
                 ]
             ],
-            'starttime'        => [
-                'exclude'      => true,
-                'label'        => $lllLang . 'LGL.starttime',
-                'config'       => [
-                    'type'       => 'input',
-                    'renderType' => 'inputDateTime',
-                    'eval'       => 'datetime',
-                    'default'    => 0,
+            'starttime' => [
+                'label' => $lllLang . 'LGL.starttime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
                     'behaviour' => [
-                        'allowLanguageSynchronization' => true
-                    ]
-
+                        'allowLanguageSynchronization' => true,
+                    ],
                 ],
             ],
-            'endtime'          => [
-                'exclude'      => true,
-                'label'        => $lllLang . 'LGL.endtime',
-                'config'       => [
-                    'type'       => 'input',
-                    'renderType' => 'inputDateTime',
-                    'eval'       => 'datetime',
-                    'default'    => 0,
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true
+            'endtime' => [
+                'label' => $lllLang . 'LGL.endtime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
+                    'range' => [
+                        'upper' => mktime(0, 0, 0, 1, 1, 2038),
                     ],
-                    'range'      => [
-                        'upper' => mktime(0, 0, 0, 1, 1, 2038)
-                    ]
-                ]
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
             ],
             'sys_language_uid' => [
-                'exclude' => 1,
-                'label'   => $lllLang . 'LGL.language',
-                'config'  => [
-                    'type'                => 'select',
-                    'renderType'          => 'selectSingle',
-                    'foreign_table'       => 'sys_language',
-                    'foreign_table_where' => 'ORDER BY sys_language.title',
-                    'items'               => [
-                        [
-                            $lllLang . 'LGL.allLanguages',
-                            -1
-                        ],
-                        [
-                            $lllLang . 'LGL.default_value',
-                            0
-                        ]
-                    ],
-                    'allowNonIdValues'    => true,
+                'label' => $lllLang . 'LGL.language',
+                'config' => [
+                    'type' => 'language',
                 ]
             ],
-            'l10n_parent'      => [
+            'l10n_parent' => [
                 'displayCond' => 'FIELD:sys_language_uid:>:0',
-                'exclude'     => 1,
-                'label'       => $lllLang . 'LGL.l18n_parent',
-                'config'      => [
-                    'type'                => 'select',
-                    'renderType'          => 'selectSingle',
+                'label' => $lllLang . 'LGL.l18n_parent',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
                     'items'               => [
                         [
-                            '',
-                            0
-                        ]
+                            'label' => '',
+                            'value' => 0
+                        ],
                     ],
-                    'foreign_table'       => $table,
+                    'foreign_table' => $table,
                     'foreign_table_where' => 'AND ' . $table . '.pid=###CURRENT_PID### AND ' . $table . '.sys_language_uid IN (-1,0)',
-                    'default'             => 0
+                    'default' => 0
                 ]
             ],
-            'l10n_diffsource'  => [
+            'l10n_diffsource' => [
                 'config' => [
                     'type' => 'passthrough'
                 ]
@@ -128,14 +106,13 @@ return call_user_func(function () {
             ######################################################################
 
             'tt_content' => [
-                'exclude' => true,
-                'label'   => $lll . $cePreKey . 'tt_content',
-                'config'  => [
-                    'type'                => 'select',
-                    'renderType'          => 'selectSingle',
-                    'foreign_table'       => 'tt_content',
+                'label' => $lll . $cePreKey . 'tt_content',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'foreign_table' => 'tt_content',
                     'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="carousel"',
-                    'maxitems'            => 1,
+                    'maxitems' => 1,
                 ],
             ],
 
@@ -149,13 +126,13 @@ return call_user_func(function () {
             ],
 
             'is_background_image' => [
-                'label'  => $lll . $cePreKey . 'is_background_image',
+                'label' => $lll . $cePreKey . 'is_background_image',
                 'config' => [
                     'type' => 'check',
                 ],
             ],
-            'header'              => [
-                'label'  => $lll . $cePreKey . 'header',
+            'header' => [
+                'label' => $lll . $cePreKey . 'header',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
@@ -164,7 +141,7 @@ return call_user_func(function () {
             ],
 
             'mask_css_class' => [
-                'label'  => $lll . $cePreKey . 'mask_css_class',
+                'label' => $lll . $cePreKey . 'mask_css_class',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
@@ -173,7 +150,7 @@ return call_user_func(function () {
             ],
 
             'button_text' => [
-                'label'  => $lll . $cePreKey . 'button_text',
+                'label' => $lll . $cePreKey . 'button_text',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
@@ -181,38 +158,37 @@ return call_user_func(function () {
                 ]
             ],
 
-            'button_link'        => [
-                'label'  => $lll . $cePreKey . 'button_link',
+            'button_link' => [
+                'label' => $lll . $cePreKey . 'button_link',
                 'config' => [
-                    'type'         => 'input',
-                    'renderType'   => 'inputLink',
-                    'size'         => 50,
-                    'max'          => 1024,
-                    'eval'         => 'trim',
+                    'type' => 'link',
+                    'renderType' => 'inputLink',
+                    'size' => 50,
+                    'eval' => 'trim',
                     'fieldControl' => [
                         'linkPopup' => [
                             'options' => [
                                 'title' => $lll . 'carousel_item.button_link',
+                                'windowOpenParameters' => 'height=800,width=600,status=0,menubar=0,scrollbars=1',
                             ],
                         ],
                     ],
-                    'softref'      => 'typolink'
                 ],
             ],
 
-            'bodytext'            => [
-                'label'     => $lll . $cePreKey . 'bodytext',
-                'config'    => [
-                    'type'           => 'text',
-                    'cols'           => 80,
-                    'rows'           => 15,
+            'bodytext' => [
+                'label' => $lll . $cePreKey . 'bodytext',
+                'config' => [
+                    'type' => 'text',
+                    'cols' => 80,
+                    'rows' => 15,
                     'enableRichtext' => true,
-                    'softref'        => 'typolink_tag,images,email[subst],url',
+                    'softref' => 'typolink_tag,images,email[subst],url',
                 ],
             ],
 
             'element_tag' => [
-                'label'  => $lll . $cePreKey . 'element_tag',
+                'label' => $lll . $cePreKey . 'element_tag',
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
@@ -220,28 +196,26 @@ return call_user_func(function () {
                 ]
             ],
 
-            // TODO: fieldControl klären, softref
-            'link'        => [
-                'label'  => $lll . $cePreKey . 'link',
+            'link' => [
+                'label' => $lll . $cePreKey . 'button_link',
                 'config' => [
-                    'type'         => 'input',
-                    'renderType'   => 'inputLink',
-                    'size'         => 50,
-                    'max'          => 1024,
-                    'eval'         => 'trim',
+                    'type' => 'link',
+                    'renderType' => 'inputLink',
+                    'size' => 50,
+                    'eval' => 'trim',
                     'fieldControl' => [
                         'linkPopup' => [
                             'options' => [
                                 'title' => $lll . 'carousel_item.link',
+                                'windowOpenParameters' => 'height=800,width=600,status=0,menubar=0,scrollbars=1',
                             ],
                         ],
                     ],
-                    'softref'      => 'typolink'
                 ],
             ],
 
             'additional_css' => [
-                'label'  => $lll . $cePreKey . 'additional_css',
+                'label' => $lll . $cePreKey . 'additional_css',
                 'config' => [
                     'type' => 'input'
                 ]
@@ -250,7 +224,7 @@ return call_user_func(function () {
         ],
 
         'palettes' => [
-            '1'     => [
+            '1' => [
                 'showitem' => ''
             ],
             'media' => [
@@ -263,7 +237,7 @@ return call_user_func(function () {
                 '
 
             ],
-            'text'  => [
+            'text' => [
                 'showitem' => '
                     header,
                     --linebreak--,
@@ -277,7 +251,7 @@ return call_user_func(function () {
                 hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden_formlabel
             '
             ],
-            'access'     => [
+            'access' => [
                 'showitem' => '
                 starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
                 endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
@@ -286,8 +260,8 @@ return call_user_func(function () {
         ],
 
         // TODO: divider in Boilerplate vesrchieben
-        'types'    => [
-            '1'               => [
+        'types' => [
+            '1' => [
                 'showitem' => '
                 --div--;' . $lll . 'tab.carousel_item.text,
                     --palette--;' . $lll . 'palette.text;text,
@@ -349,17 +323,6 @@ return call_user_func(function () {
 //                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
 //            '
 //            ],
-        ],
-
-        'interface' => [
-            'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header,
-            bodytext,
-            image,
-            background_image
-        ',
         ],
     ];
 });

@@ -17,7 +17,6 @@ return call_user_func(function () {
 
             'tstamp'    => 'tstamp',
             'crdate'    => 'crdate',
-            'cruser_id' => 'cruser_id',
 
             'dividers2tabs' => true,
             'sortby'        => 'sorting',
@@ -51,78 +50,58 @@ return call_user_func(function () {
         'columns' => [
 
             'hidden'           => [
-                'exclude' => true,
                 'label'   => $lllLang . 'LGL.hidden',
                 'config'  => [
                     'type'  => 'check',
                     'items' => [
-                        '1' => [
-                            '0' => $lllLang . 'LGL.hidden'
+                        [
+                            'label' => $lllLang . 'LGL.hidden',
+                            'value' => 0
                         ]
                     ]
                 ]
             ],
-            'starttime'        => [
-                'exclude'      => true,
-                'label'        => $lllLang . 'LGL.starttime',
-                'config'       => [
-                    'type'       => 'input',
-                    'renderType' => 'inputDateTime',
-                    'eval'       => 'datetime',
-                    'default'    => 0,
+            'starttime' => [
+                'label' => $lllLang . 'LGL.starttime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
                     'behaviour' => [
-                        'allowLanguageSynchronization' => true
-                    ]
+                        'allowLanguageSynchronization' => true,
+                    ],
                 ],
             ],
-            'endtime'          => [
-                'exclude'      => true,
-                'label'        => $lllLang . 'LGL.endtime',
-                'config'       => [
-                    'type'       => 'input',
-                    'renderType' => 'inputDateTime',
-                    'eval'       => 'datetime',
-                    'default'    => 0,
-                    'range'      => [
-                        'upper' => mktime(0, 0, 0, 1, 1, 2038)
+            'endtime' => [
+                'label' => $lllLang . 'LGL.endtime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
+                    'range' => [
+                        'upper' => mktime(0, 0, 0, 1, 1, 2038),
                     ],
                     'behaviour' => [
-                        'allowLanguageSynchronization' => true
-                    ]
+                        'allowLanguageSynchronization' => true,
+                    ],
                 ],
             ],
             'sys_language_uid' => [
-                'exclude' => 1,
-                'label'   => $lllLang . 'LGL.language',
-                'config'  => [
-                    'type'                => 'select',
-                    'renderType'          => 'selectSingle',
-                    'foreign_table'       => 'sys_language',
-                    'foreign_table_where' => 'ORDER BY sys_language.title',
-                    'items'               => [
-                        [
-                            $lllLang . 'LGL.allLanguages',
-                            -1
-                        ],
-                        [
-                            $lllLang . 'LGL.default_value',
-                            0
-                        ]
-                    ],
-                    'allowNonIdValues'    => true,
+                'label' => $lllLang . 'LGL.language',
+                'config' => [
+                    'type' => 'language',
                 ]
             ],
             'l10n_parent'      => [
                 'displayCond' => 'FIELD:sys_language_uid:>:0',
-                'exclude'     => 1,
                 'label'       => $lllLang . 'LGL.l18n_parent',
                 'config'      => [
                     'type'                => 'select',
                     'renderType'          => 'selectSingle',
                     'items'               => [
                         [
-                            '',
-                            0
+                            'label' => '',
+                            'value' => 0
                         ]
                     ],
                     'foreign_table'       => $table,
@@ -158,19 +137,16 @@ return call_user_func(function () {
                     'renderType' => 'selectSingle',
                     'items' => [
                         [
-                            'Bitte wählen...',
-                            'default',
-                            'content-bootstrappackage-carousel-item'
+                            'label' => 'Bitte wählen...',
+                            'value' => 'default'
                         ],
                         [
-                            'Parallax',
-                            'parallax',
-                            'content-bootstrappackage-carousel-item'
+                            'label' => 'Parallax',
+                            'value' => 'parallax'
                         ],
                         [
-                            'Card',
-                            'card',
-                            'content-bootstrappackage-carousel-item'
+                            'label' => 'Card',
+                            'value' => 'card'
                         ]
                     ],
                     'default' => 'default',
@@ -235,22 +211,21 @@ return call_user_func(function () {
                 ]
             ],
 
-            'button_link'        => [
+            'button_link' => [
                 'label'  => 'Button Link',
                 'config' => [
-                    'type'         => 'input',
-                    'renderType'   => 'inputLink',
-                    'size'         => 50,
-                    'max'          => 1024,
-                    'eval'         => 'trim',
+                    'type' => 'link',
+                    'renderType' => 'inputLink',
+                    'size' => 50,
+                    'eval' => 'trim',
                     'fieldControl' => [
                         'linkPopup' => [
                             'options' => [
                                 'title' => 'Button Link',
+                                'windowOpenParameters' => 'height=800,width=600,status=0,menubar=0,scrollbars=1',
                             ],
                         ],
                     ],
-                    'softref'      => 'typolink'
                 ],
             ],
         ],
@@ -327,11 +302,6 @@ return call_user_func(function () {
                     --palette--;Veröffentlichungsdaten und Zugriffsrechte;access,
             '
             ],
-        ],
-
-        'interface' => [
-            'showRecordFieldList' => '
-        ',
-        ],
+        ]
     ];
 });
