@@ -1,5 +1,0 @@
-config {
-    baseURL = https://test.tiger.de/
-    admPanel = 0
-    no_cache = 1
-}

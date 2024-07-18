@@ -1,6 +1,0 @@
-config {
-    baseURL = https://www.tiger.de/
-#    baseURL = http://prod.tiger.de/
-    admPanel = 0
-    no_cache = 1
-}
