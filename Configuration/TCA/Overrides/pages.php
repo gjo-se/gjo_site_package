@@ -9,6 +9,6 @@ call_user_func(function()
     ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/Page.tsconfig',
-        'gjo_site_package Page TSConfig'
+        'GjoSe Site Package'
     );
 });

@@ -66,3 +66,5 @@ $iconRegistry->registerIcon(
 
 ExtensionManagementUtility::allowTableOnStandardPages('tx_gjositepackage_carousel_item');
 ExtensionManagementUtility::allowTableOnStandardPages('tx_gjositepackage_content_element_item');
+// TODO: set to
+//$GLOBALS['TCA']['my_table']['ctrl']['security']['ignorePageTypeRestriction'] = true;

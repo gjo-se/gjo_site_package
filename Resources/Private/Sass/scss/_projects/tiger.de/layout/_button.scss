@@ -16,42 +16,42 @@
 
 
 .skin-black {
-  .btn-tiger-default{
+  .btn-products-default{
     color: $white;
     background-color: $black;
     border-color: $white;
   }
-  .btn-tiger-default:hover{
+  .btn-products-default:hover{
     color: $black;
     background-color: $tiger-orange;
     border-color: $black;
   }
-  .btn-tiger-primary{
+  .btn-products-primary{
     color: $black;
     background-color: $tiger-orange;
     border-color: $black;
   }
-  .btn-tiger-primary:hover {
+  .btn-products-primary:hover {
     background-color: $white;
   }
 }
 
 .skin-white {
-  .btn-tiger-default{
+  .btn-products-default{
     color: $black;
     background-color: $white;
     border-color: $black;
   }
-  .btn-tiger-default:hover{
+  .btn-products-default:hover{
     color: $black;
     background-color: $tiger-orange;
   }
-  .btn-tiger-primary{
+  .btn-products-primary{
     color: $black;
     background-color: $tiger-orange;
     border-color: $black;
   }
-  .btn-tiger-primary:hover {
+  .btn-products-primary:hover {
     background-color: $white;
   }
   .btn-flat-tiger-default{
@@ -62,31 +62,31 @@
   .btn-flat-tiger-default:hover{
     background-color: $tiger-orange;
   }
-  .btn-tiger-light-orange{
+  .btn-products-light-orange{
     background-color: $tiger-light-orange;
   }
-  .btn-tiger-light-orange.active{
+  .btn-products-light-orange.active{
     background-color: $tiger-orange;
   }
 }
 
 .skin-gray {
-  .btn-tiger-default{
+  .btn-products-default{
     color: $black;
     background-color: $white;
     border-color: $black;
   }
-  .btn-tiger-default:hover{
+  .btn-products-default:hover{
     color: $black;
     background-color: $tiger-orange;
     border-color: $black;
   }
-  .btn-tiger-primary{
+  .btn-products-primary{
     color: $black;
     background-color: $tiger-orange;
     border-color: $black;
   }
-  .btn-tiger-primary:hover {
+  .btn-products-primary:hover {
     background-color: $white;
   }
 }

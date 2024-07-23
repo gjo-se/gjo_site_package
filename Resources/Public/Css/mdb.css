@@ -15981,39 +15981,39 @@ p {
 .btn:hover {
   box-shadow: unset; }
 
-.skin-black .btn-tiger-default {
+.skin-black .btn-products-default {
   color: #fff;
   background-color: #000;
   border-color: #fff; }
 
-.skin-black .btn-tiger-default:hover {
+.skin-black .btn-products-default:hover {
   color: #000;
   background-color: #f0a01e;
   border-color: #000; }
 
-.skin-black .btn-tiger-primary {
+.skin-black .btn-products-primary {
   color: #000;
   background-color: #f0a01e;
   border-color: #000; }
 
-.skin-black .btn-tiger-primary:hover {
+.skin-black .btn-products-primary:hover {
   background-color: #fff; }
 
-.skin-white .btn-tiger-default {
+.skin-white .btn-products-default {
   color: #000;
   background-color: #fff;
   border-color: #000; }
 
-.skin-white .btn-tiger-default:hover {
+.skin-white .btn-products-default:hover {
   color: #000;
   background-color: #f0a01e; }
 
-.skin-white .btn-tiger-primary {
+.skin-white .btn-products-primary {
   color: #000;
   background-color: #f0a01e;
   border-color: #000; }
 
-.skin-white .btn-tiger-primary:hover {
+.skin-white .btn-products-primary:hover {
   background-color: #fff; }
 
 .skin-white .btn-flat-tiger-default {
@@ -16024,28 +16024,28 @@ p {
 .skin-white .btn-flat-tiger-default:hover {
   background-color: #f0a01e; }
 
-.skin-white .btn-tiger-light-orange {
+.skin-white .btn-products-light-orange {
   background-color: #f7cf8e; }
 
-.skin-white .btn-tiger-light-orange.active {
+.skin-white .btn-products-light-orange.active {
   background-color: #f0a01e; }
 
-.skin-gray .btn-tiger-default {
+.skin-gray .btn-products-default {
   color: #000;
   background-color: #fff;
   border-color: #000; }
 
-.skin-gray .btn-tiger-default:hover {
+.skin-gray .btn-products-default:hover {
   color: #000;
   background-color: #f0a01e;
   border-color: #000; }
 
-.skin-gray .btn-tiger-primary {
+.skin-gray .btn-products-primary {
   color: #000;
   background-color: #f0a01e;
   border-color: #000; }
 
-.skin-gray .btn-tiger-primary:hover {
+.skin-gray .btn-products-primary:hover {
   background-color: #fff; }
 
 body, .container, .container-fluid, h1, h2, h3, h4, h5, h6, p, .row {

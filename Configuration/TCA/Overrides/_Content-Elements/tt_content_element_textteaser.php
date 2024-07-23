@@ -8,9 +8,11 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['gjositepackage_textte
     'tt_content',
     'CType',
     [
-        'gjoSE-textteaser',
-        'gjositepackage_textteaser',
-        'content-bootstrappackage-accordion'
+        'label' => 'gjoSE-textteaser',
+        'value' => 'gjositepackage_textteaser',
+        'icon' => 'content-bootstrappackage-accordion',
+        'group' => 'gjo-se',
+        'description' => 'Beschreibung aus addTcaSelectItem()',
     ],
     'carousel',
     'after'

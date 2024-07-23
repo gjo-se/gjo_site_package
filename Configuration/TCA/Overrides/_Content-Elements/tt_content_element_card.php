@@ -15,9 +15,11 @@ call_user_func(function () {
         $table,
         'CType',
         [
-            'Card',
-            'card',
-            'content-bootstrappackage-carousel'
+            'label' => 'Card',
+            'value' => 'card',
+            'icon' => 'content-bootstrappackage-carousel',
+            'group' => 'gjo-se',
+            'description' => 'Beschreibung aus addTcaSelectItem()',
         ],
         'parallax',
         'after'

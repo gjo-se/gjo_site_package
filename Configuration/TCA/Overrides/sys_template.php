@@ -9,6 +9,6 @@ call_user_func(function()
     ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',
-        'Gjo Site Package'
+        'GjoSe Site Package'
     );
 });
