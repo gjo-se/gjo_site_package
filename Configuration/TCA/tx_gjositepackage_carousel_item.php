@@ -259,7 +259,7 @@ return call_user_func(function () {
             ],
         ],
 
-        // TODO: divider in Boilerplate vesrchieben
+        // TODO: divider in gjo_base vesrchieben
         'types' => [
             '1' => [
                 'showitem' => '

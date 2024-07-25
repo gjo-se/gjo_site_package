@@ -21,7 +21,7 @@ namespace GjoSe\GjoSitePackage\Utility;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use GjoSe\GjoBoilerplate\Utility\AbstractUtility;
+use GjoSe\GjoBase\Utility\AbstractUtility;
 
 /**
  * Class CroppingUtility

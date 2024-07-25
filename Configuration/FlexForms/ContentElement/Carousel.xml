@@ -2,7 +2,7 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
+                <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
                 </sheetTitle>
                 <type>array</type>
                 <el>
@@ -53,7 +53,7 @@
         </sDEF>
         <layout-col-4>
             <ROOT>
-                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout
+                <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout
                 </sheetTitle>
                 <type>array</type>
                 <el>
@@ -251,7 +251,7 @@
         </layout-col-4>
         <layout>
             <ROOT>
-                <sheetTitle>LLL:EXT:gjo_boilerplate/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout-col-4
+                <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.layout-col-4
                 </sheetTitle>
                 <type>array</type>
                 <el>
