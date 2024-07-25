@@ -29,7 +29,17 @@ use GjoSe\GjoBoilerplate\Utility\AbstractUtility;
  */
 class CroppingUtility extends AbstractUtility
 {
-    static function getDefaultCropSettings()
+    /**
+     * Get default crop settings
+     *
+     * @return array{
+     *     title: string,
+     *     allowedAspectRatios: array<string, array{title: string, value: float}>,
+     *     selectedRatio: string,
+     *     cropArea: array{x: float, y: float, width: float, height: float}
+     * }
+     */
+    static function getDefaultCropSettings(): array
     {
         $defaultCropSettings = [
             'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
