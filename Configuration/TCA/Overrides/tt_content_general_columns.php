@@ -1,6 +1,6 @@
 <?php
 
-call_user_func(function () {
+call_user_func(function (): void {
 
     $table  = 'tt_content';
     $column = 'tx_gjositepackage_carousel_item';

@@ -4,7 +4,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use \B13\Container\Tca\Registry;
 use \B13\Container\Tca\ContainerConfiguration;
 
-call_user_func(function()
+call_user_func(function(): void
 {
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (

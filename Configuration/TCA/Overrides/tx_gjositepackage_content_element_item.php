@@ -1,6 +1,6 @@
 <?php
 
-call_user_func(function () {
+call_user_func(function (): void {
 
     $table = 'tx_gjositepackage_content_element_item';
 

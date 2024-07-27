@@ -1,6 +1,6 @@
 <?php
 
-call_user_func(function () {
+call_user_func(function (): void {
 
     $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/';
