@@ -45,13 +45,7 @@ $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'] = array_repl
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
         ',
         'columnsOverrides' => [
-            'bodytext' => array(
-                'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-                'config' => array(
-                    'enableRichtext' => true,
-                    'richtextConfiguration' => 'default'
-                )
-            )
+            'bodytext' => ['label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel', 'config' => ['enableRichtext' => true, 'richtextConfiguration' => 'default']]
         ]
     ]
 );
