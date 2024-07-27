@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return call_user_func(function (): array {
 
     $ext      = 'gjo_site_package';

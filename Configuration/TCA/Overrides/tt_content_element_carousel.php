@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 call_user_func(function (): void {
 
     $ext = 'gjo_site_package';

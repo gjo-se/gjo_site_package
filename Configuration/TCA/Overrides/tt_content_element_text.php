@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 if (!is_array($GLOBALS['TCA']['tt_content']['types']['text'])) {
     $GLOBALS['TCA']['tt_content']['types']['text'] = [];
 }

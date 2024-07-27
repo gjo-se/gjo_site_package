@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use \B13\Container\Tca\Registry;
 use \B13\Container\Tca\ContainerConfiguration;
