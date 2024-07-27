@@ -1,6 +1,6 @@
 <?php
 
-return call_user_func(function () {
+return call_user_func(function (): array {
 
     $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
