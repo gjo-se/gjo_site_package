@@ -7,7 +7,7 @@ return call_user_func(function (): array {
     $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
     $cePreKey = 'carousel_item.';
-    $lllLang = 'LLL:EXT:' . 'lang/Resources/Private/Language/locallang_general.xlf:';
+    $lllLang = 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:';
 
     $table = 'tx_gjositepackage_carousel_item';
 
