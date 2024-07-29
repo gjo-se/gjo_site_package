@@ -43,7 +43,7 @@ class CroppingUtility extends AbstractUtility
      */
     static function getDefaultCropSettings(): array
     {
-        $defaultCropSettings = [
+        return [
             'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
             'allowedAspectRatios' => [
                 '1:1' => [
@@ -79,8 +79,6 @@ class CroppingUtility extends AbstractUtility
                 'height' => 1.0,
             ]
         ];
-
-        return $defaultCropSettings;
     }
 
 }
