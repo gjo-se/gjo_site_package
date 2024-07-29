@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use GjoSe\GjoSitePackage\Utility\CroppingUtility;
+
 call_user_func(function (): void {
 
     $table = 'tx_gjositepackage_carousel_item';
@@ -10,7 +12,7 @@ call_user_func(function (): void {
     $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
-    $defaultCropSettings = \GjoSe\GjoSitePackage\Utility\CroppingUtility::getDefaultCropSettings();
+    $defaultCropSettings = CroppingUtility::getDefaultCropSettings();
 
     $mobileCropSettings           = $defaultCropSettings;
     $mobileCropSettings['title']  = $lll . 'cropVariant.mobile';

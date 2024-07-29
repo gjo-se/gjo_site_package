@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 call_user_func(function (): void {
 
     $ext   = 'gjo_site_package';
@@ -13,7 +15,7 @@ call_user_func(function (): void {
     $type = 'card';
 
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    ExtensionManagementUtility::addTcaSelectItem(
         $table,
         'CType',
         [
@@ -27,7 +29,7 @@ call_user_func(function (): void {
         'after'
     );
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+    ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:gjo_site_package/Configuration/FlexForms/ContentElement/Composed.xml',
         'card'

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 call_user_func(function (): void {
 
     $ext   = 'gjo_site_package';
@@ -43,10 +45,10 @@ call_user_func(function (): void {
 
     ];
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($table, 'tx_gjositepackage_additional_css', '', 'after:layout');
+    ExtensionManagementUtility::addTCAcolumns($table, $additionalColumns);
+    ExtensionManagementUtility::addToAllTCAtypes($table, 'tx_gjositepackage_additional_css', '', 'after:layout');
 
-    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
+    ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
         'CType',
         'gjo-se',
