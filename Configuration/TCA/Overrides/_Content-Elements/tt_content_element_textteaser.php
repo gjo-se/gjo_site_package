@@ -25,6 +25,7 @@ ExtensionManagementUtility::addTcaSelectItem(
 if (!is_array($GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'])) {
     $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'] = [];
 }
+
 $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'] = array_replace_recursive(
     $GLOBALS['TCA']['tt_content']['types']['gjositepackage_textteaser'],
     [

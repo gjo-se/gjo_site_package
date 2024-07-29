@@ -41,7 +41,7 @@ class CroppingUtility extends AbstractUtility
      *     cropArea: array{x: float, y: float, width: float, height: float}
      * }
      */
-    static function getDefaultCropSettings(): array
+    public static function getDefaultCropSettings(): array
     {
         return [
             'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
