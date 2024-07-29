@@ -4,7 +4,6 @@ declare(strict_types=1);
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 defined('TYPO3') || die('Access denied.');
@@ -64,8 +63,5 @@ $iconRegistry->registerIcon(
     BitmapIconProvider::class,
     ['source' => 'EXT:gjo_tiger/Resources/Public/Icons/tiger_icon.png']
 );
-
-ExtensionManagementUtility::allowTableOnStandardPages('tx_gjositepackage_carousel_item');
-ExtensionManagementUtility::allowTableOnStandardPages('tx_gjositepackage_content_element_item');
 // TODO: set to
 //$GLOBALS['TCA']['my_table']['ctrl']['security']['ignorePageTypeRestriction'] = true;

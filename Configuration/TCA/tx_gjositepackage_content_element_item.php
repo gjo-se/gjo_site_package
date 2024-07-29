@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 return call_user_func(function (): array {
 
     $ext      = 'gjo_site_package';
@@ -177,13 +175,12 @@ return call_user_func(function (): array {
 
             'background_image' => [
                 'label'  => 'Hintergrund Bild',
-                'config' => ExtensionManagementUtility::getFileFieldTCAConfig(
-                    'background_image',
-                    [
-                        'maxitems'         => 1,
-                    ],
-                    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-                ),
+                'config' => [
+                    ### !!! Watch out for fieldName different from columnName
+                    'type' => 'file',
+                    'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+                    'maxitems'         => 1,
+                ],
             ],
 
             'header_text'              => [
