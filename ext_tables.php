@@ -7,7 +7,7 @@ use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-defined('TYPO3') or die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 
 $extensionKey = 'gjo_site_package';
 
