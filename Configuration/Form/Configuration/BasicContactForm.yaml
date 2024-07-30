@@ -1,4 +1,3 @@
-
 renderingOptions:
   submitButtonLabel: Submit
 identifier: BasicContactForm
@@ -9,17 +8,20 @@ finishers:
   -
     options:
       subject: 'Your message: {subject}'
-      recipientAddress: your.company@example.com
-      recipientName: 'Your Company name'
       senderAddress: '{email}'
       senderName: '{name}'
-      replyToAddress: ''
-      carbonCopyAddress: ''
-      blindCarbonCopyAddress: ''
       format: html
       attachUploads: 'true'
       translation:
         language: ''
+      replyToRecipients:
+        - ''
+      carbonCopyRecipients:
+        - ''
+      blindCarbonCopyRecipients:
+        - ''
+      recipients:
+        your.company@example.com: 'Your Company name'
     identifier: EmailToReceiver
 renderables:
   -

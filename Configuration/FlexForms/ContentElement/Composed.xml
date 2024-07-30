@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<!--TODO: LLL-->
+<?xml version="1.0"?>
 <T3DataStructure>
     <meta>
         <langDisable>1</langDisable>
@@ -8,7 +7,8 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings</sheetTitle>
+                    <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
+                    </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -39,38 +39,51 @@
                             </config>
                         </TCEforms>
                     </settings.composed.type>
-
                     <!--Only Carousel-->
                     <settings.carousel.options>
                         <TCEforms>
-                            <label>LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options</label>
+                            <label>
+                                LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.options
+                            </label>
                             <displayCond>FIELD:settings.composed.type:=:carousel</displayCond>
                             <config>
                                 <type>select</type>
                                 <renderType>selectMultipleSideBySide</renderType>
                                 <items type="array">
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.0</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.0
+                                        </numIndex>
                                         <numIndex index="1">intervall-0</numIndex>
                                     </numIndex>
                                     <numIndex index="1" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.intervall.2500
+                                        </numIndex>
                                         <numIndex index="1">intervall-2500</numIndex>
                                     </numIndex>
                                     <numIndex index="2" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.ride
+                                        </numIndex>
                                         <numIndex index="1">ride</numIndex>
                                     </numIndex>
                                     <numIndex index="3" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.pause
+                                        </numIndex>
                                         <numIndex index="1">pause</numIndex>
                                     </numIndex>
                                     <numIndex index="4" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.fade
+                                        </numIndex>
                                         <numIndex index="1">fade</numIndex>
                                     </numIndex>
                                     <numIndex index="5" type="array">
-                                        <numIndex index="0">LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop</numIndex>
+                                        <numIndex index="0">
+                                            LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:flexform.carousel.option.loop
+                                        </numIndex>
                                         <numIndex index="1">loop</numIndex>
                                     </numIndex>
                                 </items>
@@ -80,41 +93,6 @@
                             </config>
                         </TCEforms>
                     </settings.carousel.options>
-
-                    <!--Only Parallax -->
-                    <!--Vers. 2.0 - erst Fluid + JSON klären-->
-                    <!--<settings.parallax.option.type>-->
-                        <!--<TCEforms>-->
-                            <!--<label>Parallax Optionen</label>-->
-                            <!--<displayCond>FIELD:settings.composed.type:=:parallax</displayCond>-->
-                            <!--<config>-->
-                                <!--<type>select</type>-->
-                                <!--<renderType>selectSingle</renderType>-->
-                                <!--<items type="array">-->
-                                    <!--<numIndex index="0" type="array">-->
-                                        <!--<numIndex index="0">Scroll</numIndex>-->
-                                        <!--<numIndex index="1">scroll</numIndex>-->
-                                    <!--</numIndex>-->
-                                    <!--<numIndex index="1" type="array">-->
-                                        <!--<numIndex index="0">Scale</numIndex>-->
-                                        <!--<numIndex index="1">scale</numIndex>-->
-                                    <!--</numIndex>-->
-                                    <!--<numIndex index="2" type="array">-->
-                                        <!--<numIndex index="0">Opacity</numIndex>-->
-                                        <!--<numIndex index="1">opacity</numIndex>-->
-                                    <!--</numIndex>-->
-                                    <!--<numIndex index="3" type="array">-->
-                                        <!--<numIndex index="0">Scroll and Opacity</numIndex>-->
-                                        <!--<numIndex index="1">scroll-opacity</numIndex>-->
-                                    <!--</numIndex>-->
-                                    <!--<numIndex index="4" type="array">-->
-                                        <!--<numIndex index="0">Scale and Opacity</numIndex>-->
-                                        <!--<numIndex index="1">scale-opacity</numIndex>-->
-                                    <!--</numIndex>-->
-                                <!--</items>-->
-                            <!--</config>-->
-                        <!--</TCEforms>-->
-                    <!--</settings.parallax.option.type>-->
                     <settings.parallax.option.height>
                         <TCEforms>
                             <label>Höhe in px</label>
@@ -125,12 +103,9 @@
                             </config>
                         </TCEforms>
                     </settings.parallax.option.height>
-
-
                 </el>
             </ROOT>
         </sDEF>
-
         <!--Parallax-->
         <tab.layout.all>
             <ROOT>
@@ -214,7 +189,6 @@
                 </el>
             </ROOT>
         </tab.layout.all>
-
         <!--Card-->
         <tab.layout.card>
             <ROOT>
@@ -260,6 +234,5 @@
                 </el>
             </ROOT>
         </tab.layout.card>
-
     </sheets>
 </T3DataStructure>

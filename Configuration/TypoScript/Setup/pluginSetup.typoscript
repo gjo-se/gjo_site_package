@@ -7,28 +7,23 @@ plugin.tx_gjositepackage {
                 container = 1140
                 media = (min-width: 1200px)
             }
-
             desktop {
                 container = 960
                 media = (min-width: 992px)
             }
-
             laptop {
                 container = 720
                 media = (min-width: 768px)
             }
-
             tablet {
                 container = 540
                 media = (min-width: 576px)
             }
-
             mobile {
                 container = 300
                 media = (min-width: 300px)
             }
         }
-
         site {
             pid {
                 userLogin = {$plugin.tx_gjositepackage.settings.site.pid.userLogin}

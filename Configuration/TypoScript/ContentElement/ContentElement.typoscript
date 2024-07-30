@@ -14,14 +14,11 @@ lib.contentElement {
     layoutRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.layoutRootPath}
     }
-
     settings {
     }
-
 }
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Textteaser.t3s">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Carousel.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Parallax.t3s">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Card.t3s">
-

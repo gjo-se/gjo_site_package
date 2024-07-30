@@ -3,20 +3,20 @@
 
 page {
     meta {
-        description =
-        author =
-        keywords =
+        description = 
+        author = 
+        keywords = 
         viewport = width=device-width, initial-scale=1
         robots = index,follow
         apple-mobile-web-app-capable = no
         compatible = IE=edge
     }
-#    tracking {
-#        google {
-#            trackingID =
-#            anonymizeIp = 1
-#        }
-#    }
+    #    tracking {
+    #        google {
+    #            trackingID =
+    #            anonymizeIp = 1
+    #        }
+    #    }
 }
 
 config {
@@ -29,7 +29,7 @@ config {
 
 plugin.tx_gjositepackage {
     fluidtemplate {
-        page{
+        page {
             templateRootPath = EXT:gjo_site_package/Resources/Private/Templates/Page/
             partialRootPath = EXT:gjo_site_package/Resources/Private/Partials/Page/
             layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/Page/
@@ -49,36 +49,35 @@ plugin.tx_gjositepackage {
             layoutRootPath = EXT:gjo_site_package/Resources/Private/Layouts/
         }
     }
-
     settings {
-#        site{
-#            pid {
-#                userLogin = 110
-#                userLogout = 83
-#                userRegister = 84
-#                userData = 69
-#                myTiger = 70
-#
-#                agb = 13
-#                dataPrivacyStatement = 93
-#                instructionsForCancellation = 126
-#
-#                shop = 99
-#                cart = 87
-#                checkout = 88
-#                orderConfirmation = 92
-#                shippingCosts = 127
-#                payment {
-#                    payPal {
-#                        success = 96
-#                        failure = 88
-#                    }
-#                }
-#
-#                applicationBusinessCustomerFormConfirmation = 113
-#
-#            }
-#        }
+        #        site{
+        #            pid {
+        #                userLogin = 110
+        #                userLogout = 83
+        #                userRegister = 84
+        #                userData = 69
+        #                myTiger = 70
+        #
+        #                agb = 13
+        #                dataPrivacyStatement = 93
+        #                instructionsForCancellation = 126
+        #
+        #                shop = 99
+        #                cart = 87
+        #                checkout = 88
+        #                orderConfirmation = 92
+        #                shippingCosts = 127
+        #                payment {
+        #                    payPal {
+        #                        success = 96
+        #                        failure = 88
+        #                    }
+        #                }
+        #
+        #                applicationBusinessCustomerFormConfirmation = 113
+        #
+        #            }
+        #        }
 
     }
 }

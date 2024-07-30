@@ -1,27 +1,29 @@
-
 renderingOptions:
   submitButtonLabel: Send
   additionalAttributes:
     novalidate: novalidate
 type: Form
 identifier: TigerContactFormEN
-label: TigerContactForm English
+label: 'TigerContactForm English'
 prototypeName: gjoForm
 finishers:
   -
     options:
       subject: 'Kontakt Anfrage'
-      recipientAddress: gjo@gjo-se.com
-      recipientName: 'Tiger.de - Office'
       senderAddress: '{text-8}'
       senderName: '{text-4} {text-3}'
-      replyToAddress: ''
-      carbonCopyAddress: ''
-      blindCarbonCopyAddress: ''
       format: html
       attachUploads: 'false'
       translation:
         language: ''
+      replyToRecipients:
+        - ''
+      carbonCopyRecipients:
+        - ''
+      blindCarbonCopyRecipients:
+        - ''
+      recipients:
+        gjo@gjo-se.com: 'Tiger.de - Office'
     identifier: EmailToReceiver
   -
     options:
