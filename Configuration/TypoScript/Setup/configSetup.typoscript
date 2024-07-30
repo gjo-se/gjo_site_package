@@ -6,7 +6,6 @@ config {
     pageTitleFirst = 1
     linkVars = L
     prefixLocalAnchors = {$config.prefixLocalAnchors}
-    metaCharset = utf-8
     doctype = html5
     removeDefaultJS = {$config.removeDefaultJS}
     inlineStyle2TempFile = 1
