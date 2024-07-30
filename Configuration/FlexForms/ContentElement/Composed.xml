@@ -8,38 +8,38 @@
             <ROOT>
                 <TCEforms>
                     <sheetTitle>LLL:EXT:gjo_base/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings
-                    </sheetTitle>
-                </TCEforms>
-                <type>array</type>
-                <el>
-                    <settings.composed.type>
-                        <TCEforms>
-                            <label>Composed ContentElement Type</label>
-                            <onChange>reload</onChange>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">Bitte wählen...</numIndex>
-                                        <numIndex index="1">0</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">Carousel</numIndex>
-                                        <numIndex index="1">carousel</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">Parallax</numIndex>
-                                        <numIndex index="1">parallax</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">Card</numIndex>
-                                        <numIndex index="1">card</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </settings.composed.type>
-                    <!--Only Carousel-->
+                </sheetTitle>
+            </TCEforms>
+            <type>array</type>
+            <el>
+                <settings.composed.type>
+                    <TCEforms>
+                        <label>Composed ContentElement Type</label>
+                        <onChange>reload</onChange>
+                        <config>
+                            <type>select</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">Bitte w&#xE4;hlen...</numIndex>
+                                    <numIndex index="1">0</numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">Carousel</numIndex>
+                                    <numIndex index="1">carousel</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">Parallax</numIndex>
+                                    <numIndex index="1">parallax</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">Card</numIndex>
+                                    <numIndex index="1">card</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </TCEforms>
+                </settings.composed.type>
+                <!--Only Carousel-->
                     <settings.carousel.options>
                         <TCEforms>
                             <label>
@@ -95,7 +95,7 @@
                     </settings.carousel.options>
                     <settings.parallax.option.height>
                         <TCEforms>
-                            <label>Höhe in px</label>
+                            <label>H&#xF6;he in px</label>
                             <displayCond>FIELD:settings.composed.type:=:parallax</displayCond>
                             <config>
                                 <type>input</type>
@@ -107,132 +107,132 @@
             </ROOT>
         </sDEF>
         <!--Parallax-->
-        <tab.layout.all>
-            <ROOT>
-                <TCEforms>
-                    <sheetTitle>Erscheiungsbild</sheetTitle>
-                    <displayCond>FIELD:sDEF.settings.composed.type:=:parallax</displayCond>
-                </TCEforms>
-                <type>array</type>
-                <el>
-                    <settings.all.caption_css_class>
+            <tab.layout.all>
+                <ROOT>
+                    <TCEforms>
+                        <sheetTitle>Erscheiungsbild</sheetTitle>
+                        <displayCond>FIELD:sDEF.settings.composed.type:=:parallax</displayCond>
+                    </TCEforms>
+                    <type>array</type>
+                    <el>
+                        <settings.all.caption_css_class>
+                            <TCEforms>
+                                <exclude>1</exclude>
+                                <label>Caption Wrap CSS Class</label>
+                                <config>
+                                    <type>input</type>
+                                </config>
+                            </TCEforms>
+                        </settings.all.caption_css_class>
+                        <settings.all.header_layout>
+                            <TCEforms>
+                                <label>&#xDC;berschrift - Layout</label>
+                                <config>
+                                    <type>select</type>
+                                    <items type="array">
+                                        <numIndex index="0" type="array">
+                                            <numIndex index="0">H1</numIndex>
+                                            <numIndex index="1">1</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <numIndex index="0">H2</numIndex>
+                                            <numIndex index="1">2</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2" type="array">
+                                            <numIndex index="0">H3</numIndex>
+                                            <numIndex index="1">3</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3" type="array">
+                                            <numIndex index="0">H4</numIndex>
+                                            <numIndex index="1">4</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </config>
+                            </TCEforms>
+                        </settings.all.header_layout>
+                        <settings.all.header_css_class>
+                            <TCEforms>
+                                <exclude>1</exclude>
+                                <label>&#xDC;berschrift CSS Class</label>
+                                <config>
+                                    <type>input</type>
+                                </config>
+                            </TCEforms>
+                        </settings.all.header_css_class>
+                        <settings.all.bodytext_css_class>
+                            <TCEforms>
+                                <exclude>1</exclude>
+                                <label>Bodytext CSS Class</label>
+                                <config>
+                                    <type>input</type>
+                                </config>
+                            </TCEforms>
+                        </settings.all.bodytext_css_class>
+                        <settings.all.button_wrap_css_class>
+                            <TCEforms>
+                                <exclude>1</exclude>
+                                <label>Button Wrap CSS Class</label>
+                                <config>
+                                    <type>input</type>
+                                </config>
+                            </TCEforms>
+                        </settings.all.button_wrap_css_class>
+                        <settings.all.button_css_class>
+                            <TCEforms>
+                                <exclude>1</exclude>
+                                <label>Button CSS Class</label>
+                                <config>
+                                    <type>input</type>
+                                </config>
+                            </TCEforms>
+                        </settings.all.button_css_class>
+                    </el>
+                </ROOT>
+            </tab.layout.all>
+            <!--Card-->
+                <tab.layout.card>
+                    <ROOT>
                         <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Caption Wrap CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
+                            <sheetTitle>Erscheinungsbild</sheetTitle>
+                            <displayCond>FIELD:sDEF.settings.composed.type:=:card</displayCond>
                         </TCEforms>
-                    </settings.all.caption_css_class>
-                    <settings.all.header_layout>
-                        <TCEforms>
-                            <label>Überschrift - Layout</label>
-                            <config>
-                                <type>select</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">H1</numIndex>
-                                        <numIndex index="1">1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">H2</numIndex>
-                                        <numIndex index="1">2</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">H3</numIndex>
-                                        <numIndex index="1">3</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">H4</numIndex>
-                                        <numIndex index="1">4</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </settings.all.header_layout>
-                    <settings.all.header_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Überschrift CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.all.header_css_class>
-                    <settings.all.bodytext_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Bodytext CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.all.bodytext_css_class>
-                    <settings.all.button_wrap_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Button Wrap CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.all.button_wrap_css_class>
-                    <settings.all.button_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Button CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.all.button_css_class>
-                </el>
-            </ROOT>
-        </tab.layout.all>
-        <!--Card-->
-        <tab.layout.card>
-            <ROOT>
-                <TCEforms>
-                    <sheetTitle>Erscheinungsbild</sheetTitle>
-                    <displayCond>FIELD:sDEF.settings.composed.type:=:card</displayCond>
-                </TCEforms>
-                <type>array</type>
-                <el>
-                    <settings.card.card_css_class>
-                        <TCEforms>
-                            <label>Card CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.card.card_css_class>
-                    <settings.card.card-body_css_class>
-                        <TCEforms>
-                            <label>Card Body CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.card.card-body_css_class>
-                    <settings.card.button_wrap_css_class>
-                        <TCEforms>
-                            <label>Button Wrap CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.card.button_wrap_css_class>
-                    <settings.card.button_css_class>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>Button CSS Class</label>
-                            <config>
-                                <type>input</type>
-                            </config>
-                        </TCEforms>
-                    </settings.card.button_css_class>
-                </el>
-            </ROOT>
-        </tab.layout.card>
-    </sheets>
-</T3DataStructure>
+                        <type>array</type>
+                        <el>
+                            <settings.card.card_css_class>
+                                <TCEforms>
+                                    <label>Card CSS Class</label>
+                                    <config>
+                                        <type>input</type>
+                                    </config>
+                                </TCEforms>
+                            </settings.card.card_css_class>
+                            <settings.card.card-body_css_class>
+                                <TCEforms>
+                                    <label>Card Body CSS Class</label>
+                                    <config>
+                                        <type>input</type>
+                                    </config>
+                                </TCEforms>
+                            </settings.card.card-body_css_class>
+                            <settings.card.button_wrap_css_class>
+                                <TCEforms>
+                                    <label>Button Wrap CSS Class</label>
+                                    <config>
+                                        <type>input</type>
+                                    </config>
+                                </TCEforms>
+                            </settings.card.button_wrap_css_class>
+                            <settings.card.button_css_class>
+                                <TCEforms>
+                                    <exclude>1</exclude>
+                                    <label>Button CSS Class</label>
+                                    <config>
+                                        <type>input</type>
+                                    </config>
+                                </TCEforms>
+                            </settings.card.button_css_class>
+                        </el>
+                    </ROOT>
+                </tab.layout.card>
+            </sheets>
+        </T3DataStructure>

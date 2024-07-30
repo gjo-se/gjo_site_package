@@ -81,7 +81,6 @@ TCEFORM {
         editlock {
             disabled = 0
         }
-
         # Reiter Kategorien:
         categories {
             disabled = 1

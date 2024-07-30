@@ -31,22 +31,17 @@ page {
                     1.current = 1
                 }
             }
-
             ifEmpty = Default
         }
-
         templateRootPaths {
             10 = {$plugin.tx_gjositepackage.fluidtemplate.page.templateRootPath}
         }
-
         partialRootPaths {
             10 = {$plugin.tx_gjositepackage.fluidtemplate.page.partialRootPath}
         }
-
         layoutRootPaths {
             10 = {$plugin.tx_gjositepackage.fluidtemplate.page.layoutRootPath}
         }
-
         #        Verwendung pürfen
         #        dataProcessing {
         #            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -61,7 +56,6 @@ page {
         #            }
         #        }
     }
-
     meta {
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
@@ -70,39 +64,32 @@ page {
         description {
             override.field = description
         }
-
         author = {$page.meta.author}
         author {
             override.field = author
         }
-
         keywords = {$page.meta.keywords}
         keywords {
             override.field = keywords
         }
-
         X-UA-Compatible = {$page.meta.compatible}
         X-UA-Compatible {
             attribute = http-equiv
         }
-
         # OpenGraph Tags
         og:title {
             attribute = property
             field = title
         }
-
         og:site_name {
             attribute = property
             data = TSFE:tmpl|setup|sitetitle
         }
-
         og:description = {$page.meta.description}
         og:description {
             attribute = property
             field = description
         }
-
         og:image {
             attribute = property
             stdWrap.cObject = FILES
@@ -110,7 +97,6 @@ page {
                 references {
                     data = levelfield:-1, media, slide
                 }
-
                 maxItems = 1
                 renderObj = COA
                 renderObj {
@@ -122,7 +108,6 @@ page {
                             width = 1280c
                             height = 720c
                         }
-
                         stdWrap {
                             typolink {
                                 parameter.data = TSFE:lastImgResourceInfo|3
@@ -135,27 +120,21 @@ page {
             }
         }
     }
-
     includeCSSLibs {
 
     }
-
     includeCSS {
 
     }
-
     includeJSLibs {
 
     }
-
     includeJS {
 
     }
-
     includeJSFooterlibs {
 
     }
-
     includeJSFooter {
 
     }
