@@ -18,7 +18,7 @@
 
                             <div class="row justify-content-center">
 
-                                <f:if condition="{slide.images}">
+                                <f:if condition="{slide.images -> f:count()} > 0 ">
                                     <f:for each="{slide.images}" as="file" iteration="iteration">
                                         <f:render partial="Media/Type"
                                                   arguments="{
@@ -87,7 +87,7 @@
                                           arguments="{
                                                 data: {
                                                     header_layout: carousel.header_layout,
-                                                    header: slide.data.header,
+                                                    header: slide.data.productHeader,
                                                     additionalCss: carousel.header_css_class
                                                 }
 
@@ -97,15 +97,17 @@
                                         <f:format.date format="d.m.Y">{slide.data.datetime}</f:format.date>
                                     </h4>
                                 </f:if>
-                                <f:if condition="{slide.data.sub_header}">
+                                <f:if condition="{slide.data.productAdditionalInformation}">
                                     <h4>
-                                        {slide.data.sub_header}
+                                        {slide.data.productAdditionalInformation}
                                     </h4>
                                 </f:if>
 
-                                <div class="{f:if(condition: '{carousel.bodytext_css_class}', then: '{carousel.bodytext_css_class}')}">
-                                    <f:format.raw>{slide.data.bodytext}</f:format.raw>
-                                </div>
+                                <f:if condition="{slide.data.imageDescription}">
+                                    <div class="{f:if(condition: '{carousel.bodytext_css_class}', then: '{carousel.bodytext_css_class}')}">
+                                        <f:format.raw>{slide.data.imageDescription}</f:format.raw>
+                                    </div>
+                                </f:if>
 
                                 <div class="clearfix {f:if(condition: '{carousel.button_wrap_css_class}', then: '{carousel.button_wrap_css_class}')}">
                                     <f:if condition="{slide.data.newsId}">

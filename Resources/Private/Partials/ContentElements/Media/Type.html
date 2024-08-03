@@ -3,12 +3,9 @@
      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
      data-namespace-typo3-fluid="true">
 
-    <!--TODO: file.type per Default auf 2 setzen, wenn Videos gefordert, ämdern-->
-    <f:switch expression="{file.originalFile.type}">
-        <f:case value="2">
 
-            <f:render partial="Media/Type/Image"
-                      arguments="{
+    <f:render partial="Media/Type/Image"
+              arguments="{
                   width: width,
                   breakpoints: breakpoints,
                   file: file,
@@ -18,14 +15,17 @@
                   class: class,
                   figure-class: figure-class
                   }"
-            />
-        </f:case>
+    />
+    <f:switch expression="{file.originalFile.type}">
+        <f:case value="2">
+            <!--@todo-c: file.type per Default auf 2 setzen, wenn Videos gefordert, ämdern-->
+         </f:case>
         <f:case value="3">
-            <!--TODO: muss noch wie Image angepasst werden-->
+            <!--todo-c: muss noch wie Image angepasst werden-->
             <f:render partial="Media/Type/Audio" arguments="{file: file, data: data, settings: settings}"/>
         </f:case>
         <f:case value="4">
-            <!--TODO: muss noch wie Image angepasst werden-->
+            <!--todo-c: muss noch wie Image angepasst werden-->
             <f:render partial="Media/Type/Video" arguments="{file: file, data: data, settings: settings}"/>
         </f:case>
         <f:defaultCase>

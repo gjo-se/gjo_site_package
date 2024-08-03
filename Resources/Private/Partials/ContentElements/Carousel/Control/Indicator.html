@@ -14,7 +14,7 @@
                     </span>
 
                     <span class="d-none d-lg-block">
-                                                        <f:if condition="{slide.images}">
+                        <f:if condition="{slide.images}">
                             <f:for each="{slide.images}" as="file" iteration="iteration">
                                 <f:render partial="Media/Type"
                                           arguments="{
@@ -34,7 +34,7 @@
                                           arguments="{
                                               width: 90,
                                               breakpoints: {
-                                                0: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 100}}
+                                                0: {cropVariant: 'desktop', media: '(min-width: 992px)', srcset: {0: 90}}
                                               },
                                               file: slide.image,
                                               data: slide.data,

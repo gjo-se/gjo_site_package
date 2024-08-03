@@ -10,7 +10,9 @@
                         media="{breakpoint.media}"/>
             </f:for>
             <img class="img-fluid " src="{f:uri.image(image: file)}" alt="{file.alternative}"
-                 title="{file.alternative}"/>
+                 title="{file.alternative}"
+                 width="{width}"
+            />
         </picture>
 
         <f:if condition="{link}">
