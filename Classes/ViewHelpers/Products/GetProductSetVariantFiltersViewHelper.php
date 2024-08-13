@@ -1,8 +1,4 @@
 <?php
-
-// @todo-conceptClean:
-// clear Dependency: move logic to productSetVariantGroupRepository
-
 declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\ViewHelpers\Products;
