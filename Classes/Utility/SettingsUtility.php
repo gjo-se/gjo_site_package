@@ -1,18 +1,6 @@
 <?php
 declare(strict_types=1);
 
-//  - Code isActive:
-//      - no: delete | move to _works
-//      - yes:
-//          - move to
-//              - Abstract/Partials
-//              - Utility
-//              - Service
-//              - Settings
-//          - add Concept-Documentation
-//          - mark @todo-conceptClean
-//          - ok
-
 namespace GjoSe\GjoSitePackage\Utility;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
