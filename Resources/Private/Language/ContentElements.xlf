@@ -47,7 +47,7 @@
             #####################################
 
             <trans-unit id="content_element.group.gjose-content-elements">
-                <source>GjoSe-ContentElements</source>
+                <source>GjoSe - ContentElements</source>
             </trans-unit>
 
             ###############################
@@ -79,17 +79,6 @@
             ###### ContentElements - Composed   ######
             #############################################
 
-            <trans-unit id="content_group.composed">
-                <source>Composed</source>
-            </trans-unit>
-
-            <trans-unit id="parallax">
-                <source>Parallax</source>
-            </trans-unit>
-            <trans-unit id="parallax.description">
-                <source>Parallax (Scroll-Effekt) mit unterschiedlichen Inhalten (Header / Text / Bild / Button)</source>
-            </trans-unit>
-
             <trans-unit id="card">
                 <source>Card</source>
             </trans-unit>
@@ -103,10 +92,6 @@
             #############################################
             ###### ContentElements - Interactive   ######
             #############################################
-
-            <trans-unit id="content_group.complexe">
-                <source>Komplexe Elemente</source>
-            </trans-unit>
 
             <trans-unit id="carousel">
                 <source>Carousel</source>
