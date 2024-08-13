@@ -46,7 +46,7 @@
             ###### GjoSe-ContentElements   ######
             #####################################
 
-            <trans-unit id="content_group.gjose">
+            <trans-unit id="content_element.group.gjose-content-elements">
                 <source>GjoSe-ContentElements</source>
             </trans-unit>
 
