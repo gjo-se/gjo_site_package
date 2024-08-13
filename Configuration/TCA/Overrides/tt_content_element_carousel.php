@@ -1,6 +1,8 @@
 <?php
-
 declare(strict_types=1);
+
+// @todo-fileClean:
+// wer wird hier benutzt?!
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -21,7 +23,7 @@ call_user_func(function (): void {
 
     ExtensionManagementUtility::addPiFlexFormValue(
         '*',
-        'FILE:EXT:gjo_site_package/Configuration/FlexForms/ContentElement/Carousel.xml',
+        'FILE:EXT:gjo_site_package/Configuration/FlexForms/content_element_carousel.xml',
         $contentTypeName
     );
 

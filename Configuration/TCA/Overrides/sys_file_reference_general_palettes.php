@@ -13,7 +13,7 @@ call_user_func(function (): void {
         link,
         --linebreak--,
         crop
-    '
+    ',
     ];
 
 });

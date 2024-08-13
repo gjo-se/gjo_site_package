@@ -1,5 +1,5 @@
 .navbar-toggler {
-  .icon-menu, .icon-profile-active, .icon-shop-active {
+  .icon-menu, .icon-profile-active {
     color: $tiger-orange;
   }
   &.collapsed {
@@ -10,7 +10,7 @@
   &.hover-tiger-orange:hover i {
     color: $tiger-orange;
   }
-  .icon-profile-active:hover, .icon-shop-active:hover {
+  .icon-profile-active:hover {
     color: $white;
   }
 }
@@ -35,19 +35,7 @@
   }
 }
 
-.badge-shop-active {
-  background-color: $tiger-orange;
-  font-size: 0.65rem;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.2rem;
-}
-
 @include media-breakpoint-up(lg) {
-  .badge-shop-active {
-    top: 0.2rem;
-    left: 1.2rem;
-  }
   .main-nav {
     ul {
       li {

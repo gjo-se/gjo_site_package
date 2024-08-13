@@ -10,7 +10,8 @@ call_user_func(function (): void {
     $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
 
-    // TODO: appearance ansehen, in tt_content.php verschieben
+    // @todo-methodClean:
+    // move to tt_content_carousel_item?
 
     $GLOBALS['TCA'][$table]['columns'][$column] = [
         'label' => $lll . 'carousel_item',

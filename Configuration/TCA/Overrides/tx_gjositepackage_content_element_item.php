@@ -7,28 +7,7 @@ use GjoSe\GjoSitePackage\Utility\CroppingUtility;
 call_user_func(function (): void {
 
     $table = 'tx_gjositepackage_content_element_item';
+    $column = 'image';
 
-    $ext   = 'gjo_site_package';
-    $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
-
-    $defaultCropSettings = CroppingUtility::getDefaultCropSettings();
-
-    $mobileCropSettings           = $defaultCropSettings;
-    $mobileCropSettings['title']  = $lll . 'cropVariant.mobile';
-    $tabletCropSettings           = $defaultCropSettings;
-    $tabletCropSettings['title']  = $lll . 'cropVariant.tablet';
-    $laptopCropSettings           = $defaultCropSettings;
-    $laptopCropSettings['title']  = $lll . 'cropVariant.laptop';
-    $desktopCropSettings          = $defaultCropSettings;
-    $desktopCropSettings['title'] = $lll . 'cropVariant.desktop';
-    $wideScreenCropSettings          = $defaultCropSettings;
-    $wideScreenCropSettings['title'] = $lll . 'cropVariant.wideScreen';
-
-    $image = 'image';
-    $GLOBALS['TCA'][$table]['columns'][$image]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['mobile']  = $mobileCropSettings;
-    $GLOBALS['TCA'][$table]['columns'][$image]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['tablet']  = $tabletCropSettings;
-    $GLOBALS['TCA'][$table]['columns'][$image]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['laptop']  = $laptopCropSettings;
-    $GLOBALS['TCA'][$table]['columns'][$image]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['desktop'] = $desktopCropSettings;
-    $GLOBALS['TCA'][$table]['columns'][$image]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['wideScreen'] = $wideScreenCropSettings;
-
+    CroppingUtility::setCropVariants($table, $column);
 });

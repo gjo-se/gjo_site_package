@@ -70,13 +70,6 @@
 
                                 </button>
 
-                                <f:link.page pageUid="87"
-                                             class="btn-shop navbar-toggler hover-tiger-orange p-0 py-32 pr-8 position-relative">
-                                    <i class="icon-shop"></i>
-                                    <i class="icon-shop-active d-none"></i>
-                                    <span class="badge badge-pill badge-shop-active d-none"></span>
-                                </f:link.page>
-
                                 <button class="btn-cross navbar-toggler hover-tiger-orange p-0 py-32 d-none"
                                         type="button">
                                     <i class="icon-cross "></i>
@@ -89,7 +82,7 @@
                             <v:menu excludePages="5">
                                 <ul class="navbar-nav py-32">
                                     <f:for each="{menu}" as="item-lvl-1">
-                                        <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')} {f:if(condition:'{item-lvl-1.uid} == \'99\'' ,then:' shop')}">
+                                        <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')}">
                                             <a class="nav-link p-0"
                                                href="{f:uri.page(pageUid:item-lvl-1.uid)}">
                                                 {item-lvl-1.linktext}
@@ -185,13 +178,6 @@
                             </f:security.ifAuthenticated>
 
                         </button>
-                        <f:link.page pageUid="87"
-                                     class="btn-shop hover-tiger-orange navbar-toggler p-0 pr-16 py-8 position-relative">
-                            <i class="icon-shop"></i>
-                            <i class="icon-shop-active d-none"></i>
-                            <span class="badge badge-pill badge-shop-active d-none"></span>
-                        </f:link.page>
-
                         <button class="btn-cross hover-tiger-orange navbar-toggler p-0 pr-16 d-none"
                                 type="button">
                             <i class="icon-cross"></i>
@@ -278,7 +264,7 @@
                                                     </li>
                                                 </f:then>
                                                 <f:else>
-                                                    <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')} {f:if(condition:'{item-lvl-1.uid} == \'99\'' ,then:' shop')}">
+                                                    <li class="nav-item {f:if(condition:'{item-lvl-1.active}',then:' active',else:'')}">
                                                         <a class="nav-link px-16 py-24"
                                                            href="{f:uri.page(pageUid:item-lvl-1.uid)}"
                                                            id="item-lvl-1_{item-lvl-1.uid}"
@@ -335,18 +321,6 @@
                 <div class="max-width-600">
 
                     <div class="fe-user-menu-form p-16">
-
-                        <p class="pb-24">
-                            <v:variable.set name="userName" value="{gjoSe:feUser.feUser(property: 'username')}"/>
-                            <f:translate
-                                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text.salutation"
-                                    arguments="{0: userName}"/>
-                            <br/>
-                            <f:translate
-                                    key="LLL:EXT:gjo_site_package/Resources/Private/Language/locallang.xlf:myTiger.logout.text"
-                                    arguments="{0: userName}"/>
-                        </p>
-
 
                         <form name="logout" action="{f:uri.page(pageUid: userLogoutPID)}" target="_top" method="post"
                               onsubmit="return true;"

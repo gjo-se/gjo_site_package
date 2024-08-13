@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
+use B13\Container\Tca\ContainerConfiguration;
+use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use \B13\Container\Tca\Registry;
-use \B13\Container\Tca\ContainerConfiguration;
 
-call_user_func(function(): void
-{
+call_user_func(function (): void {
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -17,8 +16,8 @@ call_user_func(function(): void
             [
                 [
                     ['name' => 'left side', 'colPos' => 200],
-                    ['name' => 'right side', 'colPos' => 201]
-                ]
+                    ['name' => 'right side', 'colPos' => 201],
+                ],
             ]
         )
         )
@@ -36,8 +35,8 @@ call_user_func(function(): void
                 [
                     ['name' => 'left side', 'colPos' => 200],
                     ['name' => 'middle', 'colPos' => 201],
-                    ['name' => 'right side', 'colPos' => 202]
-                ]
+                    ['name' => 'right side', 'colPos' => 202],
+                ],
             ]
         )
         )
@@ -56,13 +55,12 @@ call_user_func(function(): void
                     ['name' => 'left side', 'colPos' => 200],
                     ['name' => 'middle left side', 'colPos' => 201],
                     ['name' => 'middle right side', 'colPos' => 202],
-                    ['name' => 'right side', 'colPos' => 203]
-                ]
+                    ['name' => 'right side', 'colPos' => 203],
+                ],
             ]
         )
         )
             ->setIcon('EXT:container/Resources/Public/Icons/container-4col.svg')
             ->setSaveAndCloseInNewContentElementWizard(false)
     );
-
 });

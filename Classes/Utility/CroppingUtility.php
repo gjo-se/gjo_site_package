@@ -4,36 +4,33 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Utility;
 
-/***************************************************************
- *  created: 27.02.18 - 16:57
- *  Copyright notice
- *  (c) 2018 Gregory Jo Erdmann <gregory.jo@gjo-se.com>
- *  All rights reserved
- *  This script is part of the TYPO3 project. The TYPO3 project is
- *  free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
- *  (at your option) any later version.
- *  The GNU General Public License can be found at
- *  http://www.gnu.org/copyleft/gpl.html.
- *  This script is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
-
-use GjoSe\GjoBase\Utility\AbstractUtility;
-
-/**
- * Class CroppingUtility
- * @package GjoSe\GjoSitePackage\Controller
- */
-class CroppingUtility extends AbstractUtility
+class CroppingUtility
 {
+    public static function setCropVariants(string $table, string $column): void
+    {
+        $defaultCropSettings = self::getBackendDefaultCropVariants();
+        $lll   = 'LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:';
+
+        $mobileCropSettings = $defaultCropSettings;
+        $mobileCropSettings['title'] = $lll . 'cropVariant.mobile';
+        $tabletCropSettings = $defaultCropSettings;
+        $tabletCropSettings['title'] = $lll . 'cropVariant.tablet';
+        $laptopCropSettings = $defaultCropSettings;
+        $laptopCropSettings['title'] = $lll . 'cropVariant.laptop';
+        $desktopCropSettings = $defaultCropSettings;
+        $desktopCropSettings['title'] = $lll . 'cropVariant.desktop';
+        $wideScreenCropSettings = $defaultCropSettings;
+        $wideScreenCropSettings['title'] = $lll . 'cropVariant.wideScreen';
+
+        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['mobile'] = $mobileCropSettings;
+        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['tablet'] = $tabletCropSettings;
+        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['laptop'] = $laptopCropSettings;
+        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['desktop'] = $desktopCropSettings;
+        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['wideScreen'] = $wideScreenCropSettings;
+
+    }
+
     /**
-     * Get default crop settings
-     *
      * @return array{
      *     title: string,
      *     allowedAspectRatios: array<string, array{title: string, value: float}>,
@@ -41,34 +38,34 @@ class CroppingUtility extends AbstractUtility
      *     cropArea: array{x: float, y: float, width: float, height: float}
      * }
      */
-    public static function getDefaultCropSettings(): array
+    private static function getBackendDefaultCropVariants(): array
     {
         return [
             'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
             'allowedAspectRatios' => [
                 '1:1' => [
                     'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
-                    'value' => 1.0
+                    'value' => 1.0,
                 ],
                 '4:3' => [
                     'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
-                    'value' => 4 / 3
+                    'value' => 4 / 3,
                 ],
                 '3:4' => [
                     'title' => '3:4',
-                    'value' => 3 / 4
+                    'value' => 3 / 4,
                 ],
                 '16:9' => [
                     'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
-                    'value' => 16 / 9
+                    'value' => 16 / 9,
                 ],
                 '21:9' => [
                     'title' => '21:9',
-                    'value' => 21 / 9
+                    'value' => 21 / 9,
                 ],
                 'NaN' => [
                     'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free',
-                    'value' => 0.0
+                    'value' => 0.0,
                 ],
             ],
             'selectedRatio' => 'NaN',
@@ -77,8 +74,7 @@ class CroppingUtility extends AbstractUtility
                 'y' => 0.0,
                 'width' => 1.0,
                 'height' => 1.0,
-            ]
+            ],
         ];
     }
-
 }

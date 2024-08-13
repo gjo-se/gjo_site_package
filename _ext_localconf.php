@@ -12,6 +12,8 @@ call_user_func(
         $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['gjo_custom'] =
             'EXT:' . $extensionKey . '/Configuration/PageTS/Rte/Custom.yaml';
 
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['gjoSe'] =
+            ['GjoSe\GjoSitePackage\ViewHelpers'];
     }
 );
 

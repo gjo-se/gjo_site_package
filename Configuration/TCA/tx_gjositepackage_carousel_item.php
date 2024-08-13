@@ -261,7 +261,6 @@ return call_user_func(function (): array {
             ],
         ],
 
-        // TODO: divider in gjo_base vesrchieben
         'types' => [
             '1' => [
                 'showitem' => '
