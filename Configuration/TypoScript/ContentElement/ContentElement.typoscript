@@ -4,21 +4,18 @@
 ##################################################
 lib.contentElement = FLUIDTEMPLATE
 lib.contentElement {
-
     templateRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.templateRootPath}
     }
+
     partialRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.partialRootPath}
     }
+
     layoutRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.layoutRootPath}
     }
-    settings {
-    }
 }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Textteaser.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Carousel.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Parallax.t3s">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Card.t3s">
+@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjo_site_package_ce_highlight.typoscript'
+@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjo_site_package_ce_carousel.typoscript'

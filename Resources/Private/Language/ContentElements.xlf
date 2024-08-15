@@ -75,6 +75,13 @@
                 <source>Text mit Teaser</source>
             </trans-unit>
 
+            <trans-unit id="content_element.highlight">
+                <source>Highlight</source>
+            </trans-unit>
+            <trans-unit id="content_element.highlight.description">
+                <source>Highlight</source>
+            </trans-unit>
+
             #############################################
             ###### ContentElements - Composed   ######
             #############################################
@@ -169,7 +176,7 @@
             <trans-unit id="flexforms.template.col5_css">
                 <source>zusätzliches CSS Spalte 5 (col5)</source>
             </trans-unit>
-            <trans-unit id="tx_gjositepackage_additional_css">
+            <trans-unit id="gjo_site_package_tca_col_additional_css">
                 <source>zusätzliches CSS (Container)</source>
             </trans-unit>
 

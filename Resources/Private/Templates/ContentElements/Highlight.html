@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="CeDefaultLayout"/>
+
+<f:section name="CeMainSection">
+    <div
+        class="disturber {f:if(condition:flexFormData.background,then:' disturber--yellow')}">
+        <div class="flex__md-8">
+            <f:if condition="{image.0}">
+                <f:image image="{image.0}" class="disturber__image" width="900c" maxHeight="300"/>
+            </f:if>
+        </div>
+        <div class="flex__md-4">
+            <h2 class="disturber__heading">{flexFormData.settings.title}</h2>
+            <f:if condition="{flexFormData.settings.subtitle}">
+                <p>{flexFormData.settings.subtitle -> f:format.nl2br()}</p>
+            </f:if>
+            <f:if condition="{flexFormData.settings.link} && {flexFormData.settings.buttonLabel}">
+                <f:link.typolink class="disturber__button btn btn--primary margin-top-s"
+                                 parameter="{flexFormData.settings.link}">{flexFormData.settings.buttonLabel}
+                </f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</f:section>
+</html>
+
+
+
+

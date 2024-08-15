@@ -11,6 +11,20 @@
 //          - mark @todo-conceptClean
 //          - ok
 
+
+
+mod.wizards.newContentElement {
+  wizardItems {
+    common.elements.codeblock {
+      title = LLL:EXT:codeblock/Resources/Private/Language/locallang_db.xlf:tt_content.CType
+      description = LLL:EXT:codeblock/Resources/Private/Language/locallang_db.xlf:tt_content.wizard.description
+      tt_content_defValues.CType = codeblock
+      iconIdentifier = content-codeblock
+    }
+    common.show := addToList(codeblock)
+  }
+}
+
 ####################
 ### Common      ####
 ####################
@@ -30,37 +44,30 @@ mod.wizards.newContentElement.wizardItems.common {
   show = *
 }
 
-#####################
-#### GjoSe       ####
-#####################
+#################################
+#### GjoSe - ContentElements ####
+#################################
+
 mod.wizards.newContentElement.wizardItems.gjo_site_package {
   header = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.group.gjose-content-elements
   after = container
   elements {
-    gjositepackage_textteaser {
+
+    gjo_site_package_ce_highlight {
       iconIdentifier = content-text-teaser
-      title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.textteaser
-      description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.textteaser.description
+      title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.highlight
+      description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.highlight.description
       tt_content_defValues {
-        CType = gjositepackage_textteaser
+        CType = gjo_site_package_ce_highlight
       }
     }
 
-    carousel {
+    gjo_site_package_ce_carousel {
       iconIdentifier = content-bootstrappackage-carousel
       title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel
       description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel.description
       tt_content_defValues {
-        CType = gjo_site_package_carousel
-      }
-    }
-
-    card {
-      iconIdentifier = content-bootstrappackage-carousel
-      title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:card
-      description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:card.description
-      tt_content_defValues {
-        CType = card
+        CType = gjo_site_package_ce_carousel
       }
     }
   }

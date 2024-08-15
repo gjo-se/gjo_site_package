@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>
+                    LLLx: Highlight Title
+                </sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.title>
+                        <label>
+                            LLLx: highlight.title
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <eval>trim,required</eval>
+                        </config>
+                    </settings.title>
+                    <settings.subtitle>
+                        <label>
+                            LLLx:highlight.subtitle
+                        </label>
+                        <config>
+                            <type>text</type>
+                            <eval>trim</eval>
+                        </config>
+                    </settings.subtitle>
+                    <settings.image>
+                        <label>Images</label>
+                        <config>
+                            <type>file</type>
+                            <maxitems>6</maxitems>
+                            <allowed>common-image-types</allowed>
+                        </config>
+                    </settings.image>
+                    <settings.buttonLabel>
+                        <label>
+                            LLLx:highlight.buttonLabel
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                        </config>
+                    </settings.buttonLabel>
+                    <settings.link>
+                        <exclude>1</exclude>
+                        <label>
+                            LLLx: highlight.link
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                            <eval>trim</eval>
+                        </config>
+                    </settings.link>
+                    <settings.background>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>
+                                LLLx: highlight.background
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <label>LLLx: Background 0</label>
+                                        <value>0</value>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <label>LLLx: Background 1</label>
+                                        <value>1</value>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.background>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

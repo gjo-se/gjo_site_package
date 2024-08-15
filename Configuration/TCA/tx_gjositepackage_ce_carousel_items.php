@@ -9,7 +9,7 @@ return call_user_func(function (): array {
     $cePreKey = 'carousel_item.';
     $lllLang = 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:';
 
-    $table = 'tx_gjositepackage_carousel_item';
+    $table = 'tx_gjositepackage_ce_carousel_items';
 
     return [
 
@@ -34,7 +34,9 @@ return call_user_func(function (): array {
                 'starttime' => 'starttime',
                 'endtime' => 'endtime',
             ],
-
+            'security' => [
+                'ignorePageTypeRestriction' => true,
+            ],
         ],
 
         'columns' => [
@@ -46,10 +48,10 @@ return call_user_func(function (): array {
                     'items' => [
                         [
                             'label' => $lllLang . 'LGL.hidden',
-                            'value' => 0
-                        ]
-                    ]
-                ]
+                            'value' => 0,
+                        ],
+                    ],
+                ],
             ],
             'starttime' => [
                 'label' => $lllLang . 'LGL.starttime',
@@ -80,7 +82,7 @@ return call_user_func(function (): array {
                 'label' => $lllLang . 'LGL.language',
                 'config' => [
                     'type' => 'language',
-                ]
+                ],
             ],
             'l10n_parent' => [
                 'displayCond' => 'FIELD:sys_language_uid:>:0',
@@ -88,24 +90,24 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'select',
                     'renderType' => 'selectSingle',
-                    'items'               => [
+                    'items' => [
                         [
                             'label' => '',
-                            'value' => 0
+                            'value' => 0,
                         ],
                     ],
                     'foreign_table' => $table,
                     'foreign_table_where' => 'AND ' . $table . '.pid=###CURRENT_PID### AND ' . $table . '.sys_language_uid IN (-1,0)',
-                    'default' => 0
-                ]
+                    'default' => 0,
+                ],
             ],
             'l10n_diffsource' => [
                 'config' => [
-                    'type' => 'passthrough'
-                ]
+                    'type' => 'passthrough',
+                ],
             ],
 
-            ######################################################################
+            //#####################################################################
 
             'tt_content' => [
                 'label' => $lll . $cePreKey . 'tt_content',
@@ -113,7 +115,7 @@ return call_user_func(function (): array {
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'foreign_table' => 'tt_content',
-                    'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="carousel"',
+                    'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="gjo_site_package_ce_carousel"',
                     'maxitems' => 1,
                 ],
             ],
@@ -123,7 +125,7 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'file',
                     'maxitems' => 1,
-                    'allowed' => 'common-image-types'
+                    'allowed' => 'common-image-types',
                 ],
             ],
 
@@ -138,7 +140,7 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
-                    'eval' => 'trim'
+                    'eval' => 'trim',
                 ],
             ],
 
@@ -147,8 +149,8 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
-                    'eval' => 'trim'
-                ]
+                    'eval' => 'trim',
+                ],
             ],
 
             'button_text' => [
@@ -156,8 +158,8 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
-                    'eval' => 'trim'
-                ]
+                    'eval' => 'trim',
+                ],
             ],
 
             'button_link' => [
@@ -194,8 +196,8 @@ return call_user_func(function (): array {
                 'config' => [
                     'type' => 'input',
                     'size' => 50,
-                    'eval' => 'trim'
-                ]
+                    'eval' => 'trim',
+                ],
             ],
 
             'link' => [
@@ -219,24 +221,24 @@ return call_user_func(function (): array {
             'additional_css' => [
                 'label' => $lll . $cePreKey . 'additional_css',
                 'config' => [
-                    'type' => 'input'
-                ]
+                    'type' => 'input',
+                ],
             ],
 
         ],
 
         'palettes' => [
             '1' => [
-                'showitem' => ''
+                'showitem' => '',
             ],
             'media' => [
                 'showitem' => '
                     image,
                     --linebreak--,
                     mask_css_class,
-                    --linebreak--,                    
+                    --linebreak--,
                     is_background_image
-                '
+                ',
 
             ],
             'text' => [
@@ -246,18 +248,18 @@ return call_user_func(function (): array {
                     bodytext,
                     --linebreak--,
                     button_text, button_link,
-                '
+                ',
             ],
             'visibility' => [
                 'showitem' => '
                 hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden_formlabel
-            '
+            ',
             ],
             'access' => [
                 'showitem' => '
                 starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
                 endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            '
+            ',
             ],
         ],
 
@@ -273,57 +275,8 @@ return call_user_func(function (): array {
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
                     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-            '
+            ',
             ],
-//            'header'          => [
-//                'showitem' => '
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-//                --palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,
-//                    link,
-//                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,
-//                    background_image,
-//                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-//            '
-//            ],
-//            'textandimage'    => [
-//                'showitem' => '
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-//                --palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,
-//                    bodytext,
-//                    image,
-//                    link,
-//                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,
-//                    background_image,
-//                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-//            '
-//            ],
-//            'backgroundimage' => [
-//                'showitem' => '
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-//                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
-//                    background_image,
-//                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-//            '
-//            ],
-
-//            'html'            => [
-//                'showitem' => '
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-//                    header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
-//                    bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.html_formlabel,
-//                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,
-//                    background_image,
-//                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-//            '
-//            ],
         ],
     ];
 });

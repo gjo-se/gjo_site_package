@@ -1,25 +1,16 @@
-###########################################
-#### CTYPE:  Parallax                  ####
-###########################################
+#############################################
+#### CTYPE: gjo_site_package_ce_carousel ####
+#############################################
 
-tt_content.parallax >
-tt_content.parallax =< lib.contentElement
-tt_content.parallax {
+tt_content.gjo_site_package_ce_carousel =< lib.contentElement
+tt_content.gjo_site_package_ce_carousel {
 
-    ################
-    ### TEMPLATE ###
-    ################
-    templateName = Parallax
-
-    ##########################
-    ### DATA PREPROCESSING ###
-    ##########################
-
+    templateName = Carousel
     dataProcessing {
-#        10 = GjoSe\GjoSitePackage\DataProcessing\FlexFormProcessor
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         20 {
-            table = tx_gjositepackage_content_element_item
+            table = tx_gjositepackage_ce_carousel_items
             pidInList.field = pid
             where {
                 data = field:uid
@@ -41,5 +32,4 @@ tt_content.parallax {
             }
         }
     }
-
 }

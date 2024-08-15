@@ -6,7 +6,7 @@ use GjoSe\GjoSitePackage\Utility\CroppingUtility;
 
 call_user_func(function (): void {
 
-    $table = 'tx_gjositepackage_content_element_item';
+    $table = 'tt_content';
     $column = 'image';
 
     CroppingUtility::setCropVariants($table, $column);
