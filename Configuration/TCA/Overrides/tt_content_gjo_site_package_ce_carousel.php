@@ -2,19 +2,6 @@
 
 declare(strict_types=1);
 
-//  - Code isActive:
-//      - no: delete | move to _works
-//      - yes:
-//          - move to
-//              - Concept
-//              - Abstract/Partials
-//              - Utility
-//              - Service
-//              - Settings
-//          - add Concept-Documentation
-//          - mark @todo-conceptClean
-//          - ok
-
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use GjoSe\GjoSitePackage\Utility\TcaUtility;
 
@@ -63,7 +50,7 @@ call_user_func(function (): void {
         [
             'label' => 'LLLx:' . $cType,
             'value' => $cType,
-            'icon' => $cType,
+            'icon' => 'content-bootstrappackage-carousel',
             'group' => 'gjose-content-elements',
         ],
         $ext . '_ce_highlight',
