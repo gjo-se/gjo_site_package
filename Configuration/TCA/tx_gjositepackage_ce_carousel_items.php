@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use GjoSe\GjoSitePackage\Utility\TcaUtility;
+
 return call_user_func(function (): array {
 
     $ext = 'gjo_site_package';
@@ -40,74 +42,6 @@ return call_user_func(function (): array {
         ],
 
         'columns' => [
-
-            'hidden' => [
-                'label' => $lllLang . 'LGL.hidden',
-                'config' => [
-                    'type' => 'check',
-                    'items' => [
-                        [
-                            'label' => $lllLang . 'LGL.hidden',
-                            'value' => 0,
-                        ],
-                    ],
-                ],
-            ],
-            'starttime' => [
-                'label' => $lllLang . 'LGL.starttime',
-                'config' => [
-                    'type' => 'datetime',
-                    'eval' => 'int',
-                    'default' => 0,
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true,
-                    ],
-                ],
-            ],
-            'endtime' => [
-                'label' => $lllLang . 'LGL.endtime',
-                'config' => [
-                    'type' => 'datetime',
-                    'eval' => 'int',
-                    'default' => 0,
-                    'range' => [
-                        'upper' => mktime(0, 0, 0, 1, 1, 2038),
-                    ],
-                    'behaviour' => [
-                        'allowLanguageSynchronization' => true,
-                    ],
-                ],
-            ],
-            'sys_language_uid' => [
-                'label' => $lllLang . 'LGL.language',
-                'config' => [
-                    'type' => 'language',
-                ],
-            ],
-            'l10n_parent' => [
-                'displayCond' => 'FIELD:sys_language_uid:>:0',
-                'label' => $lllLang . 'LGL.l18n_parent',
-                'config' => [
-                    'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'items' => [
-                        [
-                            'label' => '',
-                            'value' => 0,
-                        ],
-                    ],
-                    'foreign_table' => $table,
-                    'foreign_table_where' => 'AND ' . $table . '.pid=###CURRENT_PID### AND ' . $table . '.sys_language_uid IN (-1,0)',
-                    'default' => 0,
-                ],
-            ],
-            'l10n_diffsource' => [
-                'config' => [
-                    'type' => 'passthrough',
-                ],
-            ],
-
-            //#####################################################################
 
             'tt_content' => [
                 'label' => $lll . $cePreKey . 'tt_content',
@@ -224,6 +158,8 @@ return call_user_func(function (): array {
                     'type' => 'input',
                 ],
             ],
+
+            ...TcaUtility::getDefaultTcaColumns($table),
 
         ],
 

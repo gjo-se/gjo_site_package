@@ -46,4 +46,92 @@ final class TcaUtility
         }
 
     }
+
+    public static function getDefaultTcaColumns(string $table): array
+    {
+        return [
+
+            'starttime' => [
+                'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
+
+            'endtime' => [
+                'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+                'config' => [
+                    'type' => 'datetime',
+                    'eval' => 'int',
+                    'default' => 0,
+                    'range' => [
+                        'upper' => mktime(0, 0, 0, 1, 1, 2038),
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true,
+                    ],
+                ],
+            ],
+
+            'sys_language_uid' => [
+                'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
+                'config' => [
+                    'type' => 'language',
+                ],
+            ],
+
+            'l10n_parent' => [
+                'displayCond' => 'FIELD:sys_language_uid:>:0',
+                'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        [
+                            'label' => '',
+                            'value' => 0,
+                        ],
+                    ],
+                    'foreign_table' => $table,
+                    'foreign_table_where' => 'AND' . $table . '.pid=###CURRENT_PID### AND ' . $table . '.sys_language_uid IN (-1,0)',
+                    'default' => 0,
+                ],
+
+            ],
+
+            'l10n_source' => [
+                'displayCond' => 'FIELD:sys_language_uid:>:0',
+                'label' => 'Translation source',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'items' => [
+                        ['label' => '', 'value' => 0],
+                    ],
+                    'foreign_table' => $table,
+                    'foreign_table_where' => 'AND' . $table . '.pid=###CURRENT_PID### AND ' . $table . '.uid!=###THIS_UID###',
+                    'default' => 0,
+                ],
+            ],
+
+            'l10n_diffsource' => [
+                'config' => [
+                    'type' => 'passthrough',
+                    'default' => '',
+                ],
+            ],
+
+            'hidden' => [
+                'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+                'config' => [
+                    'type' => 'check',
+                ],
+            ],
+        ];
+    }
 }
