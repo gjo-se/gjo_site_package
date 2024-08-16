@@ -1,3 +1,7 @@
+#################################
+#### Plugin Setup            ####
+#################################
+
 plugin.tx_gjositepackage {
 
     settings {

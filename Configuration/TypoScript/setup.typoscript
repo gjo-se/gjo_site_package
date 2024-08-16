@@ -1,3 +1,6 @@
+#################################
+#### TypoScript imports      ####
+#################################
 
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
 
@@ -8,6 +11,3 @@
 @import 'EXT:gjo_site_package/Configuration/TypoScript/Container/Container.typoscript'
 @import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/DynamicContent.typoscript'
 @import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/ContentElement.typoscript'
-
-#
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gjo_site_package/Configuration/TypoScript/Extensions/tx_form.t3s">
