@@ -115,7 +115,7 @@ return call_user_func(function (): array {
                     'type' => 'select',
                     'renderType' => 'selectSingle',
                     'foreign_table' => 'tt_content',
-                    'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="gjo_site_package_ce_carousel"',
+                    'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="gjositepackage_ce_carousel"',
                     'maxitems' => 1,
                 ],
             ],

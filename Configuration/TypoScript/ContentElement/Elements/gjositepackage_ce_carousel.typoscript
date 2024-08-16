@@ -1,9 +1,9 @@
 #############################################
-#### CTYPE: gjo_site_package_ce_carousel ####
+#### CTYPE: gjositepackage_ce_carousel ####
 #############################################
 
-tt_content.gjo_site_package_ce_carousel =< lib.contentElement
-tt_content.gjo_site_package_ce_carousel {
+tt_content.gjositepackage_ce_carousel =< lib.contentElement
+tt_content.gjositepackage_ce_carousel {
 
     templateName = Carousel
     dataProcessing {

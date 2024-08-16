@@ -10,7 +10,8 @@ final class TcaUtility
 {
     public static function setTcaCtype(string $ext, string $contentElement, string $table = 'tt_content'): void
     {
-        $cType = $ext . '_ce_' . $contentElement;
+        $extSignature = str_replace('_', '', $ext);
+        $cType = $extSignature . '_ce_' . $contentElement;
 
         $tca = [
             'types' => [

@@ -13,7 +13,8 @@ call_user_func(function (): void {
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
     $table = 'tt_content';
     $column = 'tx_gjositepackage_ce_carousel_items';
-    $cType = $ext . '_ce_' . $contentElement;
+    $extSignature = str_replace('_', '', $ext);
+    $cType = $extSignature . '_ce_' . $contentElement;
 
     $GLOBALS['TCA'][$table]['columns'][$column] = [
         'label' => $lll . 'carousel_item',
@@ -53,7 +54,7 @@ call_user_func(function (): void {
             'icon' => 'content-bootstrappackage-carousel',
             'group' => 'gjose-content-elements',
         ],
-        $ext . '_ce_highlight',
+        $extSignature . '_ce_highlight',
         'after',
     );
 });

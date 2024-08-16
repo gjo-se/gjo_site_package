@@ -7,21 +7,21 @@ mod.wizards.newContentElement.wizardItems.gjo_site_package {
   after = container
   elements {
 
-    gjo_site_package_ce_highlight {
+    gjositepackage_ce_highlight {
       iconIdentifier = content-text-teaser
       title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.highlight
       description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:content_element.highlight.description
       tt_content_defValues {
-        CType = gjo_site_package_ce_highlight
+        CType = gjositepackage_ce_highlight
       }
     }
 
-    gjo_site_package_ce_carousel {
+    gjositepackage_ce_carousel {
       iconIdentifier = content-bootstrappackage-carousel
       title = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel
       description = LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:carousel.description
       tt_content_defValues {
-        CType = gjo_site_package_ce_carousel
+        CType = gjositepackage_ce_carousel
       }
     }
   }

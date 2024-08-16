@@ -15,7 +15,8 @@ call_user_func(function (): void {
     $lll = 'LLL:EXT:' . '/Resources/Private/Language/locallang_db.xlf:';
     $table = 'tt_content';
     $column = '';
-    $cType = $ext . '_ce_' . $contentElement;
+    $extSignature = str_replace('_', '', $ext);
+    $cType = $extSignature . '_ce_' . $contentElement;
 
     TcaUtility::setTcaCtype($ext, $contentElement);
 

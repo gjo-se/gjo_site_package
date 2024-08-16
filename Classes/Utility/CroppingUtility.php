@@ -9,7 +9,7 @@ class CroppingUtility
     public static function setCropVariants(string $table, string $column): void
     {
         $defaultCropSettings = self::getBackendDefaultCropVariants();
-        $lll   = 'LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:';
+        $lll = 'LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:';
 
         $mobileCropSettings = $defaultCropSettings;
         $mobileCropSettings['title'] = $lll . 'cropVariant.mobile';
@@ -74,6 +74,47 @@ class CroppingUtility
                 'y' => 0.0,
                 'width' => 1.0,
                 'height' => 1.0,
+            ],
+        ];
+    }
+
+    public static function getDefaultBreakpoints(): array
+    {
+        return [
+            0 => [
+                'cropVariant' => 'wideScreen',
+                'media' => '(min-width: 1200px)',
+                'srcset' => [
+                    0 => 1100,
+                ],
+            ],
+            1 => [
+                'cropVariant' => 'desktop',
+                'media' => '(min-width: 992px)',
+                'srcset' => [
+                    0 => 950,
+                ],
+            ],
+            2 => [
+                'cropVariant' => 'laptop',
+                'media' => '(min-width: 768px)',
+                'srcset' => [
+                    0 => 720,
+                ],
+            ],
+            3 => [
+                'cropVariant' => 'tablet',
+                'media' => '(min-width: 576px)',
+                'srcset' => [
+                    0 => 540,
+                ],
+            ],
+            4 => [
+                'cropVariant' => 'mobile',
+                'media' => '(min-width: 300px)',
+                'srcset' => [
+                    0 => 350,
+                ],
             ],
         ];
     }

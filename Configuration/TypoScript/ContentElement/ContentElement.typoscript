@@ -17,5 +17,5 @@ lib.contentElement {
     }
 }
 
-@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjo_site_package_ce_highlight.typoscript'
-@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjo_site_package_ce_carousel.typoscript'
+@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjositepackage_ce_highlight.typoscript'
+@import 'EXT:gjo_site_package/Configuration/TypoScript/ContentElement/Elements/gjositepackage_ce_carousel.typoscript'
