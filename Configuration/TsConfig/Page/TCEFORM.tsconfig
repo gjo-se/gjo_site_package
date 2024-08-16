@@ -1,0 +1,86 @@
+#################
+#### TCEFORM ####
+#################
+TCEFORM {
+    pages {
+    }
+    tt_content {
+
+      # Wizard: Neues Inhaltselement, Sichtbarkeit über be_user_group gelöst
+        CType {
+            #            header, text, textpic, image, , multimedia, media,mailform, search, login, menu, shortcut, html, script, splash, div, list
+            #            removeItems = textmedia, textpic
+        }
+
+      # Reiter Allgemein:
+        colPos {
+            #            muss bleiben, da CE in Grid muss
+            disabled = 0
+        }
+        header.disabled = 0
+        header_link.disabled = 1
+        header_position {
+            disabled = 0
+        }
+        header_layout {
+            removeItems = 0,
+            altLabels {
+                1 = H1
+                2 = H2
+                3 = H3
+                4 = H4
+                5 = H5
+            }
+        }
+        layout {
+            removeItems = 3
+            altLabels {
+                0 = ohne Container
+                1 = Container (1100px)
+                2 = Container-fluid (volle Breite)
+            }
+            disableNoMatchingValueElement = 1
+        }
+        date {
+            disabled = 1
+        }
+        subheader {
+            disabled = 1
+        }
+
+      # Reiter Erscheinungsbild:
+        frame_class {
+            disabled = 1
+        }
+        space_before_class {
+            disabled = 1
+        }
+        space_after_class {
+            disabled = 1
+        }
+        sectionIndex {
+            disabled = 1
+        }
+        linkToTop {
+            disabled = 1
+        }
+
+      # Reiter Zugriff:
+        fe_group {
+            disabled = 0
+        }
+        editlock {
+            disabled = 0
+        }
+
+      # Reiter Kategorien:
+        categories {
+            disabled = 1
+        }
+
+      # Reiter Hinweise:
+        rowDescription {
+            disabled = 1
+        }
+    }
+}

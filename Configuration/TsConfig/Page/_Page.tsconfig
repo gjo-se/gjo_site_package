@@ -1,0 +1,8 @@
+#################################
+#### User TSConfig imports   ####
+#################################
+
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/BackendLayouts.tsconfig'
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/TCEFORM.tsconfig'
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
+@import 'EXT:gjo_site_package/Configuration/TsConfig/Page/ContentElementWizard.tsconfig'
