@@ -1,9 +1,6 @@
 <?php
 declare(strict_types=1);
 
-// @todo-methodClean:
-// array
-
 namespace GjoSe\GjoSitePackage\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController as CoreAbstractController;
