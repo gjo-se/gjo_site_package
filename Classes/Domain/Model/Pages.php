@@ -5,4 +5,4 @@ namespace GjoSe\GjoSitePackage\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-class Pages extends AbstractEntity {}
+final class Pages extends AbstractEntity {}
