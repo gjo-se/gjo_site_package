@@ -1,13 +1,18 @@
 <?php
+
 declare(strict_types=1);
 
-namespace GjoSe\GjoSitePackage\Utility;
+namespace GjoSe\GjoSitePackage\Service;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
-final class SettingsUtility
+final readonly class SettingsService
 {
+    private function __construct(
+        private ConfigurationManagerInterface $configurationManager
+    ) {}
+
     /**
      * @param string|null $extensionName
      * @param string|null $pluginName
@@ -15,12 +20,11 @@ final class SettingsUtility
      *
      * @return array The configuration
      */
-    public static function getTypoScriptSettings(
+    public function getTypoScriptSettings(
         ?string $extensionName = null,
         ?string $pluginName = null,
         string $configurationType = 'extension'
     ): array {
-        $configurationManager = GeneralUtility::makeInstance(ConfigurationManagerInterface::class);
         $configurationType = match ($configurationType) {
             'extension' => ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS,
             'framework' => ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
@@ -28,6 +32,6 @@ final class SettingsUtility
             default => throw new \InvalidArgumentException('Invalid type: ' . $configurationType),
         };
 
-        return $configurationManager->getConfiguration($configurationType, $extensionName, $pluginName);
+        return $this->configurationManager->getConfiguration($configurationType, $extensionName, $pluginName);
     }
 }

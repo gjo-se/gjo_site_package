@@ -7,6 +7,7 @@ use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 (function (): void {
+    // DI NOT in nonClasses
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -25,6 +26,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
             ->setSaveAndCloseInNewContentElementWizard(false)
     );
 
+    // DI NOT in nonClasses
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -44,6 +46,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
             ->setSaveAndCloseInNewContentElementWizard(false)
     );
 
+    // DI NOT in nonClasses
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
