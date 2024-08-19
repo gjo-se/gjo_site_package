@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-
-
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use GjoSe\GjoSitePackage\Utility\TcaUtility;
 
-call_user_func(function (): void {
+(function (): void {
 
     $contentElement = 'highlight';
 
@@ -32,4 +30,4 @@ call_user_func(function (): void {
         '--div--',
         'after',
     );
-});
+})();

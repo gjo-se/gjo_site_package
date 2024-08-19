@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-call_user_func(function (): void {
+(function (): void {
 
     $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/';
@@ -21,5 +21,10 @@ call_user_func(function (): void {
     ];
 
     ExtensionManagementUtility::addTCAcolumns($table, $additionalColumn);
-    ExtensionManagementUtility::addToAllTCAtypes($table, $column, '', 'after:layout');
-});
+    ExtensionManagementUtility::addToAllTCAtypes(
+        $table,
+        $column,
+        '',
+        'after:layout'
+    );
+})();

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use GjoSe\GjoSitePackage\Utility\TcaUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-call_user_func(function (): void {
+(function (): void {
 
     $contentElement = 'carousel';
 
@@ -43,7 +43,12 @@ call_user_func(function (): void {
     TcaUtility::setTcaCtype($ext, $contentElement);
 
     $newFieldsString = '--div--;' . $lll . 'tab.carousel_items,tx_gjositepackage_ce_carousel_items';
-    ExtensionManagementUtility::addToAllTCAtypes($table, $newFieldsString, $cType, 'after:pi_flexform');
+    ExtensionManagementUtility::addToAllTCAtypes(
+        $table,
+        $newFieldsString,
+        $cType,
+        'after:pi_flexform'
+    );
 
     ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -57,4 +62,4 @@ call_user_func(function (): void {
         $extSignature . '_ce_highlight',
         'after',
     );
-});
+})();

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use GjoSe\GjoSitePackage\Utility\TcaUtility;
 
-return call_user_func(function (): array {
+return (function (): array {
 
     $ext = 'gjo_site_package';
     $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/ContentElements.xlf:';
@@ -216,4 +216,4 @@ return call_user_func(function (): array {
             ],
         ],
     ];
-});
+})();

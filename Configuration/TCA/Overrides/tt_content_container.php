@@ -6,7 +6,7 @@ use B13\Container\Tca\ContainerConfiguration;
 use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-call_user_func(function (): void {
+(function (): void {
     GeneralUtility::makeInstance(Registry::class)->configureContainer(
         (
         new ContainerConfiguration(
@@ -63,4 +63,4 @@ call_user_func(function (): void {
             ->setIcon('EXT:container/Resources/Public/Icons/container-4col.svg')
             ->setSaveAndCloseInNewContentElementWizard(false)
     );
-});
+})();

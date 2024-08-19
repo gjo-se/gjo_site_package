@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-call_user_func(function (): void {
+(function (): void {
 
     $ext   = 'gjo_site_package';
     $lll   = 'LLL:EXT:' . $ext . '/Resources/Private/Language/';
@@ -16,5 +16,4 @@ call_user_func(function (): void {
         $lll . 'ContentElements.xlf:content_element.group.gjose-content-elements',
         'after:container'
     );
-
-});
+})();
