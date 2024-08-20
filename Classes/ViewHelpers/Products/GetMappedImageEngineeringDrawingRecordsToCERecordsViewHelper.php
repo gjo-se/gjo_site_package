@@ -15,7 +15,6 @@ final class GetMappedImageEngineeringDrawingRecordsToCERecordsViewHelper extends
 
     protected $escapeOutput = false;
 
-    #[Override]
     public function initializeArguments(): void
     {
         $this->registerArgument(
@@ -27,7 +26,7 @@ final class GetMappedImageEngineeringDrawingRecordsToCERecordsViewHelper extends
     }
 
     /**
-     * @return array<mixed, array<'data'|'image', mixed>>
+     * @return array<int, array{'data': array{'productHeader': string, 'imageDescription': string}, 'image': FileReference}>
      */
     public function render(): array
     {

@@ -15,7 +15,6 @@ final class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHel
 
     protected $escapeOutput = false;
 
-    #[\Override]
     public function initializeArguments(): void
     {
         $this->registerArgument(
@@ -27,7 +26,7 @@ final class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHel
     }
 
     /**
-     * @return array<mixed, array<'data'|'images', mixed>>
+     * @return array<int, array{'data': array{'productHeader': string, 'productAdditionalInformation': string}, 'image': mixed}>
      */
     public static function renderStatic(
         array $arguments,

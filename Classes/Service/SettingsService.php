@@ -12,25 +12,24 @@ final readonly class SettingsService
         private ConfigurationManagerInterface $configurationManager
     ) {}
 
-    /**
-     * @param string|null $extensionName
-     * @param string|null $pluginName
-     * @param string $configurationType
-     *
-     * @return array The configuration
-     */
+    /** @return array<string, mixed> The configuration */
     public function getTypoScriptSettings(
         ?string $extensionName = null,
         ?string $pluginName = null,
         string $configurationType = 'extension'
     ): array {
-        $configurationType = match ($configurationType) {
+        $configurationType = $this->mapConfigurationType($configurationType);
+
+        return $this->configurationManager->getConfiguration($configurationType, $extensionName, $pluginName);
+    }
+
+    private function mapConfigurationType(string $configurationType): string
+    {
+        return match ($configurationType) {
             'extension' => ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS,
             'framework' => ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
             'full' => ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
             default => throw new \InvalidArgumentException('Invalid type: ' . $configurationType),
         };
-
-        return $this->configurationManager->getConfiguration($configurationType, $extensionName, $pluginName);
     }
 }

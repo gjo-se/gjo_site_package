@@ -4,30 +4,26 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Utility;
 
-class CroppingUtility
+final class CroppingUtility
 {
     public static function setCropVariants(string $table, string $column): void
     {
         $defaultCropSettings = self::getBackendDefaultCropVariants();
         $lll = 'LLL:EXT:gjo_site_package/Resources/Private/Language/ContentElements.xlf:';
 
-        $mobileCropSettings = $defaultCropSettings;
-        $mobileCropSettings['title'] = $lll . 'cropVariant.mobile';
-        $tabletCropSettings = $defaultCropSettings;
-        $tabletCropSettings['title'] = $lll . 'cropVariant.tablet';
-        $laptopCropSettings = $defaultCropSettings;
-        $laptopCropSettings['title'] = $lll . 'cropVariant.laptop';
-        $desktopCropSettings = $defaultCropSettings;
-        $desktopCropSettings['title'] = $lll . 'cropVariant.desktop';
-        $wideScreenCropSettings = $defaultCropSettings;
-        $wideScreenCropSettings['title'] = $lll . 'cropVariant.wideScreen';
+        $cropVariants = [
+            'mobile' => 'cropVariant.mobile',
+            'tablet' => 'cropVariant.tablet',
+            'laptop' => 'cropVariant.laptop',
+            'desktop' => 'cropVariant.desktop',
+            'wideScreen' => 'cropVariant.wideScreen',
+        ];
 
-        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['mobile'] = $mobileCropSettings;
-        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['tablet'] = $tabletCropSettings;
-        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['laptop'] = $laptopCropSettings;
-        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['desktop'] = $desktopCropSettings;
-        $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']['wideScreen'] = $wideScreenCropSettings;
-
+        foreach ($cropVariants as $variant => $label) {
+            $cropSettings = $defaultCropSettings;
+            $cropSettings['title'] = $lll . $label;
+            $GLOBALS['TCA'][$table]['columns'][$column]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'][$variant] = $cropSettings;
+        }
     }
 
     /**
@@ -78,43 +74,40 @@ class CroppingUtility
         ];
     }
 
+    /**
+     * @return array{
+     *     cropVariant: string,
+     *     media: string,
+     *     srcset: int[]
+     * }[]
+     */
     public static function getDefaultBreakpoints(): array
     {
         return [
-            0 => [
+            [
                 'cropVariant' => 'wideScreen',
                 'media' => '(min-width: 1200px)',
-                'srcset' => [
-                    0 => 1100,
-                ],
+                'srcset' => [1100],
             ],
-            1 => [
+            [
                 'cropVariant' => 'desktop',
                 'media' => '(min-width: 992px)',
-                'srcset' => [
-                    0 => 950,
-                ],
+                'srcset' => [950],
             ],
-            2 => [
+            [
                 'cropVariant' => 'laptop',
                 'media' => '(min-width: 768px)',
-                'srcset' => [
-                    0 => 720,
-                ],
+                'srcset' => [720],
             ],
-            3 => [
+            [
                 'cropVariant' => 'tablet',
                 'media' => '(min-width: 576px)',
-                'srcset' => [
-                    0 => 540,
-                ],
+                'srcset' => [540],
             ],
-            4 => [
+            [
                 'cropVariant' => 'mobile',
                 'media' => '(min-width: 300px)',
-                'srcset' => [
-                    0 => 350,
-                ],
+                'srcset' => [350],
             ],
         ];
     }

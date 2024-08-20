@@ -47,6 +47,7 @@ final class TcaUtility
 
     }
 
+    /** @return array<string, mixed> */
     public static function getDefaultTcaColumns(string $table): array
     {
         return [

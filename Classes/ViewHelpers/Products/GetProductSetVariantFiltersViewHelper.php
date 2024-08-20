@@ -5,12 +5,10 @@ declare(strict_types=1);
 namespace GjoSe\GjoSitePackage\ViewHelpers\Products;
 
 use GjoSe\GjoProducts\Domain\Model\ProductSetVariantGroup;
-use TYPO3\CMS\Fluid\Core\ViewHelper\Exception;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class GetProductSetVariantFiltersViewHelper extends AbstractViewHelper
 {
-    #[\Override]
     public function initializeArguments(): void
     {
         $this->registerArgument(
@@ -21,33 +19,30 @@ class GetProductSetVariantFiltersViewHelper extends AbstractViewHelper
         );
     }
 
+    /**
+     * @return array<string, array<int|string, int|string>>
+     */
     public function render(): array
     {
-        if (!isset($this->arguments['productSetVariantGroup'])) {
-            throw new Exception('Attribute "productSetVariantGroup" missing for GetProductSetVariantFiltersViewHelper');
-        }
-
+        /** @var ProductSetVariantGroup $productSetVariantGroup */
         $productSetVariantGroup = $this->arguments['productSetVariantGroup'];
-        $productSetVariants     = $productSetVariantGroup->getProductSetVariants();
-        $variantFilters         = [];
+        $productSetVariants = $productSetVariantGroup->getProductSetVariants();
+        $variantFilters = [];
 
-        if ($productSetVariants) {
-            foreach ($productSetVariants as $productSetVariant) {
+        foreach ($productSetVariants as $productSetVariant) {
 
-                if ($productSetVariant->getLength()) {
-                    $variantFilters['length'][$productSetVariant->getLength()] = $productSetVariant->getLength();
-                }
+            if ($productSetVariant->getLength()) {
+                $variantFilters['length'][$productSetVariant->getLength()] = $productSetVariant->getLength();
+            }
 
-                if ($productSetVariant->getVersion()) {
-                    $variantFilters['version'][$productSetVariant->getVersion()] = $productSetVariant->getVersion();
-                }
+            if ($productSetVariant->getVersion()) {
+                $variantFilters['version'][$productSetVariant->getVersion()] = $productSetVariant->getVersion();
+            }
 
-                if ($productSetVariant->getMaterial()) {
-                    $variantFilters['material'][$productSetVariant->getMaterial()] = $productSetVariant->getMaterial();
-                }
+            if ($productSetVariant->getMaterial()) {
+                $variantFilters['material'][$productSetVariant->getMaterial()] = $productSetVariant->getMaterial();
             }
         }
-
         return $variantFilters;
     }
 }
