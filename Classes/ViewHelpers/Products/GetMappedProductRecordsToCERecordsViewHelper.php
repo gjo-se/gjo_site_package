@@ -9,7 +9,7 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
-class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHelper
+final class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

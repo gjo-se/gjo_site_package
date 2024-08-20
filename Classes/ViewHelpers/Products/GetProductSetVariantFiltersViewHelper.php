@@ -1,17 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\ViewHelpers\Products;
 
-use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use Override;
 use GjoSe\GjoProducts\Domain\Model\ProductSetVariantGroup;
 use TYPO3\CMS\Fluid\Core\ViewHelper\Exception;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class GetProductSetVariantFiltersViewHelper extends AbstractViewHelper
 {
-
-    #[Override]
+    #[\Override]
     public function initializeArguments(): void
     {
         $this->registerArgument(

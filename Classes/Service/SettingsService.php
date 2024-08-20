@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Service;
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 final readonly class SettingsService
 {
-    private function __construct(
+    public function __construct(
         private ConfigurationManagerInterface $configurationManager
     ) {}
 

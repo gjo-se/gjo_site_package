@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 abstract class AbstractRepository extends Repository
 {
-    protected ?Typo3DbQueryParser $typo3DbQueryParser = null;
+    private ?Typo3DbQueryParser $typo3DbQueryParser = null;
 
     public function injectTypo3DbQueryParser(Typo3DbQueryParser $typo3DbQueryParser): void
     {

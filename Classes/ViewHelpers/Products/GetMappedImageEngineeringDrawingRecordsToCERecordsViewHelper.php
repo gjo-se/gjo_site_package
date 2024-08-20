@@ -1,14 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\ViewHelpers\Products;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
-use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 
-class GetMappedImageEngineeringDrawingRecordsToCERecordsViewHelper extends AbstractViewHelper
+final class GetMappedImageEngineeringDrawingRecordsToCERecordsViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
