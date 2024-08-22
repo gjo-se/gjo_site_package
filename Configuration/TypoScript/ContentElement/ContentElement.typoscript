@@ -7,11 +7,9 @@ lib.contentElement {
     templateRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.templateRootPath}
     }
-
     partialRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.partialRootPath}
     }
-
     layoutRootPaths {
         10 = {$plugin.tx_gjositepackage.fluidtemplate.contentElement.layoutRootPath}
     }

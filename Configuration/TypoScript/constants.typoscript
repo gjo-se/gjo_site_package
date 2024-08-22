@@ -6,9 +6,9 @@
 
 page {
     meta {
-        description =
-        author =
-        keywords =
+        description = 
+        author = 
+        keywords = 
         viewport = width=device-width, initial-scale=1
         robots = index,follow
         apple-mobile-web-app-capable = no
@@ -49,31 +49,30 @@ plugin.tx_gjositepackage {
     settings {
         site {
             pid {
-#                userLogin = 110
-#                userLogout = 83
-#                userRegister = 84
-#                userData = 69
-#                myTiger = 70
-#
-#                agb = 13
-#                dataPrivacyStatement = 93
-#                instructionsForCancellation = 126
+                #                userLogin = 110
+                #                userLogout = 83
+                #                userRegister = 84
+                #                userData = 69
+                #                myTiger = 70
+                #
+                #                agb = 13
+                #                dataPrivacyStatement = 93
+                #                instructionsForCancellation = 126
 
-#                cart = 87
-#                checkout = 88
-#                orderConfirmation = 92
-#                shippingCosts = 127
-#                payment {
-#                    payPal {
-#                        success = 96
-#                        failure = 88
-#                    }
-#                }
-#
-#                applicationBusinessCustomerFormConfirmation = 113
+                #                cart = 87
+                #                checkout = 88
+                #                orderConfirmation = 92
+                #                shippingCosts = 127
+                #                payment {
+                #                    payPal {
+                #                        success = 96
+                #                        failure = 88
+                #                    }
+                #                }
+                #
+                #                applicationBusinessCustomerFormConfirmation = 113
 
             }
         }
-
     }
 }

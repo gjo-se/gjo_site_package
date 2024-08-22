@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <T3DataStructure>
     <sheets>
         <sDEF>
@@ -14,7 +14,8 @@
                         </label>
                         <config>
                             <type>input</type>
-                            <eval>trim,required</eval>
+                            <eval>trim</eval>
+                            <required>1</required>
                         </config>
                     </settings.title>
                     <settings.subtitle>
@@ -55,26 +56,24 @@
                         </config>
                     </settings.link>
                     <settings.background>
-                        <TCEforms>
-                            <exclude>1</exclude>
-                            <label>
-                                LLLx: highlight.background
-                            </label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <label>LLLx: Background 0</label>
-                                        <value>0</value>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <label>LLLx: Background 1</label>
-                                        <value>1</value>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <exclude>1</exclude>
+                        <label>
+                            LLLx: highlight.background
+                        </label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLLx: Background 0</label>
+                                    <value>0</value>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <label>LLLx: Background 1</label>
+                                    <value>1</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.background>
                 </el>
             </ROOT>

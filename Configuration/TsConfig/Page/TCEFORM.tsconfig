@@ -6,13 +6,12 @@ TCEFORM {
     }
     tt_content {
 
-      # Wizard: Neues Inhaltselement, Sichtbarkeit über be_user_group gelöst
+        # Wizard: Neues Inhaltselement, Sichtbarkeit über be_user_group gelöst
         CType {
             #            header, text, textpic, image, , multimedia, media,mailform, search, login, menu, shortcut, html, script, splash, div, list
             #            removeItems = textmedia, textpic
         }
-
-      # Reiter Allgemein:
+        # Reiter Allgemein:
         colPos {
             #            muss bleiben, da CE in Grid muss
             disabled = 0
@@ -47,8 +46,7 @@ TCEFORM {
         subheader {
             disabled = 1
         }
-
-      # Reiter Erscheinungsbild:
+        # Reiter Erscheinungsbild:
         frame_class {
             disabled = 1
         }
@@ -64,21 +62,18 @@ TCEFORM {
         linkToTop {
             disabled = 1
         }
-
-      # Reiter Zugriff:
+        # Reiter Zugriff:
         fe_group {
             disabled = 0
         }
         editlock {
             disabled = 0
         }
-
-      # Reiter Kategorien:
+        # Reiter Kategorien:
         categories {
             disabled = 1
         }
-
-      # Reiter Hinweise:
+        # Reiter Hinweise:
         rowDescription {
             disabled = 1
         }

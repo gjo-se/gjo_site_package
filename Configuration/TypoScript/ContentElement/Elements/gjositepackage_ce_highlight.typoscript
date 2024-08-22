@@ -4,16 +4,16 @@
 
 tt_content.gjositepackage_ce_highlight =< lib.contentElement
 tt_content.gjositepackage_ce_highlight {
-  templateName = Highlight
-  dataProcessing {
-    10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
-    20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-    20 {
-      references {
-        table = tt_content
-        fieldName = settings.image
-      }
-      as = image
+    templateName = Highlight
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references {
+                table = tt_content
+                fieldName = settings.image
+            }
+            as = image
+        }
     }
-  }
 }
