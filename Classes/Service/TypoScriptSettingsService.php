@@ -6,7 +6,7 @@ namespace GjoSe\GjoSitePackage\Service;
 
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
-final readonly class SettingsService
+final readonly class TypoScriptSettingsService
 {
     public function __construct(
         private ConfigurationManagerInterface $configurationManager
