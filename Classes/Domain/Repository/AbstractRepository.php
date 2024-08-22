@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-// @todo-methodClean:
-// - debugSqlQuery passt noch nicht! TypeDeklaracionen fehlen
-
 namespace GjoSe\GjoSitePackage\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\Generic\Query;

@@ -26,10 +26,10 @@ class GetProductSetVariantFiltersViewHelper extends AbstractViewHelper
     {
         /** @var ProductSetVariantGroup $productSetVariantGroup */
         $productSetVariantGroup = $this->arguments['productSetVariantGroup'];
-        $productSetVariants = $productSetVariantGroup->getProductSetVariants();
+        $objectStorage = $productSetVariantGroup->getProductSetVariants();
         $variantFilters = [];
 
-        foreach ($productSetVariants as $productSetVariant) {
+        foreach ($objectStorage as $productSetVariant) {
 
             if ($productSetVariant->getLength()) {
                 $variantFilters['length'][$productSetVariant->getLength()] = $productSetVariant->getLength();
@@ -43,6 +43,7 @@ class GetProductSetVariantFiltersViewHelper extends AbstractViewHelper
                 $variantFilters['material'][$productSetVariant->getMaterial()] = $productSetVariant->getMaterial();
             }
         }
+
         return $variantFilters;
     }
 }

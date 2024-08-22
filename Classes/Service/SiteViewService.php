@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Service;
 
+use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 final class SiteViewService extends AbstractService
@@ -12,7 +13,7 @@ final class SiteViewService extends AbstractService
     public function getTemplateRootPaths(): array
     {
         $site = $this->getSite();
-        return $site ? ($site->getConfiguration()['view']['templateRootPaths'] ?? []) : [];
+        return $site instanceof Site ? ($site->getConfiguration()['view']['templateRootPaths'] ?? []) : [];
     }
 
     public function getTemplateRootPath(int $index = 0): string
@@ -25,7 +26,7 @@ final class SiteViewService extends AbstractService
     public function getPartialRootPaths(): array
     {
         $site = $this->getSite();
-        return $site ? ($site->getConfiguration()['view']['partialRootPaths'] ?? []) : [];
+        return $site instanceof Site ? ($site->getConfiguration()['view']['partialRootPaths'] ?? []) : [];
     }
 
     public function getPartialRootPath(int $index = 0): string

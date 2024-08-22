@@ -31,15 +31,15 @@ final class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHel
     public static function renderStatic(
         array $arguments,
         \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext,
+        RenderingContextInterface $renderingContext
     ): array {
 
         /** @var ProductSet $productSet */
         $productSet = $arguments['productSet'];
-        $productSetVariantGroups = $productSet->getProductSetVariantGroups();
+        $objectStorage = $productSet->getProductSetVariantGroups();
 
         $mappedRecords = [];
-        foreach ($productSetVariantGroups as $productSetVariantGroup) {
+        foreach ($objectStorage as $productSetVariantGroup) {
             $products = $productSetVariantGroup->getProducts();
             foreach ($products as $key => $record) {
                 $additionalInformation = '';
