@@ -27,6 +27,7 @@ final class GetMappedProductRecordsToCERecordsViewHelper extends AbstractViewHel
 
     /**
      * @return array<int, array{'data': array{'productHeader': string, 'productAdditionalInformation': string}, 'image': mixed}>
+     * @noinspection PhpFullyQualifiedNameUsageInspection
      */
     public static function renderStatic(
         array $arguments,

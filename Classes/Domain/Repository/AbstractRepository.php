@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Domain\Repository;
 
-use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 use TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -20,9 +19,10 @@ abstract class AbstractRepository extends Repository
     }
 
     /**
-     * @param QueryInterface<Query> $query
+     * @template T
+     * @param QueryInterface<T> $query
      */
-    protected function debugSqlQuery(Query $query, bool $params = false): void
+    protected function debugSqlQuery(QueryInterface $query, bool $params = false): void
     {
         if ($this->typo3DbQueryParser instanceof Typo3DbQueryParser) {
             $queryBuilder = $this->typo3DbQueryParser->convertQueryToDoctrineQueryBuilder($query);

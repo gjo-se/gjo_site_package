@@ -40,11 +40,11 @@ final class CroppingUtility
             'title' => 'LLL:EXT:gjo_site_package/Resources/Private/Language/Backend.xlf:option.default',
             'allowedAspectRatios' => [
                 '1:1' => [
-                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
+                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:wizard.ratio.1_1',
                     'value' => 1.0,
                 ],
                 '4:3' => [
-                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
+                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:wizard.ratio.4_3',
                     'value' => 4 / 3,
                 ],
                 '3:4' => [
@@ -52,7 +52,7 @@ final class CroppingUtility
                     'value' => 3 / 4,
                 ],
                 '16:9' => [
-                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:wizard.ratio.16_9',
                     'value' => 16 / 9,
                 ],
                 '21:9' => [
@@ -60,7 +60,7 @@ final class CroppingUtility
                     'value' => 21 / 9,
                 ],
                 'NaN' => [
-                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free',
+                    'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:wizard.ratio.free',
                     'value' => 0.0,
                 ],
             ],

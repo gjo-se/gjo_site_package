@@ -10,9 +10,6 @@ use GjoSe\GjoSitePackage\Utility\TcaUtility;
     $contentElement = 'highlight';
 
     $ext = 'gjo_site_package';
-    $lll = 'LLL:EXT:' . $ext . '/Resources/Private/Language/locallang_db.xlf:';
-    $table = 'tt_content';
-    $column = '';
     $extSignature = str_replace('_', '', $ext);
     $cType = $extSignature . '_ce_' . $contentElement;
 

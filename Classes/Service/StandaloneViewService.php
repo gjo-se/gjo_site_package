@@ -16,10 +16,10 @@ final readonly class StandaloneViewService
     public function configureStandaloneView(string $template = ''): StandaloneView
     {
         $this->standaloneView->setTemplatePathAndFilename(
-            $this->siteViewService->getTemplateRootPath(0) . $template
+            $this->siteViewService->getTemplateRootPath() . $template
         );
         $this->standaloneView->setPartialRootPaths([
-            $this->siteViewService->getPartialRootPath(0),
+            $this->siteViewService->getPartialRootPath(),
             $this->siteViewService->getPartialRootPath(1),
             $this->siteViewService->getPartialRootPath(2),
         ]);

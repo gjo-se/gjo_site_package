@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace GjoSe\GjoSitePackage\Service;
 
 use TYPO3\CMS\Core\Site\Entity\Site;
-final  class SiteSettingsService extends AbstractService
+
+final class SiteSettingsService extends AbstractService
 {
     public function getSiteSettings(): array
     {

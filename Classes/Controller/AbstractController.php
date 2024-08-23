@@ -10,7 +10,6 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class AbstractController extends CoreAbstractController
 {
-    /** @param array<mixed> $additionalVariables */
     protected function assignCommonViewVariables(array $additionalVariables = []): void
     {
         $this->view->assignMultiple(array_merge([

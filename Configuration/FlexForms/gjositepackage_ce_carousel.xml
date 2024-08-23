@@ -171,7 +171,7 @@
         </settings.carousel.header_layout>
         <settings.carousel.header_css_class>
             <exclude>1</exclude>
-            <label>&#xDC;berschrift CSS Class</label>
+            <label>LLLx: Ueberschrift CSS Class</label>
             <config>
                 <type>input</type>
             </config>
