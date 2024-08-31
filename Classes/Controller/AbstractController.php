@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace GjoSe\GjoSitePackage\Controller;
 
-use GjoSe\GjoSitePackage\Utility\CroppingUtility;
+use GjoSe\GjoApi\Utility\CroppingUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController as CoreAbstractController;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 

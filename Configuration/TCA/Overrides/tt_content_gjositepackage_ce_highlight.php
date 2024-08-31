@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use GjoSe\GjoSitePackage\Utility\TcaUtility;
+use GjoSe\GjoApi\Utility\TcaUtility;
 
 (function (): void {
 
